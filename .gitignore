@@ -1,0 +1,23 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python environments / cache
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local computational scratch
+**/scratch/
+**/tmp/
+**/runs/raw/
+
+# Local archives
+*.zip
+*.tar
+*.tar.gz
+
+# Do not broadly ignore calculation outputs yet: the actual DFT code and provenance policy are not frozen.
