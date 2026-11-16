@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "task_id": "FESE-GPT-WORK-20261116-R01",
+  "project_id": "fese-dft",
+  "status": "ENTRY_VERIFIED_CAPABILITY_PROBE",
+  "worker_id": "/root/gpt_fese_independent_r01",
+  "declared_model": "GPT-6 Astra Pro (developer runtime label)",
+  "provider_build_id": "NOT_EXPOSED",
+  "execution_surface": "CURRENT_CLOUD_TASK_FRESH_CONTEXT_CHILD",
+  "execution_location": "CLOUD",
+  "branch": "ai/gpt-fese-20261116-r01",
+  "branch_initial_commit": "c5c49f164da9dbe3d0f4be912b2f8655ca2aa676",
+  "active_blueprint_id": "FESE-INDEPENDENT-THREE-LANE-20261116-R03",
+  "requirements_sha256": "6384fbedfd36bcc6a37c1a831a0f23c60bd42e170737a00d7c5460c7fd2a3c8a",
+  "actual_run_ids": [],
+  "comparison_open": false,
+  "source_access": "ALL_THREE_ORIGINAL_PDFS_REHASHED_AND_READ",
+  "capability": "pw.x absent initially; bounded nonroot repair in progress",
+  "updated_at": "2026-11-16 19:34:37 UTC",
+  "next_action": "Verify executable and primary/independent backup readback, then bounded pilots and preproduction plan"
+}
