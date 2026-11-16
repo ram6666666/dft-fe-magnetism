@@ -1,0 +1,11 @@
+{
+  "task_id": "FESE-GPT-WORK-20261116-R01",
+  "status": "BRANCH_READY_NOT_STARTED",
+  "lane": "gpt",
+  "branch": "ai/gpt-fese-20261116-r01",
+  "common_baseline_commit": "ea051074ffc1bcac961a1c291ab7bdb565ed4a22",
+  "calculation_dispatched": false,
+  "actual_run_ids": [],
+  "independent_freeze": false,
+  "updated_on": "2026-11-16"
+}
