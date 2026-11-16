@@ -1,0 +1,12 @@
+{
+  "task_id": "FESE-GPT-NATIVE-WORK-20261116-R01",
+  "status": "PREPARED_NOT_STARTED",
+  "execution_surface": "NEW_NATIVE_GPT_WORK_CLOUD",
+  "native_work_observed": false,
+  "scientific_results": "NONE",
+  "first_independent_freeze": false,
+  "branch": "ai/gpt-work-fese-20261116-r01",
+  "common_base_commit": "ea051074ffc1bcac961a1c291ab7bdb565ed4a22",
+  "contract_sha256": "dad0f5820d6d4ed87d5a5bfcc789799855f3b4f0e22d59167b5f377b9124d1f6",
+  "comparison_open": false
+}
