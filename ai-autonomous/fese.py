@@ -57,7 +57,10 @@ def sha(path):
 
 def dump(path, obj):
     """Write readable strict JSON; missing observables stay null, never NaN/zero."""
-    Path(path).write_text(json.dumps(obj, indent=2, allow_nan=False) + '\n')
+    path=Path(path)
+    temp=path.with_name(path.name+f'.{os.getpid()}.tmp')
+    temp.write_text(json.dumps(obj, indent=2, allow_nan=False) + '\n')
+    temp.replace(path)
 
 def normalize(case):
     """Validate physical/settings input; a,c are Angstrom and z is fractional.
@@ -72,12 +75,20 @@ def normalize(case):
     assert 0 < c['z_se'] < .5
     assert len(c['kgrid']) == 3 and all(isinstance(n, int) and n > 0 for n in c['kgrid'])
     assert len(c['kshift']) == 3 and all(n in (0, 1) for n in c['kshift'])
+    if c.get('gamma_only',False):
+        assert c['kgrid']==[1,1,1] and c['kshift']==[0,0,0]
     assert 0 <= c['starting_polarization'] < 1
     c['ecutrho_ry'] = c.get('ecutrho_ry', 4 * c['ecutwfc_ry'])
     c['n_fe'] = 4
     c['functional'] = 'PBE'
     c['smearing'] = 'mv'
     c['relativistic'] = 'scalar; collinear; no SOC'
+    c['startingwfc']='atomic+random'
+    c['startingpot']='atomic'
+    c['rng_algorithm']='QE6.7 randy shuffled LCG; m=714025, ia=1366, ic=150889, ntab=97'
+    c['rng_default_initial_seed']=0
+    c['rng_seed_evidence']='SOURCE_DERIVED_DEFAULT_FOR_CONFIGURED_STATIC_SCF_PATH'
+    c['rng_state_runtime_captured']=False
     return c
 
 def geometry(c):
@@ -135,7 +146,8 @@ ATOMIC_SPECIES
         '\n'.join(' '.join(f'{v:.12f}' for v in row) for row in cell) + \
         '\nATOMIC_POSITIONS crystal\n' + \
         '\n'.join(f'{s} {x:.12f} {y:.12f} {z:.12f}' for s, x, y, z in sites) + \
-        '\nK_POINTS automatic\n' + ' '.join(str(x) for x in c['kgrid']+c['kshift']) + '\n'
+        ('\nK_POINTS gamma\n' if c.get('gamma_only',False) else
+         '\nK_POINTS automatic\n' + ' '.join(str(x) for x in c['kgrid']+c['kshift']) + '\n')
 
 def prepare(case):
     """Create a new immutable attempt; raises if run_id already exists."""
@@ -295,6 +307,7 @@ def execute(case, pw, proj, ranks):
     d,c = prepare(case)
     receipt = json.loads((d/'receipt.json').read_text())
     pwpath = shutil.which(pw) or pw
+    proj = shutil.which(proj) or proj
     launcher = ['mpirun','-np',str(ranks)] if ranks>1 else []
     receipt['pw_executable'] = str(Path(pwpath).resolve())
     receipt['pw_sha256'] = sha(pwpath) if Path(pwpath).is_file() else None
@@ -343,7 +356,7 @@ def analyze():
              'exit_code':r.get('pw',{}).get('exit_code'),'elapsed_seconds':r.get('pw',{}).get('elapsed_seconds')}
         row['energy_per_fe_ry']=row['energy_total_ry']/4 if row['energy_total_ry'] is not None else None
         rows.append(row)
-    keys=['a_ang','c_ang','z_se','ecutwfc_ry','ecutrho_ry','kgrid','kshift','degauss_ry','smearing','functional','pw_sha256','runtime_profile_sha256','nbnd','conv_thr_ry']
+    keys=['a_ang','c_ang','z_se','ecutwfc_ry','ecutrho_ry','kgrid','kshift','gamma_only','degauss_ry','smearing','functional','pw_sha256','runtime_profile_sha256','nbnd','conv_thr_ry']
     groups={}
     for r in rows:
         key=json.dumps({k:r.get(k) for k in keys},sort_keys=True)
@@ -359,17 +372,19 @@ def analyze():
             r['relative_to_nm_mev_fe']=(r['energy_total_ry']-enm)*RY_EV*1000/4 if ok and enm is not None else None
     dump(ROOT/'results.json',rows)
     fields=['run_id','stage','initial_state','final_state','status','path_id','a_ang','c_ang','z_se','n_fe','functional','ecutwfc_ry','ecutrho_ry','kgrid','kshift','degauss_ry','conv_thr_ry','starting_polarization','qe_version','exit_code','scf_converged','scf_iterations','energy_total_ry','relative_to_group_min_mev_fe','relative_to_nm_mev_fe','total_magnetization_muB_cell','absolute_magnetization_muB_cell','fe_lowdin_moments_muB','elapsed_seconds','input_path','log_path']
-    with (ROOT/'results.csv').open('w',newline='') as f:
-        w=csv.DictWriter(f,fieldnames=fields,extrasaction='ignore');w.writeheader()
+    csv_temp=ROOT/f'results.csv.{os.getpid()}.tmp'
+    with csv_temp.open('w',newline='') as f:
+        w=csv.DictWriter(f,fieldnames=fields,extrasaction='ignore',lineterminator='\n');w.writeheader()
         for r in rows:
             w.writerow({k:json.dumps(v) if isinstance(v,(list,dict)) else v for k,v in r.items()})
+    csv_temp.replace(ROOT/'results.csv')
     print(f'Wrote {len(rows)} actual run records',flush=True)
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
     sub=ap.add_subparsers(dest='action',required=True)
     for action in ('run','prepare'):
-        p=sub.add_parser(action);p.add_argument('campaign');p.add_argument('--only');p.add_argument('--pw',default='pw.x');p.add_argument('--proj',default='projwfc.x');p.add_argument('--ranks',type=int,default=1)
+        p=sub.add_parser(action);p.add_argument('campaign');p.add_argument('--only');p.add_argument('--pw',default='pw.x');p.add_argument('--proj',default='projwfc.x');p.add_argument('--ranks',type=int,default=1);p.add_argument('--no-analyze',action='store_true')
     sub.add_parser('analyze')
     args=ap.parse_args()
     if args.action=='analyze':
@@ -380,7 +395,7 @@ def main():
         if args.action=='prepare':prepare(case)
         else:
             execute(case,args.pw,args.proj,args.ranks)
-            analyze()
+            if not args.no_analyze:analyze()
 
 if __name__=='__main__':
     main()

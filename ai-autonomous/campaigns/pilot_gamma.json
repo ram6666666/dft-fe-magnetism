@@ -1,0 +1,3 @@
+[
+  {"run_id":"P004_stripe_gamma_pipeline", "initial_state":"STRIPE", "stage":"PILOT_PIPELINE_ONLY", "max_seconds":900, "kgrid":[1,1,1], "gamma_only":true}
+]

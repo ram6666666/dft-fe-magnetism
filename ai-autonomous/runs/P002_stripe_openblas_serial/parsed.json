@@ -1,0 +1,32 @@
+{
+  "status": "RUN_FAILED",
+  "scf_converged": false,
+  "job_done": true,
+  "energy_total_ry": null,
+  "scf_accuracy_ry": 0.08760108,
+  "scf_iterations": null,
+  "total_magnetization_muB_cell": -0.0,
+  "absolute_magnetization_muB_cell": 7.72,
+  "smearing_contribution_ry": null,
+  "qe_version": "6.7MaX",
+  "run_id": "P002_stripe_openblas_serial",
+  "initial_state": "STRIPE",
+  "fe_lowdin_moments_muB": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "all_lowdin_moments_muB": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "magnetic_diagnostic": "Lowdin atomic spin population plus cell spin integrals",
+  "final_state": "UNVERIFIED_FINAL_STATE"
+}

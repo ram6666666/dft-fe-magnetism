@@ -1,0 +1,46 @@
+{
+  "run_id": "P002_stripe_openblas_serial",
+  "status": "RUN_FAILED",
+  "prepared_at": "2026-11-16T19:47:58.306920+00:00",
+  "input_sha256": "3cddb7c33a6f005fb755162da7cd3004867c9bc63a1f5d66f2d792b30ce43b6e",
+  "pseudo_sha256": {
+    "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+    "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+  },
+  "source_sha256": "dd8cfaa7640e6d06be9af47ec555d8f1d6ea8fa7585c017a98a15ad1457ce5c7",
+  "source_path": "source_versions/dd8cfaa7640e6d06be9af47ec555d8f1d6ea8fa7585c017a98a15ad1457ce5c7.py",
+  "pw_executable": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+  "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+  "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+  "projwfc_sha256": "1bb5632fd9292ba7f544e7cfc9ff38c89906d0527ea3f7e81a287f12575460ed",
+  "pw": {
+    "command": [
+      "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+      "-nk",
+      "1",
+      "-in",
+      "input.in"
+    ],
+    "cwd": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/P002_stripe_openblas_serial",
+    "start": "2026-11-16T19:47:59.683005+00:00",
+    "end": "2026-11-16T19:54:08.926032+00:00",
+    "exit_code": 2,
+    "elapsed_seconds": 369.2427734740013,
+    "timed_out": false,
+    "child_cpu_seconds": 367.1794909999999,
+    "child_maxrss_kib": 554756,
+    "environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "LD_LIBRARY_PATH": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread:/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/lib/x86_64-linux-gnu"
+    }
+  },
+  "file_hashes": {
+    "input.in": "3cddb7c33a6f005fb755162da7cd3004867c9bc63a1f5d66f2d792b30ce43b6e",
+    "runtime.json": "efbd78c7d000b851ba87055f9e17fbafaf85f790b57b28a0fca358d45a101e40",
+    "config.json": "3998e8948b85b0965554b54f0d9b21722701ac8c823ef62b2a2513707ef344ce",
+    "pw_execution.json": "21f9ee0239525e81e07e69399df2167f1d0ccf9101d937bfb814a59a5e9a5166",
+    "pw.out": "dc207063dd6c16f8d203e878cd80547a0f0680fe9cdbd67251c521cf8bb4e8e4",
+    "pw.err": "5cd50e2948b566fec9ba324dcf1e2575de4173b54c98e3e4559d0af09fc9abe7"
+  }
+}

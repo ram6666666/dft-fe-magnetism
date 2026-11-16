@@ -1,0 +1,32 @@
+{
+  "status": "RUN_COMPLETED",
+  "scf_converged": true,
+  "job_done": true,
+  "energy_total_ry": -1971.59423608,
+  "scf_accuracy_ry": 8e-08,
+  "scf_iterations": 19,
+  "total_magnetization_muB_cell": -0.0,
+  "absolute_magnetization_muB_cell": 10.42,
+  "smearing_contribution_ry": -0.01085175,
+  "qe_version": "6.7MaX",
+  "run_id": "P004_stripe_gamma_pipeline",
+  "initial_state": "STRIPE",
+  "fe_lowdin_moments_muB": [
+    2.4792,
+    -2.4797,
+    2.4792,
+    -2.4797
+  ],
+  "all_lowdin_moments_muB": [
+    2.4792,
+    -2.4797,
+    2.4792,
+    -2.4797,
+    -0.0001,
+    -0.0001,
+    -0.0001,
+    -0.0001
+  ],
+  "magnetic_diagnostic": "Lowdin atomic spin population plus cell spin integrals",
+  "final_state": "STRIPE"
+}

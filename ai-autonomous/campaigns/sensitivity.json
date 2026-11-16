@@ -1,0 +1,122 @@
+[
+  {
+    "run_id": "C_cut110_FM",
+    "stage": "SENSITIVITY",
+    "initial_state": "FM",
+    "ecutwfc_ry": 110,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  },
+  {
+    "run_id": "C_cut110_CB",
+    "stage": "SENSITIVITY",
+    "initial_state": "CB",
+    "ecutwfc_ry": 110,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  },
+  {
+    "run_id": "C_cut110_STRIPE",
+    "stage": "SENSITIVITY",
+    "initial_state": "STRIPE",
+    "ecutwfc_ry": 110,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  },
+  {
+    "run_id": "C_mesh443_FM",
+    "stage": "SENSITIVITY",
+    "initial_state": "FM",
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      4,
+      4,
+      3
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  },
+  {
+    "run_id": "C_mesh443_CB",
+    "stage": "SENSITIVITY",
+    "initial_state": "CB",
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      4,
+      4,
+      3
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  },
+  {
+    "run_id": "C_mesh443_STRIPE",
+    "stage": "SENSITIVITY",
+    "initial_state": "STRIPE",
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      4,
+      4,
+      3
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  },
+  {
+    "run_id": "C_smear010_FM",
+    "stage": "SENSITIVITY",
+    "initial_state": "FM",
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800,
+    "degauss_ry": 0.01
+  },
+  {
+    "run_id": "C_smear010_CB",
+    "stage": "SENSITIVITY",
+    "initial_state": "CB",
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800,
+    "degauss_ry": 0.01
+  },
+  {
+    "run_id": "C_smear010_STRIPE",
+    "stage": "SENSITIVITY",
+    "initial_state": "STRIPE",
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800,
+    "degauss_ry": 0.01
+  }
+]

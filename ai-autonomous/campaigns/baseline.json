@@ -1,0 +1,141 @@
+[
+  {
+    "run_id": "B_a100_FM",
+    "stage": "BASELINE",
+    "initial_state": "FM",
+    "a_ang": 3.765,
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  },
+  {
+    "run_id": "B_a100_CB",
+    "stage": "BASELINE",
+    "initial_state": "CB",
+    "a_ang": 3.765,
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  },
+  {
+    "run_id": "B_a100_STRIPE",
+    "stage": "BASELINE",
+    "initial_state": "STRIPE",
+    "a_ang": 3.765,
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  },
+  {
+    "run_id": "B_a100_NM",
+    "stage": "BASELINE_REFERENCE",
+    "initial_state": "NM",
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  },
+  {
+    "run_id": "B_a098_FM",
+    "stage": "BASELINE",
+    "initial_state": "FM",
+    "a_ang": 3.6897,
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  },
+  {
+    "run_id": "B_a098_CB",
+    "stage": "BASELINE",
+    "initial_state": "CB",
+    "a_ang": 3.6897,
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  },
+  {
+    "run_id": "B_a098_STRIPE",
+    "stage": "BASELINE",
+    "initial_state": "STRIPE",
+    "a_ang": 3.6897,
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  },
+  {
+    "run_id": "B_a102_FM",
+    "stage": "BASELINE",
+    "initial_state": "FM",
+    "a_ang": 3.8403,
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  },
+  {
+    "run_id": "B_a102_CB",
+    "stage": "BASELINE",
+    "initial_state": "CB",
+    "a_ang": 3.8403,
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  },
+  {
+    "run_id": "B_a102_STRIPE",
+    "stage": "BASELINE",
+    "initial_state": "STRIPE",
+    "a_ang": 3.8403,
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  }
+]

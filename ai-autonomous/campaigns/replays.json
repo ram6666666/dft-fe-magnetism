@@ -1,0 +1,57 @@
+[
+  {
+    "run_id": "D_replay_STRIPE",
+    "stage": "REPLAY",
+    "initial_state": "STRIPE",
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800
+  },
+  {
+    "run_id": "D_seed003_FM",
+    "stage": "SEED_SENSITIVITY",
+    "initial_state": "FM",
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800,
+    "starting_polarization": 0.03
+  },
+  {
+    "run_id": "D_seed003_CB",
+    "stage": "SEED_SENSITIVITY",
+    "initial_state": "CB",
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800,
+    "starting_polarization": 0.03
+  },
+  {
+    "run_id": "D_seed003_STRIPE",
+    "stage": "SEED_SENSITIVITY",
+    "initial_state": "STRIPE",
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800,
+    "starting_polarization": 0.03
+  }
+]

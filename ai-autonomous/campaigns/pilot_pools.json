@@ -1,0 +1,3 @@
+[
+  {"run_id":"P003_stripe_openblas_pool2", "initial_state":"STRIPE", "stage":"PILOT_RUNTIME_POOLING", "max_seconds":1800, "kpoint_pools":2}
+]
