@@ -261,6 +261,7 @@ def load_records(root: Path):
         data["parallel_layout"] = {
             "ranks": _command_integer(command, ("-np", "-n"), 1),
             "pools": _command_integer(command, ("-nk", "-npool", "-npools"), 1),
+            "binding": command[command.index("--bind-to")+1] if "--bind-to" in command and command.index("--bind-to")+1<len(command) else "NOT_EXPLICIT_IN_COMMAND",
             "omp_threads": env.get("OMP_NUM_THREADS"),
             "blas_threads": env.get("OPENBLAS_NUM_THREADS"),
         }

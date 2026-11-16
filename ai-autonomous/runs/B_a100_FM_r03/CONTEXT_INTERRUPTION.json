@@ -1,0 +1,10 @@
+{
+  "observed_utc": "2026-11-16T20:51:24.253978+00:00",
+  "reason": "EXECUTION_CONTEXT_INTERRUPTED_UNKNOWN_CAUSE",
+  "owning_tool_session": 69387,
+  "tool_observation": "Unknown process id at2026-11-16T20:45:08Z",
+  "last_pw_log_write_utc": "2026-11-16T20:23:38.899171+00:00",
+  "qe_exit_code": null,
+  "scientific_completion": false,
+  "limits": "No terminal QE receipt exists; global process absence cannot be independently established from a new PID namespace. Tool ownership is gone, logs stopped over20minutes earlier, and no successful result or background continuation is claimed."
+}

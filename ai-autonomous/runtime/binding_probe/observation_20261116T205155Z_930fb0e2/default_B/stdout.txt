@@ -1,0 +1,2 @@
+{"rank": "0", "local_rank": "0", "pid": 13, "affinity": [0]}
+{"rank": "1", "local_rank": "1", "pid": 14, "affinity": [1]}

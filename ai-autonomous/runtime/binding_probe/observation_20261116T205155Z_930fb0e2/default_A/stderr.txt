@@ -1,0 +1,3 @@
+hwloc/linux: failed to find sysfs cpu topology directory, aborting linux discovery.
+[e3865bf49b68:00005] Rank 1 bound to package[0][core:1]
+[e3865bf49b68:00005] Rank 0 bound to package[0][core:0]

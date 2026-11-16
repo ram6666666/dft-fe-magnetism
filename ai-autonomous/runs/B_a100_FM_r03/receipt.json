@@ -1,0 +1,54 @@
+{
+  "run_id": "B_a100_FM_r03",
+  "status": "RUN_FAILED",
+  "prepared_at": "2026-11-16T20:12:08.082763+00:00",
+  "input_sha256": "424b08a14fb87360f5a17cd59b57739499444df7172c55c456f2e9c9ff670a84",
+  "pseudo_sha256": {
+    "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+    "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+  },
+  "source_sha256": "3f181c2e9d9a7547463882528f68645461470e2bbc0e75b5b6df9022fdc2a49a",
+  "source_path": "source_versions/3f181c2e9d9a7547463882528f68645461470e2bbc0e75b5b6df9022fdc2a49a.py",
+  "pw_executable": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+  "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+  "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+  "projwfc_sha256": "1bb5632fd9292ba7f544e7cfc9ff38c89906d0527ea3f7e81a287f12575460ed",
+  "stop_reason": "EXECUTION_CONTEXT_INTERRUPTED_UNKNOWN_CAUSE",
+  "pw": {
+    "command": [
+      "mpirun",
+      "-np",
+      "2",
+      "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+      "-nk",
+      "2",
+      "-in",
+      "input.in"
+    ],
+    "cwd": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_FM_r03",
+    "start": "2026-11-16T20:12:08.437440+00:00",
+    "status": "EXECUTION_CONTEXT_INTERRUPTED",
+    "timeout_seconds": 1860,
+    "environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "LD_LIBRARY_PATH": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread:/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/lib/x86_64-linux-gnu",
+      "TMPDIR": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_FM_r03/tmp/pw",
+      "PRTE_MCA_prte_tmpdir_base": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_FM_r03/tmp/pw",
+      "OMPI_MCA_btl_sm_backing_directory": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_FM_r03/tmp/pw"
+    },
+    "pid": 12,
+    "exit_code": null,
+    "elapsed_seconds": null,
+    "end_observed_at": "2026-11-16T20:51:24.253978+00:00"
+  },
+  "file_hashes": {
+    "input.in": "424b08a14fb87360f5a17cd59b57739499444df7172c55c456f2e9c9ff670a84",
+    "CONTEXT_INTERRUPTION.json": "181869d93712995b3f5e2b319100af91fbfc4a873c1178962d5e4503fe0e164a",
+    "runtime.json": "f5b1ed6b8c3e1d8037787817dec557c3e531a117f4cb5603e71b603b0588a5e8",
+    "config.json": "e8110cbc133c3bfea215a0f314b127b84383434c91b015b55d5812f42f723a39",
+    "pw_execution.json": "c6e19f68666a553b59d668b0747876e65bca232b671bda112b3144f8304ca39d",
+    "pw.out": "eb71c01534374d1701e0771abcaf486854b797547e8daa2941aa6e6dbbdf4564",
+    "pw.err": "d84a8f6edd548536575c09062a5223f548c67f753be238589d44f2210121f646"
+  }
+}

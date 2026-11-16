@@ -1,0 +1,32 @@
+{
+  "status": "RUN_FAILED",
+  "scf_converged": false,
+  "job_done": false,
+  "energy_total_ry": null,
+  "scf_accuracy_ry": 0.00290558,
+  "scf_iterations": null,
+  "total_magnetization_muB_cell": 0.01,
+  "absolute_magnetization_muB_cell": 7.12,
+  "smearing_contribution_ry": null,
+  "qe_version": "6.7MaX",
+  "run_id": "B_a100_CB_r03",
+  "initial_state": "CB",
+  "final_state": "UNVERIFIED_FINAL_STATE",
+  "fe_lowdin_moments_muB": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "all_lowdin_moments_muB": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "stop_reason": "EXECUTION_CONTEXT_INTERRUPTED_UNKNOWN_CAUSE"
+}

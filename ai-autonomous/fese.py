@@ -41,7 +41,8 @@ DEFAULTS = dict(a_ang=3.765, c_ang=5.518, z_se=.2343, ecutwfc_ry=60.,
                 kgrid=[4, 4, 3], kshift=[0, 0, 0], degauss_ry=.02,
                 conv_thr_ry=1e-7, mixing_beta=.3, electron_maxstep=120,
                 starting_polarization=.15, nbnd=84, max_seconds=600,
-                project=True, stage='PILOT', path_id='FIXED_C_Z_TETRAGONAL_R01')
+                project=True, stage='PILOT', path_id='FIXED_C_Z_TETRAGONAL_R01',
+                mpi_bind_to='none')
 
 def utc():
     """Return an unambiguous UTC timestamp for observable runtime evidence."""
@@ -349,7 +350,10 @@ def execute(case, pw, proj, ranks):
     receipt = json.loads((d/'receipt.json').read_text())
     pwpath = shutil.which(pw) or pw
     proj = shutil.which(proj) or proj
-    launcher = ['mpirun','-np',str(ranks)] if ranks>1 else []
+    # Independent default mpirun jobs were observed pinning to the same cores.
+    # Explicit no-binding lets the OS schedule concurrent jobs across its allowed
+    # CPU set. Rank/pool counts and numerical-library identity remain recorded.
+    launcher = ['mpirun','--bind-to',c['mpi_bind_to'],'-np',str(ranks)] if ranks>1 else []
     receipt['pw_executable'] = str(Path(pwpath).resolve())
     receipt['pw_sha256'] = sha(pwpath) if Path(pwpath).is_file() else None
     identity=runtime_identity(pwpath,proj)

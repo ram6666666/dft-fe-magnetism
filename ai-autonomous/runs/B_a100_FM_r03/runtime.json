@@ -1,0 +1,41 @@
+{
+  "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+  "projwfc_sha256": "1bb5632fd9292ba7f544e7cfc9ff38c89906d0527ea3f7e81a287f12575460ed",
+  "ldd_stdout": "\tlinux-vdso.so.1 (0x00007f662f84b000)\n\tlibscalapack-openmpi.so.2.2 => /workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/lib/x86_64-linux-gnu/libscalapack-openmpi.so.2.2 (0x00007f662d59c000)\n\tliblapack.so.3 => /workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3 (0x00007f662ce63000)\n\tlibblas.so.3 => /workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 (0x00007f662cde2000)\n\tlibfftw3.so.3 => /lib/x86_64-linux-gnu/libfftw3.so.3 (0x00007f662cb95000)\n\tlibmpi_mpifh.so.40 => /lib/x86_64-linux-gnu/libmpi_mpifh.so.40 (0x00007f662cb28000)\n\tlibgfortran.so.5 => /lib/x86_64-linux-gnu/libgfortran.so.5 (0x00007f662c824000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f662c734000)\n\tlibmvec.so.1 => /lib/x86_64-linux-gnu/libmvec.so.1 (0x00007f662c63b000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007f662c60e000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f662c418000)\n\tlibmpi.so.40 => /lib/x86_64-linux-gnu/libmpi.so.40 (0x00007f662c04b000)\n\tlibopenblas.so.0 => /workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblas.so.0 (0x00007f6629a70000)\n\tlibopen-pal.so.80 => /lib/x86_64-linux-gnu/libopen-pal.so.80 (0x00007f6629933000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007f662f84d000)\n\tlibpsm2.so.2 => /lib/x86_64-linux-gnu/libpsm2.so.2 (0x00007f66298ca000)\n\tlibfabric.so.1 => /lib/x86_64-linux-gnu/libfabric.so.1 (0x00007f6629703000)\n\tlibucp.so.0 => /lib/x86_64-linux-gnu/libucp.so.0 (0x00007f662956a000)\n\tlibucs.so.0 => /lib/x86_64-linux-gnu/libucs.so.0 (0x00007f66294fb000)\n\tlibevent_core-2.1.so.7 => /lib/x86_64-linux-gnu/libevent_core-2.1.so.7 (0x00007f66294c5000)\n\tlibevent_pthreads-2.1.so.7 => /lib/x86_64-linux-gnu/libevent_pthreads-2.1.so.7 (0x00007f66294c0000)\n\tlibhwloc.so.15 => /lib/x86_64-linux-gnu/libhwloc.so.15 (0x00007f662945c000)\n\tlibpmix.so.2 => /lib/x86_64-linux-gnu/libpmix.so.2 (0x00007f6629229000)\n\tlibucm.so.0 => /lib/x86_64-linux-gnu/libucm.so.0 (0x00007f662920a000)\n\tlibuct.so.0 => /lib/x86_64-linux-gnu/libuct.so.0 (0x00007f66291bf000)\n\tlibnl-3.so.200 => /lib/x86_64-linux-gnu/libnl-3.so.200 (0x00007f662919c000)\n\tlibnuma.so.1 => /lib/x86_64-linux-gnu/libnuma.so.1 (0x00007f662918d000)\n\tlibrdmacm.so.1 => /lib/x86_64-linux-gnu/librdmacm.so.1 (0x00007f662916c000)\n\tlibefa.so.1 => /lib/x86_64-linux-gnu/libefa.so.1 (0x00007f662915e000)\n\tlibibverbs.so.1 => /lib/x86_64-linux-gnu/libibverbs.so.1 (0x00007f662913d000)\n\tlibudev.so.1 => /lib/x86_64-linux-gnu/libudev.so.1 (0x00007f66290f8000)\n\tlibmunge.so.2 => /lib/x86_64-linux-gnu/libmunge.so.2 (0x00007f66290ec000)\n\tlibnl-route-3.so.200 => /lib/x86_64-linux-gnu/libnl-route-3.so.200 (0x00007f6629057000)\n\tlibcap.so.2 => /lib/x86_64-linux-gnu/libcap.so.2 (0x00007f662904b000)\n",
+  "ldd_stderr": "",
+  "numerical_libraries": {
+    "libscalapack-openmpi.so.2.2.1": {
+      "path": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/lib/x86_64-linux-gnu/libscalapack-openmpi.so.2.2.1",
+      "sha256": "dc09400498e5806e6ef05e7278fab28820d6a74caa36ba5a804f7c96ff1e3939"
+    },
+    "liblapack.so.3": {
+      "path": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3",
+      "sha256": "336a9b0a527ae2d558b4ff59844e787e49e38d5a1c39d5ae36651252badf28cd"
+    },
+    "libblas.so.3": {
+      "path": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3",
+      "sha256": "6bcdc34466e1ff7155f60b6365abe51d9125fc97c90d4c6e392c3f6260acf44d"
+    },
+    "libfftw3.so.3.6.10": {
+      "path": "/usr/lib/x86_64-linux-gnu/libfftw3.so.3.6.10",
+      "sha256": "cd2c5964adadc66703a8c88cd308bf4bf75fc674e6490559482fdbfa182dc6cb"
+    },
+    "libmpi_mpifh.so.40.40.1": {
+      "path": "/usr/lib/x86_64-linux-gnu/libmpi_mpifh.so.40.40.1",
+      "sha256": "1edee66f9e572d7de4c7b890f747a8f7fff761ebe0fa81e35f879469a53dc645"
+    },
+    "libgfortran.so.5.0.0": {
+      "path": "/usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0",
+      "sha256": "d1c716d10039872bb5481b921d2142577c7873cad4d8d9f09028231aa7e42127"
+    },
+    "libmpi.so.40.40.7": {
+      "path": "/usr/lib/x86_64-linux-gnu/libmpi.so.40.40.7",
+      "sha256": "dcca32f78fe6bda5ab10ca9019a3129e1869ffe6bb7a6f5461207563d2cea446"
+    },
+    "libopenblasp-r0.3.29.so": {
+      "path": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.29.so",
+      "sha256": "10d1c640ecccd21063a7d80f90e949b1d48202830b6ec0b52b2796c5d0fbce63"
+    }
+  },
+  "profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c"
+}
