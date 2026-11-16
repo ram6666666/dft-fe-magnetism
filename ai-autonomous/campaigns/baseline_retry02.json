@@ -1,0 +1,34 @@
+[
+  {
+    "run_id": "B_a100_FM_r02",
+    "stage": "BASELINE",
+    "initial_state": "FM",
+    "a_ang": 3.765,
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800,
+    "retries": "B_a100_FM",
+    "retry_reason": "Concurrent isolated PID namespaces collided in PRTE shared temporary session directory; no scientific input change"
+  },
+  {
+    "run_id": "B_a100_STRIPE_r02",
+    "stage": "BASELINE",
+    "initial_state": "STRIPE",
+    "a_ang": 3.765,
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800,
+    "retries": "B_a100_STRIPE",
+    "retry_reason": "Concurrent isolated PID namespaces collided in PRTE shared temporary session directory; no scientific input change"
+  }
+]

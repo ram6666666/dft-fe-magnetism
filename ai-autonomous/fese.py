@@ -181,35 +181,76 @@ def run_process(cmd, d, stem, seconds):
     env = os.environ.copy()
     env.setdefault('OMP_NUM_THREADS', '1')
     env.setdefault('OPENBLAS_NUM_THREADS', '1')
+    # Independent tool sessions can reuse PID 12 while sharing /tmp. OpenMPI 5
+    # then collides in PRTE session directories. Give every stage its own
+    # temporary root; this changes execution plumbing, not physical inputs.
+    mpi_tmp=(d/'tmp'/stem).resolve()
+    mpi_tmp.mkdir(parents=True,exist_ok=True)
+    env['TMPDIR']=str(mpi_tmp)
+    env['PRTE_MCA_prte_tmpdir_base']=str(mpi_tmp)
+    # PRTE isolation alone did not fix the observed shared-memory crashes.
+    # btl_sm names mmap files by node/UID/jobid/rank in shared /dev/shm; reused
+    # namespace-local PIDs can be associated with reused runtime identities.
+    # The file-collision explanation is supported, but not proved, by the stack.
+    env['OMPI_MCA_btl_sm_backing_directory']=str(mpi_tmp)
+    env['OMPI_MCA_osc_sm_backing_directory']=str(mpi_tmp)
+    env['OMPI_MCA_osc_rdma_backing_directory']=str(mpi_tmp)
     timed_out = False
+    stop_reason = None
+    signal_request = []
+    previous_handlers = {}
+    # The CLI owns one child process group. Gracefully preserve an interrupted
+    # receipt instead of abandoning MPI children when a supervisor stops it.
+    def request_stop(signum, frame):
+        signal_request.append(signum)
+    for signum in (signal.SIGINT, signal.SIGTERM):
+        previous_handlers[signum]=signal.signal(signum,request_stop)
     live=dict(command=cmd,cwd=str(d),start=start,status='RUNNING',timeout_seconds=seconds,
-              environment={k:env.get(k) for k in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','LD_LIBRARY_PATH')})
+              environment={k:env.get(k) for k in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','LD_LIBRARY_PATH','TMPDIR','PRTE_MCA_prte_tmpdir_base','OMPI_MCA_btl_sm_backing_directory','OMPI_MCA_osc_sm_backing_directory','OMPI_MCA_osc_rdma_backing_directory')})
     dump(d/f'{stem}_execution.json',live)
     with (d/f'{stem}.out').open('w') as out, (d/f'{stem}.err').open('w') as err:
         try:
             p = subprocess.Popen(cmd, cwd=d, env=env, stdout=out, stderr=err, start_new_session=True)
             live['pid']=p.pid
             dump(d/f'{stem}_execution.json',live)
-            try:
-                code = p.wait(timeout=seconds)
-            except subprocess.TimeoutExpired:
-                timed_out = True
-                os.killpg(p.pid, signal.SIGTERM)
+            while True:
+                remaining=seconds-(time.monotonic()-t0)
+                if signal_request:
+                    stop_reason=f'WORKER_SIGNAL_{signal_request[-1]}'
+                elif (d/'CANCEL_REQUEST').exists():
+                    stop_reason='EXPLICIT_CANCEL_REQUEST_FILE'
+                elif remaining<=0:
+                    timed_out=True
+                    stop_reason='EXTERNAL_TIME_BOUND'
+                if stop_reason:
+                    try:
+                        os.killpg(p.pid, signal.SIGTERM)
+                    except ProcessLookupError:
+                        pass
+                    try:
+                        p.wait(timeout=10)
+                    except subprocess.TimeoutExpired:
+                        os.killpg(p.pid, signal.SIGKILL)
+                        p.wait()
+                    code=124 if timed_out else 125
+                    break
                 try:
-                    p.wait(timeout=10)
+                    code=p.wait(timeout=min(5,remaining))
+                    break
                 except subprocess.TimeoutExpired:
-                    os.killpg(p.pid, signal.SIGKILL)
-                    p.wait()
-                code = 124
+                    continue
         except OSError as e:
             err.write(f'{type(e).__name__}: {e}\n')
             code = 127
+        finally:
+            for signum,handler in previous_handlers.items():
+                signal.signal(signum,handler)
     r1 = resource.getrusage(resource.RUSAGE_CHILDREN)
     result=dict(command=cmd, cwd=str(d), start=start, end=utc(), exit_code=code,
-        elapsed_seconds=time.monotonic()-t0, timed_out=timed_out,
+        elapsed_seconds=time.monotonic()-t0, timed_out=timed_out, stop_reason=stop_reason,
         child_cpu_seconds=r1.ru_utime+r1.ru_stime-r0.ru_utime-r0.ru_stime,
         child_maxrss_kib=r1.ru_maxrss, environment={k:env.get(k) for k in
-          ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','LD_LIBRARY_PATH')})
+          ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','LD_LIBRARY_PATH','TMPDIR','PRTE_MCA_prte_tmpdir_base','OMPI_MCA_btl_sm_backing_directory','OMPI_MCA_osc_sm_backing_directory','OMPI_MCA_osc_rdma_backing_directory')})
     dump(d/f'{stem}_execution.json',{**result,'status':'PROCESS_EXITED'})
     return result
 
@@ -384,14 +425,21 @@ def main():
     ap=argparse.ArgumentParser(description=__doc__)
     sub=ap.add_subparsers(dest='action',required=True)
     for action in ('run','prepare'):
-        p=sub.add_parser(action);p.add_argument('campaign');p.add_argument('--only');p.add_argument('--pw',default='pw.x');p.add_argument('--proj',default='projwfc.x');p.add_argument('--ranks',type=int,default=1);p.add_argument('--no-analyze',action='store_true')
+        p=sub.add_parser(action);p.add_argument('campaign');p.add_argument('--only');p.add_argument('--new-run-id',help='Fresh immutable replay ID; requires one --only selection');p.add_argument('--pw',default='pw.x');p.add_argument('--proj',default='projwfc.x');p.add_argument('--ranks',type=int,default=1);p.add_argument('--no-analyze',action='store_true')
     sub.add_parser('analyze')
     args=ap.parse_args()
     if args.action=='analyze':
         analyze();return
-    for case in json.loads(Path(args.campaign).read_text()):
-        if args.only and args.only!=case['run_id']:
-            continue
+    cases=json.loads(Path(args.campaign).read_text())
+    if args.only:
+        cases=[case for case in cases if case['run_id']==args.only]
+    if not cases:
+        ap.error('No matching campaign case; nothing was run')
+    if args.new_run_id and (not args.only or len(cases)!=1):
+        ap.error('--new-run-id requires exactly one --only case')
+    for case in cases:
+        if args.new_run_id:
+            case={**case,'replay_of':case['run_id'],'run_id':args.new_run_id}
         if args.action=='prepare':prepare(case)
         else:
             execute(case,args.pw,args.proj,args.ranks)

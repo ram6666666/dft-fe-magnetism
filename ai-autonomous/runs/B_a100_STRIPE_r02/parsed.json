@@ -1,0 +1,32 @@
+{
+  "status": "RUN_FAILED",
+  "scf_converged": false,
+  "job_done": false,
+  "energy_total_ry": null,
+  "scf_accuracy_ry": null,
+  "scf_iterations": null,
+  "total_magnetization_muB_cell": null,
+  "absolute_magnetization_muB_cell": null,
+  "smearing_contribution_ry": null,
+  "qe_version": "6.7MaX",
+  "run_id": "B_a100_STRIPE_r02",
+  "initial_state": "STRIPE",
+  "final_state": "UNVERIFIED_FINAL_STATE",
+  "fe_lowdin_moments_muB": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "all_lowdin_moments_muB": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "stop_reason": "SUPERVISOR_INTERRUPTED_STALLED_MPI"
+}

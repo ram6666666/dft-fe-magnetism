@@ -1,0 +1,40 @@
+{
+  "a_ang": 3.765,
+  "c_ang": 5.518,
+  "z_se": 0.2343,
+  "ecutwfc_ry": 90,
+  "kgrid": [
+    2,
+    2,
+    2
+  ],
+  "kshift": [
+    0,
+    0,
+    0
+  ],
+  "degauss_ry": 0.02,
+  "conv_thr_ry": 1e-07,
+  "mixing_beta": 0.3,
+  "electron_maxstep": 120,
+  "starting_polarization": 0.15,
+  "nbnd": 84,
+  "max_seconds": 1800,
+  "project": true,
+  "stage": "BASELINE",
+  "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+  "run_id": "B_a100_STRIPE",
+  "initial_state": "STRIPE",
+  "kpoint_pools": 2,
+  "ecutrho_ry": 360,
+  "n_fe": 4,
+  "functional": "PBE",
+  "smearing": "mv",
+  "relativistic": "scalar; collinear; no SOC",
+  "startingwfc": "atomic+random",
+  "startingpot": "atomic",
+  "rng_algorithm": "QE6.7 randy shuffled LCG; m=714025, ia=1366, ic=150889, ntab=97",
+  "rng_default_initial_seed": 0,
+  "rng_seed_evidence": "SOURCE_DERIVED_DEFAULT_FOR_CONFIGURED_STATIC_SCF_PATH",
+  "rng_state_runtime_captured": false
+}

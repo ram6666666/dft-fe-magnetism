@@ -1,0 +1,7 @@
+                MCA prte: "prte_tmpdir_base" (current value:
+                          "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runtime/prte_probe_tmp",
+                          data source: environment, type: string)
+                          Base of the session directory tree to be used by
+                          all processes
+                MCA prte: "prte_local_tmpdir_base" (current value: "", data
+                          source: default, type: string)

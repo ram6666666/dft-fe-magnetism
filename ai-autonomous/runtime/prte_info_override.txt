@@ -1,0 +1,1097 @@
+                    PRTE: 3.0.82025-02-17
+      PRTE repo revision: 2025-02-17
+       PRTE release date: @PMIX_RELEASE_DATE@
+                    PMIx: OpenPMIx 5.0.7a1 (PMIx Standard: 5.1, Stable ABI:
+                          5.0, Provisional ABI: 5.0)
+                 MCA mca: no components
+                MCA prte: no components
+               MCA hwloc: no components
+                MCA pmix: no components
+                 MCA rml: no components
+              MCA routed: no components
+              MCA errmgr: dvm (MCA v2.1.0, API v3.0.0, Component v3.0.6)
+              MCA errmgr: prted (MCA v2.1.0, API v3.0.0, Component v3.0.6)
+                 MCA ess: env (MCA v2.1.0, API v3.0.0, Component v3.0.6)
+                 MCA ess: hnp (MCA v2.1.0, API v3.0.0, Component v3.0.6)
+                 MCA ess: slurm (MCA v2.1.0, API v3.0.0, Component v3.0.6)
+               MCA filem: raw (MCA v2.1.0, API v2.0.0, Component v3.0.6)
+             MCA grpcomm: direct (MCA v2.1.0, API v3.0.0, Component v3.0.6)
+                 MCA iof: hnp (MCA v2.1.0, API v2.0.0, Component v3.0.6)
+                 MCA iof: prted (MCA v2.1.0, API v2.0.0, Component v3.0.6)
+                MCA odls: default (MCA v2.1.0, API v2.0.0, Component v3.0.6)
+                 MCA oob: tcp (MCA v2.1.0, API v2.0.0, Component v3.0.6)
+                 MCA plm: slurm (MCA v2.1.0, API v2.0.0, Component v3.0.6)
+                 MCA plm: ssh (MCA v2.1.0, API v2.0.0, Component v3.0.6)
+           MCA backtrace: execinfo (MCA v2.1.0, API v2.0.0, Component v3.0.6)
+              MCA prtedl: dlopen (MCA v2.1.0, API v1.0.0, Component v3.0.6)
+     MCA prteinstalldirs: env (MCA v2.1.0, API v2.0.0, Component v3.0.6)
+     MCA prteinstalldirs: config (MCA v2.1.0, API v2.0.0, Component v3.0.6)
+       MCA prtereachable: weighted (MCA v2.1.0, API v2.0.0, Component v3.0.6)
+       MCA prtereachable: netlink (MCA v2.1.0, API v2.0.0, Component v3.0.6)
+                 MCA ras: simulator (MCA v2.1.0, API v2.0.0, Component
+                          v3.0.6)
+                 MCA ras: testrm (MCA v2.1.0, API v2.0.0, Component v3.0.6)
+                 MCA ras: gridengine (MCA v2.1.0, API v2.0.0, Component
+                          v3.0.6)
+                 MCA ras: pbs (MCA v2.1.0, API v2.0.0, Component v3.0.6)
+                 MCA ras: slurm (MCA v2.1.0, API v2.0.0, Component v3.0.6)
+               MCA rmaps: ppr (MCA v2.1.0, API v4.0.0, Component v3.0.8)
+               MCA rmaps: rank_file (MCA v2.1.0, API v4.0.0, Component
+                          v3.0.6)
+               MCA rmaps: round_robin (MCA v2.1.0, API v4.0.0, Component
+                          v3.0.6)
+               MCA rmaps: seq (MCA v2.1.0, API v4.0.0, Component v3.0.6)
+                 MCA rtc: hwloc (MCA v2.1.0, API v1.0.0, Component v3.0.6)
+              MCA schizo: ompi (MCA v2.1.0, API v1.0.0, Component v3.0.6)
+              MCA schizo: prte (MCA v2.1.0, API v1.0.0, Component v3.0.6)
+               MCA state: dvm (MCA v2.1.0, API v1.0.0, Component v3.0.6)
+               MCA state: prted (MCA v2.1.0, API v1.0.0, Component v3.0.6)
+                  Prefix: /usr
+             Exec_prefix: /usr
+                  Bindir: /usr/bin
+                 Sbindir: /usr/sbin
+                  Libdir: /usr/lib/x86_64-linux-gnu/openmpi/lib
+                  Incdir: /usr/lib/x86_64-linux-gnu/openmpi/include
+                  Mandir: /usr/share/man
+               Pkglibdir: /usr/lib/x86_64-linux-gnu/openmpi/lib/prte
+              Libexecdir: /usr/libexec
+             Datarootdir: /usr/share
+                 Datadir: /usr/share
+              Sysconfdir: /etc/openmpi
+          Sharedstatedir: /usr/com
+           Localstatedir: /var
+                 Infodir: /usr/share/info
+              Pkgdatadir: /usr/share/prte
+               Pkglibdir: /usr/lib/x86_64-linux-gnu/openmpi/lib/prte
+           Pkgincludedir: /usr/lib/x86_64-linux-gnu/openmpi/include/prte
+ Configured architecture: x86_64-pc-linux-gnu
+          Configure host: hostname
+           Configured by: username
+           Configured on: Mon Feb 17 13:09:46 UTC 2025
+          Configure host: hostname
+  Configure command line: '--disable-option-checking' '--prefix=/usr'
+                          '--enable-prte-ft'
+                          '--with-proxy-version-string=5.0.7'
+                          '--with-proxy-package-name=Open MPI'
+                          '--with-proxy-bugreport=https://www.open-mpi.org/community/help/'
+                          '--disable-devel-check'
+                          '--enable-prte-prefix-by-default'
+                          '--build=x86_64-linux-gnu'
+                          '--includedir=${prefix}/include'
+                          '--mandir=${prefix}/share/man'
+                          '--infodir=${prefix}/share/info'
+                          '--sysconfdir=/etc' '--localstatedir=/var'
+                          '--libdir=${prefix}/lib/x86_64-linux-gnu'
+                          '--runstatedir=/run' '--disable-maintainer-mode'
+                          '--disable-dependency-tracking'
+                          '--disable-wrapper-runpath'
+                          '--with-package-string=Debian OpenMPI'
+                          '--with-verbs' '--with-libfabric' '--with-psm'
+                          '--with-psm2' '--with-ucx'
+                          '--with-jdk-dir=/usr/lib/jvm/default-java'
+                          '--enable-mpi-java'
+                          '--enable-opal-btl-usnic-unit-tests'
+                          '--disable-silent-rules' '--enable-ipv6'
+                          '--with-devel-headers' '--with-slurm' '--with-sge'
+                          '--without-tm' '--sysconfdir=/etc/openmpi'
+                          '--libdir=${prefix}/lib/x86_64-linux-gnu/openmpi/lib'
+                          '--includedir=${prefix}/lib/x86_64-linux-gnu/openmpi/include'
+                          'build_alias=x86_64-linux-gnu' 'CFLAGS=-g -O2
+                          -Werror=implicit-function-declaration
+                          -ffile-prefix-map=/build/reproducible-path/openmpi-5.0.7=.
+                          -fstack-protector-strong -fstack-clash-protection
+                          -Wformat -Werror=format-security -fcf-protection
+                          -O3' 'LDFLAGS=-Wl,-z,relro' 'CPPFLAGS=-Wdate-time
+                          -D_FORTIFY_SOURCE=2' 'CXXFLAGS=-g -O2
+                          -ffile-prefix-map=/build/reproducible-path/openmpi-5.0.7=.
+                          -fstack-protector-strong -fstack-clash-protection
+                          -Wformat -Werror=format-security -fcf-protection
+                          -O3' 'FCFLAGS=-g -O2
+                          -ffile-prefix-map=/build/reproducible-path/openmpi-5.0.7=.
+                          -fstack-protector-strong -fstack-clash-protection
+                          -fcf-protection -O3' '--cache-file=/dev/null'
+                          '--srcdir=../../../../3rd-party/prrte'
+                Built by: username
+                Built on: Mon Feb 17 13:09:46 UTC 2025
+              Built host: hostname
+              C compiler: gcc
+     C compiler absolute: /usr/bin/gcc
+  C compiler family name: GNU
+      C compiler version: "14" "." "2" "." "0"
+             C char size: 1
+             C bool size: 1
+            C short size: 2
+              C int size: 4
+             C long size: 8
+            C float size: 4
+           C double size: 8
+          C pointer size: 8
+            C bool align: skipped
+             C int align: 4
+          C double align: 8
+          Thread support: posix
+            Build CFLAGS: -DNDEBUG  -g -O2
+                          -ffile-prefix-map=/build/reproducible-path/openmpi-5.0.7=.
+                          -fstack-protector-strong -fstack-clash-protection
+                          -fcf-protection -O3 -finline-functions  
+                          -Werror=implicit-function-declaration -Wformat
+                          -Werror=format-security
+           Build LDFLAGS: -Wl,-z,relro  -L/usr/lib/x86_64-linux-gnu/pmix2/lib
+                          -Wl,-rpath -Wl,/usr/lib/x86_64-linux-gnu/pmix2/lib
+                          -Wl,--enable-new-dtags
+              Build LIBS: -lm   -levent_core -levent_pthreads -lpmix -lhwloc
+  Internal debug support: no
+              dl support: yes
+   prun default --prefix: yes
+     Symbol vis. support: yes
+          Manpages built: yes
+                 MCA mca: "mca_param_files" (current value:
+                          "/home/agent/.pmix/mca-params.conf,/usr/lib/x86_64-linux-gnu/pmix2/share/pmix-mca-params.conf",
+                          data source: default, type: string, deprecated,
+                          synonym of: mca_base_param_files)
+                          Path for MCA configuration files containing
+                          variable values
+                 MCA mca: "mca_component_path" (current value:
+                          "/usr/lib/x86_64-linux-gnu/pmix2/lib/pmix", data
+                          source: file
+                          (/usr/lib/x86_64-linux-gnu/pmix2/share/pmix-mca-params.conf:59),
+                          type: string, deprecated, synonym of:
+                          mca_base_component_path)
+                          Path where to look for additional components
+                 MCA mca: "mca_component_show_load_errors" (current value:
+                          "all", data source: default, type: string,
+                          deprecated, synonym of:
+                          mca_base_component_show_load_errors)
+                          Whether to show errors for components that failed
+                          to load or not. Valid values are "all" (meaning:
+                          all load failures are reported), "none" (no load
+                          failures are reported), or a comma-delimited list
+                          of items, each of which can be a
+                          framework/component pair or a framework name (only
+                          load failures from the specifically-listed items
+                          are reported). If the comma-delimited list is
+                          prefixed with "^", then orientation of the list is
+                          negated: warn about all load failures *except* for
+                          the listed items.
+                 MCA mca: "mca_component_disable_dlopen" (current value: "0",
+                          data source: default, type: bool, deprecated,
+                          synonym of: mca_base_component_disable_dlopen)
+                          Whether to attempt to disable opening dynamic
+                          components or not
+                 MCA mca: "mca_verbose" (current value: "stderr", data
+                          source: default, type: string, deprecated, synonym
+                          of: mca_base_verbose)
+                          Specifies where the default error output stream
+                          goes (this is separate from distinct help
+                          messages).  Accepts a comma-delimited list of:
+                          stderr, stdout, syslog,
+                          syslogpri:<notice|info|debug>, syslogid:<str>
+                          (where str is the prefix string for all syslog
+                          notices), file[:filename] (if filename is not
+                          specified, a default filename is used), fileappend
+                          (if not specified, the file is opened for
+                          truncation), level[:N] (if specified, integer
+                          verbose level; otherwise, 0 is implied)
+                 MCA mca: "mca_base_param_files" (current value:
+                          "/home/agent/.pmix/mca-params.conf,/usr/lib/x86_64-linux-gnu/pmix2/share/pmix-mca-params.conf",
+                          data source: default, type: string, synonyms:
+                          mca_param_files)
+                          Path for MCA configuration files containing
+                          variable values
+                 MCA mca: "mca_base_override_param_file" (current value:
+                          "/usr/lib/x86_64-linux-gnu/pmix2/share/pmix-mca-params-override.conf",
+                          data source: default, type: string)
+                          Variables set in this file will override any value
+                          set inthe environment or another configuration file
+                 MCA mca: "mca_base_suppress_override_warning" (current
+                          value: "0", data source: default, type: bool)
+                          Suppress warnings when attempting to set an
+                          overridden value (default: false)
+                 MCA mca: "mca_base_param_file_prefix" (current value: "",
+                          data source: default, type: string)
+                          Aggregate MCA parameter file sets
+                 MCA mca: "mca_base_param_file_path" (current value:
+                          "/usr/lib/x86_64-linux-gnu/pmix2/share/pmix/amca-param-sets:/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime",
+                          data source: default, type: string)
+                          Aggregate MCA parameter Search path
+                 MCA mca: "mca_base_param_file_path_force" (current value:
+                          "", data source: default, type: string)
+                          Forced Aggregate MCA parameter Search path
+                 MCA mca: "mca_base_component_path" (current value:
+                          "/usr/lib/x86_64-linux-gnu/pmix2/lib/pmix", data
+                          source: file
+                          (/usr/lib/x86_64-linux-gnu/pmix2/share/pmix-mca-params.conf:59),
+                          type: string, synonyms: mca_component_path)
+                          Path where to look for additional components
+                 MCA mca: "mca_base_component_show_load_errors" (current
+                          value: "all", data source: default, type: string,
+                          synonyms: mca_component_show_load_errors)
+                          Whether to show errors for components that failed
+                          to load or not. Valid values are "all" (meaning:
+                          all load failures are reported), "none" (no load
+                          failures are reported), or a comma-delimited list
+                          of items, each of which can be a
+                          framework/component pair or a framework name (only
+                          load failures from the specifically-listed items
+                          are reported). If the comma-delimited list is
+                          prefixed with "^", then orientation of the list is
+                          negated: warn about all load failures *except* for
+                          the listed items.
+                 MCA mca: "mca_base_abort_on_load_error" (current value: "0",
+                          data source: default, type: bool)
+                          Whether to abort when a specified component isn't
+                          found or cannot be loaded
+                 MCA mca: "mca_base_component_track_load_errors" (current
+                          value: "0", data source: default, type: bool)
+                          Whether to track errors for components that failed
+                          to load or not
+                 MCA mca: "mca_base_component_disable_dlopen" (current value:
+                          "0", data source: default, type: bool, synonyms:
+                          mca_component_disable_dlopen)
+                          Whether to attempt to disable opening dynamic
+                          components or not
+                 MCA mca: "mca_base_verbose" (current value: "stderr", data
+                          source: default, type: string, synonyms:
+                          mca_verbose)
+                          Specifies where the default error output stream
+                          goes (this is separate from distinct help
+                          messages).  Accepts a comma-delimited list of:
+                          stderr, stdout, syslog,
+                          syslogpri:<notice|info|debug>, syslogid:<str>
+                          (where str is the prefix string for all syslog
+                          notices), file[:filename] (if filename is not
+                          specified, a default filename is used), fileappend
+                          (if not specified, the file is opened for
+                          truncation), level[:N] (if specified, integer
+                          verbose level; otherwise, 0 is implied)
+                MCA prte: "prte_keep_fqdn_hostnames" (current value: "0",
+                          data source: default, type: bool)
+                          Whether or not to keep FQDN hostnames [default: no]
+                MCA prte: "prte_strip_prefix" (current value: "", data
+                          source: default, type: string)
+                          Prefix(es) to match when deciding whether to strip
+                          leading characters and zeroes from node names
+                          returned by daemons
+                MCA prte: "prte_signal" (current value: "6,7,8,11", data
+                          source: default, type: string)
+                          Comma-delimited list of integer signal numbers to
+                          PRTE to attempt to intercept.  Upon receipt of the
+                          intercepted signal, PRTE will display a stack trace
+                          and abort.  PRTE will *not* replace signals if
+                          handlers are already installed by the time MPI_INIT
+                          is invoked.  Optionally append ":complain" to any
+                          signal number in the comma-delimited list to make
+                          PRTE complain if it detects another signal handler
+                          (and therefore does not insert its own).
+                MCA prte: "prte_stacktrace_output" (current value: "stderr",
+                          data source: default, type: string)
+                          Specifies where the stack trace output stream goes.
+                           Accepts one of the following: none (disabled),
+                          stderr (default), stdout, file[:filename].   If
+                          'filename' is not specified, a default filename of
+                          'stacktrace' is used.  The 'filename' is appended
+                          with either '.PID' or '.RANK.PID', if RANK is
+                          available.  The 'filename' can be an absolute path
+                          or a relative path to the current working
+                          directory.
+                MCA prte: "prte_if_include" (current value: "", data source:
+                          default, type: string, synonyms: oob_tcp_include,
+                          oob_tcp_if_include)
+                          Comma-delimited list of devices and/or CIDR
+                          notation of TCP networks to use for PRTE bootstrap
+                          communication (e.g., "eth0,192.168.0.0/16"). 
+                          Mutually exclusive with prte_if_exclude.
+                MCA prte: "prte_if_exclude" (current value: "", data source:
+                          default, type: string, synonyms: oob_tcp_exclude,
+                          oob_tcp_if_exclude)
+                          Comma-delimited list of devices and/or CIDR
+                          notation of TCP networks to NOT use for PRTE
+                          bootstrap communication -- all devices not matching
+                          these specifications will be used (e.g.,
+                          "eth0,192.168.0.0/16").  If set to a non-default
+                          value, it is mutually exclusive with
+                          prte_if_include.
+                MCA prte: "prte_set_max_sys_limits" (current value: "", data
+                          source: default, type: string)
+                          Set the specified system-imposed limits to the
+                          specified value, including "unlimited".Supported
+                          params: core, filesize, maxmem, openfiles,
+                          stacksize, maxchildren
+                MCA prte: "prte_tmpdir_base" (current value:
+                          "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/prte_isolated_test",
+                          data source: environment, type: string)
+                          Base of the session directory tree to be used by
+                          all processes
+                MCA prte: "prte_local_tmpdir_base" (current value: "", data
+                          source: default, type: string)
+                          Base of the session directory tree to be used by
+                          prun/mpirun
+                MCA prte: "prte_remote_tmpdir_base" (current value: "", data
+                          source: default, type: string)
+                          Base of the session directory tree on remote nodes,
+                          if required to be different from head node
+                MCA prte: "prte_no_session_dirs" (current value: "", data
+                          source: default, type: string)
+                          Prohibited locations for session directories
+                          (multiple locations separated by ',', default=NULL)
+                MCA prte: "prte_fwd_environment" (current value: "0", data
+                          source: default, type: bool)
+                          Forward the entire local environment
+                MCA prte: "prte_execute_quiet" (current value: "0", data
+                          source: default, type: bool)
+                          Do not output error and help messages
+                MCA prte: "prte_report_silent_errors" (current value: "0",
+                          data source: default, type: bool)
+                          Report all errors, including silent ones
+                MCA prte: "prte_progress_thread_debug" (current value: "-1",
+                          data source: default, type: int)
+                          Debug level for PRTE progress threads
+                MCA prte: "prte_daemon_fail" (current value: "-4", data
+                          source: default, type: int)
+                          Have the specified prted fail after init for
+                          debugging purposes
+                MCA prte: "prte_daemon_fail_delay" (current value: "0", data
+                          source: default, type: int)
+                          Have the specified prted fail after specified
+                          number of seconds [default: 0 => no delay]
+                MCA prte: "prte_default_hostfile" (current value:
+                          "/etc/openmpi/prte-default-hostfile", data source:
+                          default, type: string)
+                          Name of the default hostfile (relative or absolute
+                          path, "none" to ignore environmental or default MCA
+                          param setting)
+                MCA prte: "prte_default_dash_host" (current value: "", data
+                          source: default, type: string)
+                          Default -host setting (specify "none" to ignore
+                          environmental or default MCA param setting)
+                MCA prte: "prte_show_resolved_nodenames" (current value: "0",
+                          data source: default, type: bool)
+                          Display any node names that are resolved to a
+                          different name [default: false]
+                MCA prte: "prte_do_not_resolve" (current value: "1", data
+                          source: default, type: bool)
+                          Do not attempt to resolve hostnames [defaults to
+                          true]
+                MCA prte: "prte_launch_agent" (current value: "prted", data
+                          source: default, type: string)
+                          Executable for DVM daemons on remote nodes
+                          [default: prted]
+                MCA prte: "prte_allocation_required" (current value: "0",
+                          data source: default, type: bool)
+                          Whether or not an allocation by a resource manager
+                          is required [default: no]
+                MCA prte: "prte_allowed_exit_without_sync" (current value:
+                          "0", data source: default, type: bool)
+                          Set default process exiting without calling
+                          finalize policy to not trigger job termination
+                MCA prte: "prte_report_child_jobs_separately" (current value:
+                          "0", data source: default, type: bool)
+                          Set default to return the exit status of the
+                          primary job only
+                MCA prte: "prte_stat_history_size" (current value: "1", data
+                          source: default, type: int)
+                          Number of stat samples to keep
+                MCA prte: "prte_max_vm_size" (current value: "-1", data
+                          source: default, type: int)
+                          Maximum size of virtual machine - used to subdivide
+                          allocation
+                MCA prte: "prte_set_default_slots" (current value: "", data
+                          source: default, type: string)
+                          Set the number of slots on nodes that lack such
+                          info to the number of specified objects [a number,
+                          "cores" (default), "packages", or "hwthreads"
+                          (default if hwthreads_as_cpus is set), or a fixed
+                          number to be applied to all nodes
+                MCA prte: "prte_set_default_slots_override" (current value:
+                          "0", data source: default, type: bool)
+                          Set the number of slots on nodes to the number of
+                          objects specified by prte_set_default_slots
+                          regardless whather we are in a managed allocation
+                          or specifications were given in a hostfile
+                MCA prte: "prte_daemon_cores" (current value: "", data
+                          source: default, type: string)
+                          Restrict the PRTE daemons (including mpirun) to
+                          operate on the specified cores (comma-separated
+                          list of ranges)
+                MCA prte: "prte_timeout_for_stack_trace" (current value:
+                          "30", data source: default, type: int)
+                          Seconds to wait for stack traces to return before
+                          terminating the job (<= 0 wait forever)
+                MCA prte: "prte_pmix_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity for PRRTE-level PMIx code
+                MCA prte: "prte_progress_thread_cpus" (current value: "",
+                          data source: default, type: string)
+                          Comma-delimited list of ranges of CPUs to whichthe
+                          internal PRRTE progress thread is to be bound
+                MCA prte: "prte_bind_progress_thread_reqd" (current value:
+                          "0", data source: default, type: bool)
+                          Whether binding of internal PRRTE progress thread
+                          is required
+                MCA prte: "prte_silence_shared_fs" (current value: "0", data
+                          source: default, type: bool)
+                          Silence the shared file system warning
+                MCA prte: "prte_ssh_agent" (current value: "ssh : rsh", data
+                          source: default, type: string, deprecated, synonym
+                          of: plm_ssh_agent)
+                          The command used to launch executables on remote
+                          nodes (typically "ssh")
+                MCA prte: "prte_assume_same_shell" (current value: "1", data
+                          source: default, type: bool, deprecated, synonym
+                          of: plm_ssh_assume_same_shell)
+                          If set to true, assume that the shell on the remote
+                          node is the same as the shell on the local node. 
+                          Otherwise, probe for what the remote shell
+                          [default: 1]
+                MCA prte: "prte_net_private_ipv4" (current value:
+                          "10.0.0.0/8;172.16.0.0/12;192.168.0.0/16;169.254.0.0/16",
+                          data source: default, type: string)
+                          Semicolon-delimited list of CIDR notation entries
+                          specifying what networks are considered "private"
+                          (default value based on RFC1918 and RFC3330)
+                MCA pmix: "pmix_event_caching_window" (current value: "1",
+                          data source: default, type: int)
+                          Time (in seconds) to aggregate events before
+                          reporting them - this suppresses event cascades
+                          when processes abnormally terminate
+                MCA pmix: "pmix_suppress_missing_data_warning" (current
+                          value: "0", data source: default, type: bool)
+                          Suppress warning that PMIx is missing job-level
+                          data that is supposed to be provided by the host
+                          RM.
+                MCA pmix: "pmix_progress_thread_cpus" (current value: "",
+                          data source: default, type: string)
+                          Comma-delimited list of ranges of CPUs to whichthe
+                          internal PMIx progress thread is to be bound
+                MCA pmix: "pmix_bind_progress_thread_reqd" (current value:
+                          "0", data source: default, type: bool)
+                          Whether binding of internal PMIx progress thread is
+                          required
+                MCA pmix: "pmix_maxfd" (current value: "1024", data source:
+                          default, type: int)
+                          In non-Linux environments, use this value as a
+                          maximum number of file descriptors to close when
+                          forking a new child process
+                MCA pmix: "pmix_net_private_ipv4" (current value:
+                          "10.0.0.0/8;172.16.0.0/12;192.168.0.0/16;169.254.0.0/16",
+                          data source: default, type: string)
+                          Semicolon-delimited list of CIDR notation entries
+                          specifying what networks are considered "private"
+                          (default value based on RFC1918 and RFC3330)
+                MCA pmix: "pmix_client_get_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity for client get operations
+                MCA pmix: "pmix_client_connect_verbose" (current value: "0",
+                          data source: default, type: int)
+                          Verbosity for client connect operations
+                MCA pmix: "pmix_client_fence_verbose" (current value: "0",
+                          data source: default, type: int)
+                          Verbosity for client fence operations
+                MCA pmix: "pmix_client_pub_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity for client publish, lookup, and unpublish
+                          operations
+                MCA pmix: "pmix_client_spawn_verbose" (current value: "0",
+                          data source: default, type: int)
+                          Verbosity for client spawn operations
+                MCA pmix: "pmix_client_event_verbose" (current value: "0",
+                          data source: default, type: int)
+                          Verbosity for client event notifications
+                MCA pmix: "pmix_client_iof_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity for client iof operations
+                MCA pmix: "pmix_client_base_verbose" (current value: "0",
+                          data source: default, type: int)
+                          Verbosity for basic client operations
+                MCA pmix: "pmix_server_get_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity for server get operations
+                MCA pmix: "pmix_server_connect_verbose" (current value: "0",
+                          data source: default, type: int)
+                          Verbosity for server connect operations
+                MCA pmix: "pmix_server_fence_verbose" (current value: "0",
+                          data source: default, type: int)
+                          Verbosity for server fence operations
+                MCA pmix: "pmix_server_pub_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity for server publish, lookup, and unpublish
+                          operations
+                MCA pmix: "pmix_server_spawn_verbose" (current value: "0",
+                          data source: default, type: int)
+                          Verbosity for server spawn operations
+                MCA pmix: "pmix_server_event_verbose" (current value: "0",
+                          data source: default, type: int)
+                          Verbosity for server event operations
+                MCA pmix: "pmix_server_iof_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity for server iof operations
+                MCA pmix: "pmix_server_base_verbose" (current value: "0",
+                          data source: default, type: int)
+                          Verbosity for basic server operations
+                MCA pmix: "pmix_server_group_verbose" (current value: "0",
+                          data source: default, type: int)
+                          Verbosity for server group operations
+                MCA pmix: "pmix_server_fence_localonly_opt" (current value:
+                          "1", data source: default, type: bool)
+                          Optimize local-only fence opteration by eliminating
+                          the upcall to the RM (default: true)
+                MCA pmix: "pmix_max_events" (current value: "512", data
+                          source: default, type: int)
+                          Maximum number of event notifications to cache
+                MCA pmix: "pmix_max_iof_cache" (current value: "1048576",
+                          data source: default, type: int)
+                          Maximum number of IOF messages to cache
+                MCA pmix: "pmix_event_eviction_time" (current value: "120",
+                          data source: default, type: int)
+                          Maximum number of seconds to cache an event
+                MCA pmix: "pmix_hwloc_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity for HWLOC operations
+                MCA pmix: "pmix_hwloc_hole_kind" (current value: "biggest",
+                          data source: default, type: string)
+                          Kind of VM hole to identify - none, begin, biggest,
+                          libs, heap, stack (default=biggest)
+                MCA pmix: "pmix_hwloc_topo_file" (current value: "", data
+                          source: default, type: string)
+                          Topology file to use instead of discovering it
+                          (mostly for testing purposes)
+                MCA pmix: "pmix_hwloc_test_cpuset" (current value: "", data
+                          source: default, type: string)
+                          Cpuset for testing purposes
+                 MCA rml: "rml_base_max_retries" (current value: "3", data
+                          source: default, type: int)
+                          Max #times to retry sending a message
+                 MCA rml: "rml_base_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Debug verbosity of the RML subsystem
+                 MCA rml: "rml_base_radix" (current value: "64", data source:
+                          default, type: int, synonyms: routed_radix)
+                          Radix to be used for routing tree
+              MCA routed: "routed_base_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Debug verbosity of the Routed subsystem
+              MCA routed: "routed_radix" (current value: "64", data source:
+                          default, type: int, deprecated, synonym of:
+                          rml_base_radix)
+                          Radix to be used for routing tree
+              MCA errmgr: "errmgr" (current value: "", data source: default,
+                          type: string)
+                          Default selection set of components for the errmgr
+                          framework (<none> means use all components that can
+                          be found)
+              MCA errmgr: "errmgr_base_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity level for the errmgr framework (default:
+                          0)
+              MCA errmgr: "errmgr_dvm_priority" (current value: "1000", data
+                          source: default, type: int)
+                          Priority of the dvm errmgr component
+              MCA errmgr: "errmgr_prted_priority" (current value: "1000",
+                          data source: default, type: int)
+                          Priority of the prted errmgr component
+                 MCA ess: "ess" (current value: "", data source: default,
+                          type: string)
+                          Default selection set of components for the ess
+                          framework (<none> means use all components that can
+                          be found)
+                 MCA ess: "prte_ess_nspace" (current value: "", data source:
+                          default, type: string, deprecated, synonym of:
+                          ess_base_nspace)
+                          Process nspace
+                 MCA ess: "prte_ess_vpid" (current value: "", data source:
+                          default, type: string, deprecated, synonym of:
+                          ess_base_vpid)
+                          Process vpid
+                 MCA ess: "prte_ess_num_procs" (current value: "-1", data
+                          source: default, type: int, deprecated, synonym of:
+                          ess_base_num_procs)
+                          Used to discover the number of procs in the job
+                 MCA ess: "ess_base_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity level for the ess framework (default: 0)
+                 MCA ess: "ess_base_nspace" (current value: "", data source:
+                          default, type: string, synonyms: prte_ess_nspace)
+                          Process nspace
+                 MCA ess: "ess_base_vpid" (current value: "", data source:
+                          default, type: string, synonyms: prte_ess_vpid)
+                          Process vpid
+                 MCA ess: "ess_base_num_procs" (current value: "-1", data
+                          source: default, type: int, synonyms:
+                          prte_ess_num_procs)
+                          Used to discover the number of procs in the job
+                 MCA ess: "ess_base_forward_signals" (current value: "", data
+                          source: default, type: string, synonyms:
+                          ess_hnp_forward_signals)
+                          Comma-delimited list of additional signals (names
+                          or integers) to forward to application processes
+                          ["none" => forward nothing]. Signals provided by
+                          default include SIGTSTP, SIGUSR1, SIGUSR2, SIGABRT,
+                          SIGALRM, and SIGCONT
+                 MCA ess: "ess_hnp_forward_signals" (current value: "", data
+                          source: default, type: string, deprecated, synonym
+                          of: ess_base_forward_signals)
+                          Comma-delimited list of additional signals (names
+                          or integers) to forward to application processes
+                          ["none" => forward nothing]. Signals provided by
+                          default include SIGTSTP, SIGUSR1, SIGUSR2, SIGABRT,
+                          SIGALRM, and SIGCONT
+               MCA filem: "filem" (current value: "", data source: default,
+                          type: string)
+                          Default selection set of components for the filem
+                          framework (<none> means use all components that can
+                          be found)
+               MCA filem: "filem_base_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity level for the filem framework (default:
+                          0)
+               MCA filem: "filem_raw_flatten_directory_trees" (current value:
+                          "0", data source: default, type: bool)
+                          Put all files in the working directory instead of
+                          creating their respective directory trees
+             MCA grpcomm: "grpcomm" (current value: "", data source: default,
+                          type: string)
+                          Default selection set of components for the grpcomm
+                          framework (<none> means use all components that can
+                          be found)
+             MCA grpcomm: "grpcomm_base_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity level for the grpcomm framework (default:
+                          0)
+             MCA grpcomm: "grpcomm_base_starting_context_id" (current value:
+                          "1", data source: default, type: int)
+                          Starting value for assigning context id's
+             MCA grpcomm: "grpcomm_direct_priority" (current value: "85",
+                          data source: default, type: int)
+                          Priority of the grpcomm direct component
+                 MCA iof: "iof_output_limit" (current value: "2147483647",
+                          data source: default, type: size_t)
+                          Maximum backlog of output messages [default:
+                          unlimited]
+                 MCA iof: "iof_xml_output" (current value: "0", data source:
+                          default, type: bool)
+                          Display all output in XML format (default: false)
+                 MCA iof: "iof_tag_output" (current value: "0", data source:
+                          default, type: bool)
+                          Tag all output with [job,rank] (default: false)
+                 MCA iof: "iof_timestamp_output" (current value: "0", data
+                          source: default, type: bool)
+                          Timestamp all application process output (default:
+                          false)
+                MCA odls: "odls" (current value: "", data source: default,
+                          type: string)
+                          Default selection set of components for the odls
+                          framework (<none> means use all components that can
+                          be found)
+                MCA odls: "odls_base_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity level for the odls framework (default: 0)
+                MCA odls: "odls_base_max_threads" (current value: "16", data
+                          source: default, type: int)
+                          Maximum number of threads to use for spawning local
+                          procs
+                MCA odls: "odls_base_num_threads" (current value: "-1", data
+                          source: default, type: int)
+                          Specific number of threads to use for spawning
+                          local procs
+                MCA odls: "odls_base_cutoff" (current value: "32", data
+                          source: default, type: int)
+                          Minimum number of local procs before using thread
+                          pool for spawn
+                MCA odls: "odls_base_signal_direct_children_only" (current
+                          value: "0", data source: default, type: bool)
+                          Whether to restrict signals (e.g., SIGTERM) to
+                          direct children, or to apply them as well to any
+                          children spawned by those processes
+                MCA odls: "odls_base_exec_agent" (current value: "", data
+                          source: default, type: string)
+                          Command used to exec application processes
+                          [default: NULL]
+                 MCA oob: "oob" (current value: "", data source: default,
+                          type: string)
+                          Default selection set of components for the oob
+                          framework (<none> means use all components that can
+                          be found)
+                 MCA oob: "oob_tcp_include" (current value: "", data source:
+                          default, type: string, deprecated, synonym of:
+                          prte_if_include)
+                          Comma-delimited list of devices and/or CIDR
+                          notation of TCP networks to use for PRTE bootstrap
+                          communication (e.g., "eth0,192.168.0.0/16"). 
+                          Mutually exclusive with prte_if_exclude.
+                 MCA oob: "oob_tcp_if_include" (current value: "", data
+                          source: default, type: string, deprecated, synonym
+                          of: prte_if_include)
+                          Comma-delimited list of devices and/or CIDR
+                          notation of TCP networks to use for PRTE bootstrap
+                          communication (e.g., "eth0,192.168.0.0/16"). 
+                          Mutually exclusive with prte_if_exclude.
+                 MCA oob: "oob_tcp_exclude" (current value: "", data source:
+                          default, type: string, deprecated, synonym of:
+                          prte_if_exclude)
+                          Comma-delimited list of devices and/or CIDR
+                          notation of TCP networks to NOT use for PRTE
+                          bootstrap communication -- all devices not matching
+                          these specifications will be used (e.g.,
+                          "eth0,192.168.0.0/16").  If set to a non-default
+                          value, it is mutually exclusive with
+                          prte_if_include.
+                 MCA oob: "oob_tcp_if_exclude" (current value: "", data
+                          source: default, type: string, deprecated, synonym
+                          of: prte_if_exclude)
+                          Comma-delimited list of devices and/or CIDR
+                          notation of TCP networks to NOT use for PRTE
+                          bootstrap communication -- all devices not matching
+                          these specifications will be used (e.g.,
+                          "eth0,192.168.0.0/16").  If set to a non-default
+                          value, it is mutually exclusive with
+                          prte_if_include.
+                 MCA oob: "oob_tcp_peer_limit" (current value: "-1", data
+                          source: default, type: int)
+                          Maximum number of peer connections to
+                          simultaneously maintain (-1 = infinite)
+                 MCA oob: "oob_tcp_peer_retries" (current value: "2", data
+                          source: default, type: int)
+                          Number of times to try shutting down a connection
+                          before giving up
+                 MCA oob: "oob_tcp_sndbuf" (current value: "0", data source:
+                          default, type: int)
+                          TCP socket send buffering size (in bytes, 0 =>
+                          leave system default)
+                 MCA oob: "oob_tcp_rcvbuf" (current value: "0", data source:
+                          default, type: int)
+                          TCP socket receive buffering size (in bytes, 0 =>
+                          leave system default)
+                 MCA oob: "oob_tcp_static_ipv4_ports" (current value: "",
+                          data source: default, type: string)
+                          Static ports for daemons and procs (IPv4)
+                 MCA oob: "oob_tcp_static_ipv6_ports" (current value: "",
+                          data source: default, type: string)
+                          Static ports for daemons and procs (IPv6)
+                 MCA oob: "oob_tcp_dynamic_ipv4_ports" (current value: "",
+                          data source: default, type: string)
+                          Range of ports to be dynamically used by daemons
+                          and procs (IPv4)
+                 MCA oob: "oob_tcp_dynamic_ipv6_ports" (current value: "",
+                          data source: default, type: string)
+                          Range of ports to be dynamically used by daemons
+                          and procs (IPv6)
+                 MCA oob: "oob_tcp_disable_ipv4_family" (current value: "0",
+                          data source: default, type: bool)
+                          Disable the IPv4 interfaces
+                 MCA oob: "oob_tcp_disable_ipv6_family" (current value: "0",
+                          data source: default, type: bool)
+                          Disable the IPv6 interfaces
+                 MCA oob: "oob_tcp_keepalive_time" (current value: "300",
+                          data source: default, type: int)
+                          Idle time in seconds before starting to send
+                          keepalives (keepalive_time <= 0 disables keepalive
+                          functionality)
+                 MCA oob: "oob_tcp_keepalive_intvl" (current value: "20",
+                          data source: default, type: int)
+                          Time between successive keepalive pings when peer
+                          has not responded, in seconds (ignored if
+                          keepalive_time <= 0)
+                 MCA oob: "oob_tcp_keepalive_probes" (current value: "9",
+                          data source: default, type: int)
+                          Number of keepalives that can be missed before
+                          declaring error (ignored if keepalive_time <= 0)
+                 MCA oob: "oob_tcp_retry_delay" (current value: "0", data
+                          source: default, type: int)
+                          Time (in sec) to wait before trying to connect to
+                          peer again
+                 MCA oob: "oob_tcp_max_recon_attempts" (current value: "10",
+                          data source: default, type: int)
+                          Max number of times to attempt connection before
+                          giving up (-1 -> never give up)
+                 MCA oob: "oob_base_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity level for the oob framework (default: 0)
+                 MCA plm: "plm" (current value: "", data source: default,
+                          type: string)
+                          Default selection set of components for the plm
+                          framework (<none> means use all components that can
+                          be found)
+                 MCA plm: "plm_base_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity level for the plm framework (default: 0)
+                 MCA plm: "plm_base_node_regex_threshold" (current value:
+                          "1024", data source: default, type: size_t)
+                          Only pass the node regex on the orted command line
+                          if smaller than this threshold
+                 MCA plm: "plm_slurm_args" (current value: "", data source:
+                          default, type: string)
+                          Custom arguments to srun
+                 MCA plm: "plm_ssh_num_concurrent" (current value: "128",
+                          data source: default, type: int)
+                          How many plm_ssh_agent instances to invoke
+                          concurrently (must be > 0)
+                 MCA plm: "plm_ssh_force_ssh" (current value: "0", data
+                          source: default, type: bool)
+                          Force the launcher to always use ssh
+                 MCA plm: "plm_ssh_disable_qrsh" (current value: "0", data
+                          source: default, type: bool)
+                          Disable the use of qrsh when under the Grid Engine
+                          parallel environment
+                 MCA plm: "plm_ssh_daemonize_qrsh" (current value: "0", data
+                          source: default, type: bool)
+                          Daemonize the orted under the Grid Engine parallel
+                          environment
+                 MCA plm: "plm_ssh_disable_llspawn" (current value: "0", data
+                          source: default, type: bool)
+                          Disable the use of llspawn when under the
+                          LoadLeveler environment
+                 MCA plm: "plm_ssh_daemonize_llspawn" (current value: "0",
+                          data source: default, type: bool)
+                          Daemonize the orted when under the LoadLeveler
+                          environment
+                 MCA plm: "plm_ssh_priority" (current value: "10", data
+                          source: default, type: int)
+                          Priority of the ssh plm component
+                 MCA plm: "plm_ssh_delay" (current value: "", data source:
+                          default, type: string)
+                          Delay between invocations of the remote agent
+                          (sec[:usec])
+                 MCA plm: "plm_ssh_no_tree_spawn" (current value: "0", data
+                          source: default, type: bool)
+                          If set to true, do not launch via a tree-based
+                          topology
+                 MCA plm: "plm_ssh_agent" (current value: "ssh : rsh", data
+                          source: default, type: string, synonyms:
+                          pls_ssh_agent, prte_ssh_agent)
+                          The command used to launch executables on remote
+                          nodes (typically "ssh")
+                 MCA plm: "plm_ssh_assume_same_shell" (current value: "1",
+                          data source: default, type: bool, synonyms:
+                          prte_assume_same_shell)
+                          If set to true, assume that the shell on the remote
+                          node is the same as the shell on the local node. 
+                          Otherwise, probe for what the remote shell
+                          [default: 1]
+                 MCA plm: "plm_ssh_pass_environ_mca_params" (current value:
+                          "1", data source: default, type: bool)
+                          If set to false, do not include mca params from the
+                          environment on the orted cmd line
+                 MCA plm: "plm_ssh_args" (current value: "", data source:
+                          default, type: string)
+                          Arguments to add to ssh
+                 MCA plm: "plm_ssh_pass_libpath" (current value: "", data
+                          source: default, type: string)
+                          Prepend the specified library path to the remote
+                          shell's LD_LIBRARY_PATH
+                 MCA plm: "plm_ssh_chdir" (current value: "", data source:
+                          default, type: string)
+                          Change working directory after ssh, but before exec
+                          of prted
+       MCA prtebacktrace: "prtebacktrace" (current value: "", data source:
+                          default, type: string)
+                          Default selection set of components for the
+                          prtebacktrace framework (<none> means use all
+                          components that can be found)
+       MCA prtebacktrace: "prtebacktrace_base_verbose" (current value: "0",
+                          data source: default, type: int)
+                          Verbosity level for the prtebacktrace framework
+                          (default: 0)
+              MCA prtedl: "prtedl" (current value: "", data source: default,
+                          type: string)
+                          Default selection set of components for the prtedl
+                          framework (<none> means use all components that can
+                          be found)
+              MCA prtedl: "prtedl_base_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity level for the prtedl framework (default:
+                          0)
+              MCA prtedl: "prtedl_dlopen_filename_suffixes" (current value:
+                          ".so,.dylib,.dll,.sl", data source: default, type:
+                          string)
+                          Comma-delimited list of filename suffixes that the
+                          PRTE dlopen component will try
+       MCA prtereachable: "prtereachable" (current value: "", data source:
+                          default, type: string)
+                          Default selection set of components for the
+                          prtereachable framework (<none> means use all
+                          components that can be found)
+       MCA prtereachable: "prtereachable_base_verbose" (current value: "0",
+                          data source: default, type: int)
+                          Verbosity level for the prtereachable framework
+                          (default: 0)
+                 MCA ras: "ras" (current value: "", data source: default,
+                          type: string)
+                          Default selection set of components for the ras
+                          framework (<none> means use all components that can
+                          be found)
+                 MCA ras: "ras_base_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity level for the ras framework (default: 0)
+                 MCA ras: "ras_base_multiplier" (current value: "1", data
+                          source: default, type: int)
+                          Simulate a larger cluster by launching N
+                          daemons/node
+                 MCA ras: "ras_base_launch_orted_on_hn" (current value: "0",
+                          data source: default, type: bool)
+                          Launch an prte daemon on the head node
+                 MCA ras: "ras_simulator_slots" (current value: "", data
+                          source: default, type: string)
+                          Comma-separated list of number of slots on each
+                          node to simulate
+                 MCA ras: "ras_simulator_max_slots" (current value: "", data
+                          source: default, type: string)
+                          Comma-separated list of number of max slots on each
+                          node to simulate
+                 MCA ras: "ras_simulator_num_nodes" (current value: "", data
+                          source: default, type: string)
+                          Comma-separated list of number of nodes to simulate
+                          for each topology
+                 MCA ras: "ras_simulator_have_cpubind" (current value: "1",
+                          data source: default, type: bool)
+                          Topology supports binding to cpus
+                 MCA ras: "ras_simulator_have_membind" (current value: "1",
+                          data source: default, type: bool)
+                          Topology supports binding to memory
+                 MCA ras: "ras_testrm_hostfile" (current value: "", data
+                          source: default, type: string)
+                          Name of file containing hosts for allocation
+                 MCA ras: "ras_gridengine_priority" (current value: "100",
+                          data source: default, type: int)
+                          Priority of the gridengine ras component
+                 MCA ras: "ras_gridengine_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Enable verbose output for the gridengine ras
+                          component
+                 MCA ras: "ras_gridengine_show_jobid" (current value: "0",
+                          data source: default, type: bool)
+                          Show the JOB_ID of the Grid Engine job
+                 MCA ras: "ras_pbs_priority" (current value: "100", data
+                          source: default, type: int)
+                          Priority of the pbs ras component
+                 MCA ras: "ras_pbs_smp" (current value: "0", data source:
+                          default, type: bool)
+                          The PBS system is configured in SMP mode with the
+                          number of cpus/node given in the environment
+                 MCA ras: "ras_slurm_dyn_allocate_timeout" (current value:
+                          "30", data source: default, type: int)
+                          Number of seconds to wait for Slurm dynamic
+                          allocation
+                 MCA ras: "ras_slurm_enable_dyn_alloc" (current value: "0",
+                          data source: default, type: bool)
+                          Whether or not dynamic allocations are enabled
+                 MCA ras: "ras_slurm_config_file" (current value: "", data
+                          source: default, type: string)
+                          Path to Slurm configuration file
+                 MCA ras: "ras_slurm_enable_rolling_alloc" (current value:
+                          "0", data source: default, type: bool)
+                          Enable partial dynamic allocations
+                 MCA ras: "ras_slurm_use_entire_allocation" (current value:
+                          "0", data source: default, type: bool)
+                          Use entire allocation (not just job step nodes) for
+                          this application
+               MCA rmaps: "rmaps" (current value: "", data source: default,
+                          type: string)
+                          Default selection set of components for the rmaps
+                          framework (<none> means use all components that can
+                          be found)
+               MCA rmaps: "rmaps_base_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity level for the rmaps framework (default:
+                          0)
+               MCA rmaps: "rmaps_default_mapping_policy" (current value: "",
+                          data source: default, type: string)
+                          Default mapping Policy [slot | hwthread | core |
+                          l1cache | l2cache | l3cache | numa | package | node
+                          | seq | dist | ppr | rankfile | pe-list=a,b
+                          (comma-delimited ranges of cpus to use for this
+                          job)], with supported colon-delimited modifiers:
+                          PE=y (for multiple cpus/proc), SPAN, OVERSUBSCRIBE,
+                          NOOVERSUBSCRIBE, NOLOCAL, HWTCPUS, CORECPUS,
+                          DEVICE=dev (for dist policy), INHERIT, NOINHERIT,
+                          ORDERED, FILE=%s (path to file containing
+                          sequential or rankfile entries)
+               MCA rmaps: "rmaps_default_ranking_policy" (current value: "",
+                          data source: default, type: string)
+                          Default ranking Policy [slot | node | span | fill]
+               MCA rmaps: "rmaps_default_inherit" (current value: "0", data
+                          source: default, type: bool)
+                          Whether child jobs shall inherit
+                          mapping/ranking/binding directives from their
+                          parent by default
+               MCA rmaps: "rmaps_ppr_priority" (current value: "90", data
+                          source: default, type: int)
+                          Priority of the ppr rmaps component
+               MCA rmaps: "rmaps_round_robin_priority" (current value: "10",
+                          data source: default, type: int)
+                          Priority of the rr rmaps component
+               MCA rmaps: "rmaps_seq_priority" (current value: "60", data
+                          source: default, type: int)
+                          Priority of the seq rmaps component
+                 MCA rtc: "rtc" (current value: "", data source: default,
+                          type: string)
+                          Default selection set of components for the rtc
+                          framework (<none> means use all components that can
+                          be found)
+                 MCA rtc: "rtc_base_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity level for the rtc framework (default: 0)
+                 MCA rtc: "rtc_hwloc_priority" (current value: "70", data
+                          source: default, type: int)
+                          Priority of the HWLOC rtc component
+                 MCA rtc: "rtc_hwloc_vmhole" (current value: "biggest", data
+                          source: default, type: string)
+                          Kind of VM hole to identify - none, begin, biggest,
+                          libs, heap, stack (default=biggest)
+              MCA schizo: "schizo" (current value: "", data source: default,
+                          type: string)
+                          Default selection set of components for the schizo
+                          framework (<none> means use all components that can
+                          be found)
+              MCA schizo: "schizo_base_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity level for the schizo framework (default:
+                          0)
+              MCA schizo: "schizo_base_test_proxy_launch" (current value:
+                          "0", data source: default, type: bool)
+                          Test proxy launches
+              MCA schizo: "schizo_ompi_warn_deprecations" (current value:
+                          "0", data source: default, type: bool)
+                          Issue warnings about deprecated command line
+                          options
+              MCA schizo: "schizo_prte_warn_deprecations" (current value:
+                          "1", data source: default, type: bool)
+                          Issue warnings about deprecated command line
+                          options
+               MCA state: "state" (current value: "", data source: default,
+                          type: string)
+                          Default selection set of components for the state
+                          framework (<none> means use all components that can
+                          be found)
+               MCA state: "state_base_verbose" (current value: "0", data
+                          source: default, type: int)
+                          Verbosity level for the state framework (default:
+                          0)
+               MCA state: "state_base_check_fds" (current value: "0", data
+                          source: default, type: bool)
+                          Daemons should check fds for leaks after each job
+                          completes
+               MCA state: "state_base_recoverable" (current value: "0", data
+                          source: default, type: bool)
+                          Default setting for recoverable runtime option
+               MCA state: "state_base_max_restarts" (current value: "0", data
+                          source: default, type: int)
+                          Set default max number of times to restart a failed
+                          process
+               MCA state: "state_base_continuous" (current value: "0", data
+                          source: default, type: bool)
+                          Set default policy for processes to run
+                          continuously until explicitly terminated
+               MCA state: "state_base_error_non_zero_exit" (current value:
+                          "1", data source: default, type: bool)
+                          Set default policy for marking it an error for a
+                          process to return a non-zero exit status
+               MCA state: "state_base_show_launch_progress" (current value:
+                          "0", data source: default, type: bool)
+                          Provide progress reports on DVM startup
+               MCA state: "state_base_notify_errors" (current value: "0",
+                          data source: default, type: bool)
+                          Generate a PMIx event for reportable process errors
+               MCA state: "state_base_autorestart" (current value: "0", data
+                          source: default, type: bool)
+                          Automatically restart failed processes up to the
+                          max restart limit

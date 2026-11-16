@@ -1,0 +1,5 @@
+&PROJWFC
+ prefix='fese', outdir='./scratch',
+ filpdos='pdos',
+ DeltaE=0.05,
+/

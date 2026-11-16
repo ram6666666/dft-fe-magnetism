@@ -1,0 +1,32 @@
+{
+  "status": "RUN_COMPLETED",
+  "scf_converged": true,
+  "job_done": true,
+  "energy_total_ry": -1971.71337925,
+  "scf_accuracy_ry": 3e-08,
+  "scf_iterations": 15,
+  "total_magnetization_muB_cell": -0.0,
+  "absolute_magnetization_muB_cell": 7.87,
+  "smearing_contribution_ry": 0.00828395,
+  "qe_version": "6.7MaX",
+  "run_id": "P003_stripe_openblas_pool2",
+  "initial_state": "STRIPE",
+  "fe_lowdin_moments_muB": [
+    1.8143,
+    -1.8143,
+    1.8143,
+    -1.8143
+  ],
+  "all_lowdin_moments_muB": [
+    1.8143,
+    -1.8143,
+    1.8143,
+    -1.8143,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "magnetic_diagnostic": "Lowdin atomic spin population plus cell spin integrals",
+  "final_state": "STRIPE"
+}

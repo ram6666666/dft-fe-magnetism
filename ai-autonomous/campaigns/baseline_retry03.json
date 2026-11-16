@@ -1,0 +1,50 @@
+[
+  {
+    "run_id": "B_a100_FM_r03",
+    "stage": "BASELINE",
+    "initial_state": "FM",
+    "a_ang": 3.765,
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800,
+    "retry_reason": "Isolate PRTE and btl_sm backing directory after shared PID namespace collision",
+    "retries": "B_a100_FM"
+  },
+  {
+    "run_id": "B_a100_CB_r03",
+    "stage": "BASELINE",
+    "initial_state": "CB",
+    "a_ang": 3.765,
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800,
+    "retry_reason": "Isolate PRTE and btl_sm backing directory after shared PID namespace collision",
+    "retries": "B_a100_CB"
+  },
+  {
+    "run_id": "B_a100_STRIPE_r03",
+    "stage": "BASELINE",
+    "initial_state": "STRIPE",
+    "a_ang": 3.765,
+    "ecutwfc_ry": 90,
+    "kgrid": [
+      2,
+      2,
+      2
+    ],
+    "kpoint_pools": 2,
+    "max_seconds": 1800,
+    "retry_reason": "Isolate PRTE and btl_sm backing directory after shared PID namespace collision",
+    "retries": "B_a100_STRIPE"
+  }
+]

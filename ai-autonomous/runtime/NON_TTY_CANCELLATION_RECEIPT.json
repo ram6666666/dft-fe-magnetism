@@ -1,0 +1,19 @@
+{
+  "scope": "Own bounded dummy probes only; no production session touched",
+  "first_probe": {
+    "chunk_id": "9c6d84",
+    "wall_time_seconds": 0.010277759,
+    "exit_code": 130,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "second_probe": {
+    "chunk_id": "e07639",
+    "wall_time_seconds": 0.029448937,
+    "exit_code": 130,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "second_probe_marker_check": "Seven-second wait after interruption; startup markers only, no signal-handler or timer-completion markers",
+  "claim_limit": "Observed backend behavior, not a portable process-tree termination guarantee"
+}

@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-c",
+    "import time; print(\"dummy child started\",flush=True); time.sleep(60)"
+  ],
+  "cwd": "runtime/cancellation_probe",
+  "start": "2026-11-16T20:15:35.895145+00:00",
+  "end": "2026-11-16T20:15:40.905366+00:00",
+  "exit_code": 125,
+  "elapsed_seconds": 5.010256929999741,
+  "timed_out": false,
+  "stop_reason": "EXPLICIT_CANCEL_REQUEST_FILE",
+  "child_cpu_seconds": 0.09185,
+  "child_maxrss_kib": 12416,
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "LD_LIBRARY_PATH": null,
+    "TMPDIR": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runtime/cancellation_probe/tmp/dummy",
+    "PRTE_MCA_prte_tmpdir_base": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runtime/cancellation_probe/tmp/dummy",
+    "OMPI_MCA_btl_sm_backing_directory": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runtime/cancellation_probe/tmp/dummy",
+    "OMPI_MCA_osc_sm_backing_directory": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runtime/cancellation_probe/tmp/dummy",
+    "OMPI_MCA_osc_rdma_backing_directory": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runtime/cancellation_probe/tmp/dummy"
+  },
+  "status": "PROCESS_EXITED"
+}

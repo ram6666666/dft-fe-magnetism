@@ -1,0 +1,32 @@
+{
+  "status": "RUN_FAILED",
+  "scf_converged": false,
+  "job_done": false,
+  "energy_total_ry": null,
+  "scf_accuracy_ry": null,
+  "scf_iterations": null,
+  "total_magnetization_muB_cell": null,
+  "absolute_magnetization_muB_cell": null,
+  "smearing_contribution_ry": null,
+  "qe_version": null,
+  "run_id": "B_a100_STRIPE",
+  "initial_state": "STRIPE",
+  "fe_lowdin_moments_muB": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "all_lowdin_moments_muB": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "magnetic_diagnostic": "Lowdin atomic spin population plus cell spin integrals",
+  "final_state": "UNVERIFIED_FINAL_STATE"
+}

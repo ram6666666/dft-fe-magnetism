@@ -1,0 +1,62 @@
+[
+  {
+    "path": "opal/mca/btl/sm/btl_sm_component.c",
+    "local_name": "opal__mca__btl__sm__btl_sm_component.c",
+    "git_blob_sha": "63d4a3a24ffd7d536043fd2433599859e3488701",
+    "url": "https://github.com/open-mpi/ompi/blob/v5.0.7/opal/mca/btl/sm/btl_sm_component.c",
+    "tag": "v5.0.7",
+    "sha256": "f618a504ca8cf01f99a36350cb59f2fc27da679abcf0531538437b2fc33728ad",
+    "bytes": 22382,
+    "github_blob_identity_verified": true
+  },
+  {
+    "path": "ompi/mca/coll/sm/coll_sm_module.c",
+    "local_name": "ompi__mca__coll__sm__coll_sm_module.c",
+    "git_blob_sha": "d77e16565237466aadc30568f319e8611cb79baf",
+    "url": "https://github.com/open-mpi/ompi/blob/v5.0.7/ompi/mca/coll/sm/coll_sm_module.c",
+    "tag": "v5.0.7",
+    "sha256": "23dc278e444f8fee1e972b1e2b7db125be99cbf26c9ee44eb836fae3e5f0d035",
+    "bytes": 23685,
+    "github_blob_identity_verified": true
+  },
+  {
+    "path": "ompi/mca/osc/sm/osc_sm_component.c",
+    "local_name": "ompi__mca__osc__sm__osc_sm_component.c",
+    "git_blob_sha": "1c52eb17bb89c1783eeaa529527e217511850571",
+    "url": "https://github.com/open-mpi/ompi/blob/v5.0.7/ompi/mca/osc/sm/osc_sm_component.c",
+    "tag": "v5.0.7",
+    "sha256": "0527b250331e3d5ac57bc4441352f879820c32dd676b7dd54485e7d69f564d23",
+    "bytes": 21964,
+    "github_blob_identity_verified": true
+  },
+  {
+    "path": "ompi/mca/osc/rdma/osc_rdma_component.c",
+    "local_name": "ompi__mca__osc__rdma__osc_rdma_component.c",
+    "git_blob_sha": "cba64ea6f966101aec78c3529709fc700852d153",
+    "url": "https://github.com/open-mpi/ompi/blob/v5.0.7/ompi/mca/osc/rdma/osc_rdma_component.c",
+    "tag": "v5.0.7",
+    "sha256": "7d81d6794ec00fe0f5abdc6512bb1ad1fabcc22ee1e3ea9531067a82106eba4a",
+    "bytes": 68046,
+    "github_blob_identity_verified": true
+  },
+  {
+    "path": "opal/mca/shmem/mmap/shmem_mmap_module.c",
+    "local_name": "opal__mca__shmem__mmap__shmem_mmap_module.c",
+    "git_blob_sha": "e36efb738e3b8cb2142d91243d576826cfc1d232",
+    "url": "https://github.com/open-mpi/ompi/blob/v5.0.7/opal/mca/shmem/mmap/shmem_mmap_module.c",
+    "tag": "v5.0.7",
+    "sha256": "18576dedb602b5b3f6c863fab10f2ab86d8fa8fbdfed9590f05d80c0ab78d693",
+    "bytes": 20772,
+    "github_blob_identity_verified": true
+  },
+  {
+    "path": "opal/mca/smsc/cma/smsc_cma_module.c",
+    "local_name": "opal__mca__smsc__cma__smsc_cma_module.c",
+    "git_blob_sha": "0aeec05c084635f5131c7a3e44af98c4b59a7b64",
+    "url": "https://github.com/open-mpi/ompi/blob/v5.0.7/opal/mca/smsc/cma/smsc_cma_module.c",
+    "tag": "v5.0.7",
+    "sha256": "034038b998984c26946434ceb98013eead8448262bb89f63ff4ce394eb8f09fb",
+    "bytes": 9484,
+    "github_blob_identity_verified": true
+  }
+]

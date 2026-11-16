@@ -1,0 +1,76 @@
+{
+  "run_id": "P003_stripe_openblas_pool2",
+  "status": "RUN_COMPLETED",
+  "prepared_at": "2026-11-16T19:54:58.816830+00:00",
+  "input_sha256": "418194cf3fb684388bb788792d9d87a0351adafc45c427b388e2a1d1590f3fac",
+  "pseudo_sha256": {
+    "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+    "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+  },
+  "source_sha256": "dd8cfaa7640e6d06be9af47ec555d8f1d6ea8fa7585c017a98a15ad1457ce5c7",
+  "source_path": "source_versions/dd8cfaa7640e6d06be9af47ec555d8f1d6ea8fa7585c017a98a15ad1457ce5c7.py",
+  "pw_executable": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+  "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+  "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+  "projwfc_sha256": "1bb5632fd9292ba7f544e7cfc9ff38c89906d0527ea3f7e81a287f12575460ed",
+  "pw": {
+    "command": [
+      "mpirun",
+      "-np",
+      "2",
+      "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+      "-nk",
+      "2",
+      "-in",
+      "input.in"
+    ],
+    "cwd": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/P003_stripe_openblas_pool2",
+    "start": "2026-11-16T19:55:00.116586+00:00",
+    "end": "2026-11-16T20:08:06.023031+00:00",
+    "exit_code": 0,
+    "elapsed_seconds": 785.9064559349972,
+    "timed_out": false,
+    "child_cpu_seconds": 1558.498609,
+    "child_maxrss_kib": 390940,
+    "environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "LD_LIBRARY_PATH": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread:/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/lib/x86_64-linux-gnu"
+    }
+  },
+  "projection": {
+    "command": [
+      "mpirun",
+      "-np",
+      "2",
+      "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/projwfc.x",
+      "-in",
+      "proj.in"
+    ],
+    "cwd": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/P003_stripe_openblas_pool2",
+    "start": "2026-11-16T20:08:06.048176+00:00",
+    "end": "2026-11-16T20:08:12.256316+00:00",
+    "exit_code": 0,
+    "elapsed_seconds": 6.208144758998969,
+    "timed_out": false,
+    "child_cpu_seconds": 11.998319000000011,
+    "child_maxrss_kib": 390940,
+    "environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "LD_LIBRARY_PATH": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread:/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/lib/x86_64-linux-gnu"
+    }
+  },
+  "file_hashes": {
+    "input.in": "418194cf3fb684388bb788792d9d87a0351adafc45c427b388e2a1d1590f3fac",
+    "proj.out": "4d453a27ebf2013b061606826564ec5f76a187de07c60796bcc06055daf3d3a3",
+    "proj.err": "c73159cc4f61a4a455aad34a2bc8a04f87170edd22b2009ab1240257fa212d94",
+    "proj.in": "6da0d7ab9bbb718f7961ffef4123d39c5c9f0b44815c0aec73801250c7949931",
+    "runtime.json": "9abf4d6f0ef7efb2afbfa7d20aba9f76ec2f1947525208f99eb48ac090ce75b5",
+    "config.json": "a7800c8b5d61c6b3c311d312590c18fea651f6232b442976882e17dfa31742c5",
+    "pw_execution.json": "8a402b96db1fa2e481607131a827c6d4a8fe9fb363253050cd36e611c2fe55fb",
+    "pw.out": "f74aa495b2f3f454b99f2c79790b0a5e8951961ca0f92410121dd152946776f3",
+    "proj_execution.json": "d7b63607ad2784fcfa1a48350d39b7a3d79ca92098a356cd35e61cac94237a85",
+    "pw.err": "c73159cc4f61a4a455aad34a2bc8a04f87170edd22b2009ab1240257fa212d94"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "scope": "Read-only command/record checks; no worker jobs started",
+  "source_sha256": "a9f5b8bb61eac97485bbc29d0ec2274bc1f9305bab1258fd80f85fbc71ba9837",
+  "check_only_command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/batch.py",
+    "campaigns/baseline.json",
+    "--only",
+    "B_a100_FM",
+    "B_a100_CB",
+    "B_a100_STRIPE",
+    "--ranks",
+    "2",
+    "--max-concurrent",
+    "3",
+    "--check-only"
+  ],
+  "check_only_returncode": 0,
+  "check_only": {
+    "mode": "CHECK_ONLY_NO_JOBS_STARTED",
+    "campaign_sha256": "2378d197f8819752dbf1b6086107cc3d3b64e25e7147cd9145fb6f38e0da1ff8",
+    "max_concurrent": 3,
+    "workers": [
+      {
+        "run_id": "B_a100_FM",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/fese.py",
+          "run",
+          "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/campaigns/baseline.json",
+          "--only",
+          "B_a100_FM",
+          "--pw",
+          "pw.x",
+          "--proj",
+          "projwfc.x",
+          "--ranks",
+          "2",
+          "--no-analyze"
+        ],
+        "run_directory_exists": true
+      },
+      {
+        "run_id": "B_a100_CB",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/fese.py",
+          "run",
+          "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/campaigns/baseline.json",
+          "--only",
+          "B_a100_CB",
+          "--pw",
+          "pw.x",
+          "--proj",
+          "projwfc.x",
+          "--ranks",
+          "2",
+          "--no-analyze"
+        ],
+        "run_directory_exists": true
+      },
+      {
+        "run_id": "B_a100_STRIPE",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/fese.py",
+          "run",
+          "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/campaigns/baseline.json",
+          "--only",
+          "B_a100_STRIPE",
+          "--pw",
+          "pw.x",
+          "--proj",
+          "projwfc.x",
+          "--ranks",
+          "2",
+          "--no-analyze"
+        ],
+        "run_directory_exists": true
+      }
+    ]
+  },
+  "failed_actual_receipt_with_hypothetical_worker_exit_zero": "RUN_FAILED",
+  "completed_actual_receipt_classification": "COMPLETED_RUN_RECORD",
+  "positive_launch_and_cancellation_tested": false
+}

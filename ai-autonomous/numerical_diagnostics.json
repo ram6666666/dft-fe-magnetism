@@ -1,0 +1,173 @@
+{
+  "source_sha256": "4c96401aa035b0190d615ba72ea6f1f8ee12a843687c0f34371289ddd33b8bfc",
+  "bohr_in_angstrom": 0.529177210903,
+  "scope": "Actual completed logs; no synthetic scientific values",
+  "runs": [
+    {
+      "run_id": "B_a100_CB",
+      "run_status": "RUN_FAILED",
+      "input_sha256": "af19a275f0dbc7e9801a62c41322756a79c75d371b45e174028ab73a8a9229bc",
+      "log_sha256": "daaa8ced5f12779e01ddbfe665f3b24151474ce8ea530aee8fd3825b8f944f9e",
+      "diagnostic_status": "NOT_COMPLETED",
+      "occupation_check": null,
+      "volume_check": null,
+      "energy_residual_check": null
+    },
+    {
+      "run_id": "B_a100_CB_r03",
+      "run_status": "RUNNING",
+      "input_sha256": "c7f977e0c951b7209e95733e412db0e898ee70e21ba3ecba1dcc11441e8ef92a",
+      "log_sha256": "b0f57902d3827e6aca2a7a1771791deae09cdea8af63d383a3c37a0c44341e7a",
+      "diagnostic_status": "NOT_COMPLETED",
+      "occupation_check": null,
+      "volume_check": null,
+      "energy_residual_check": null
+    },
+    {
+      "run_id": "B_a100_FM",
+      "run_status": "RUN_FAILED",
+      "input_sha256": "61493349b3e95049c9be7119a3e013c59b75ffced58b0a2bd5b7fd2bf706be15",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "diagnostic_status": "NOT_COMPLETED",
+      "occupation_check": null,
+      "volume_check": null,
+      "energy_residual_check": null
+    },
+    {
+      "run_id": "B_a100_FM_r02",
+      "run_status": "RUN_FAILED",
+      "input_sha256": "92d22e2d55d2c9724426d220d1b422bd93142003d2396b1299da15d5dfa9e2c1",
+      "log_sha256": "27a230be9ba8d2deba1ca36645eb7c48b51f13453df47ed629a1135caa009b15",
+      "diagnostic_status": "NOT_COMPLETED",
+      "occupation_check": null,
+      "volume_check": null,
+      "energy_residual_check": null
+    },
+    {
+      "run_id": "B_a100_FM_r03",
+      "run_status": "RUNNING",
+      "input_sha256": "424b08a14fb87360f5a17cd59b57739499444df7172c55c456f2e9c9ff670a84",
+      "log_sha256": "5806f70104afbfd69ce3c3d4fc18b3b32b3ed9e5e42a0c490519cde1d9c20727",
+      "diagnostic_status": "NOT_COMPLETED",
+      "occupation_check": null,
+      "volume_check": null,
+      "energy_residual_check": null
+    },
+    {
+      "run_id": "B_a100_STRIPE",
+      "run_status": "RUN_FAILED",
+      "input_sha256": "e67c4fbba6e9141ee9abbd0d992ca145335b2ac1febbc404b7d8b7996ed803f1",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "diagnostic_status": "NOT_COMPLETED",
+      "occupation_check": null,
+      "volume_check": null,
+      "energy_residual_check": null
+    },
+    {
+      "run_id": "B_a100_STRIPE_r02",
+      "run_status": "RUN_FAILED",
+      "input_sha256": "32bc0b995a73d8ae485c1cce58666922796f4aab1b8011d1d28a0a80d8f2c80c",
+      "log_sha256": "933b34aa94d74719a2375b8d86fc457970bc0a97a63e3a98cb689e00ac8525b0",
+      "diagnostic_status": "NOT_COMPLETED",
+      "occupation_check": null,
+      "volume_check": null,
+      "energy_residual_check": null
+    },
+    {
+      "run_id": "B_a100_STRIPE_r03",
+      "run_status": "RUNNING",
+      "input_sha256": "ef6dd3a84968a5e5801b86730447ce32804baece9884fbf28e39c1c7c571ce3f",
+      "log_sha256": "9984af37846c3e1275fc259692b8334bd839e9f85653faaf0d63a51f766c10eb",
+      "diagnostic_status": "NOT_COMPLETED",
+      "occupation_check": null,
+      "volume_check": null,
+      "energy_residual_check": null
+    },
+    {
+      "run_id": "P001_stripe_60_k443",
+      "run_status": "RUN_FAILED",
+      "input_sha256": "3829f63f81019f34bb7f118a52b95fadbf9269ea4c9aac7c1a0d18471adf4b94",
+      "log_sha256": "ac2415851d59209f1a53af7071597212d7dba5108565e062037071bccd8b4d21",
+      "diagnostic_status": "NOT_COMPLETED",
+      "occupation_check": null,
+      "volume_check": null,
+      "energy_residual_check": null
+    },
+    {
+      "run_id": "P002_stripe_openblas_serial",
+      "run_status": "RUN_FAILED",
+      "input_sha256": "3cddb7c33a6f005fb755162da7cd3004867c9bc63a1f5d66f2d792b30ce43b6e",
+      "log_sha256": "dc207063dd6c16f8d203e878cd80547a0f0680fe9cdbd67251c521cf8bb4e8e4",
+      "diagnostic_status": "NOT_COMPLETED",
+      "occupation_check": null,
+      "volume_check": null,
+      "energy_residual_check": null
+    },
+    {
+      "run_id": "P003_stripe_openblas_pool2",
+      "run_status": "RUN_COMPLETED",
+      "input_sha256": "418194cf3fb684388bb788792d9d87a0351adafc45c427b388e2a1d1590f3fac",
+      "log_sha256": "f74aa495b2f3f454b99f2c79790b0a5e8951961ca0f92410121dd152946776f3",
+      "diagnostic_status": "OBSERVED_COMPLETED_LOG_CHECKS",
+      "occupation_check": {
+        "status": "PRINTED_BLOCKS_COMPLETE",
+        "nbnd": 84,
+        "printed_band_blocks": 36,
+        "printed_occupation_blocks": 36,
+        "fermi_energy_ev": 10.8484,
+        "maximum_abs_printed_highest_band_occupation": 0.0,
+        "occupation_print_resolution": 0.0001,
+        "minimum_highest_band_above_fermi_ev": 8.399600000000001,
+        "minimum_margin_in_smearing_widths": 30.867960654663168,
+        "highest_band_empty_at_print_precision": true,
+        "interpretation": "Checks truncation of occupied bands at printed precision; does not establish k-mesh or smearing convergence"
+      },
+      "volume_check": {
+        "qe_printed_bohr3": 1055.6945,
+        "derived_bohr3": 1055.6944879525417,
+        "relative_difference": 1.1411879525961599e-08,
+        "within_print_precision": true,
+        "definition": "det(A,B,C)=2*a^2*c; Angstrom^3 converted using CODATA bohr"
+      },
+      "energy_residual_check": {
+        "qe_estimated_scf_accuracy_ry_cell": 3e-08,
+        "qe_estimated_scf_accuracy_mev_fe": 0.00010204269842245498,
+        "last_printed_iteration_energy_change_mev_fe": 0.002415010511633208,
+        "interpretation": "Electronic self-consistency diagnostics only; not a total discretization error bound"
+      }
+    },
+    {
+      "run_id": "P004_stripe_gamma_pipeline",
+      "run_status": "RUN_COMPLETED",
+      "input_sha256": "ecb3ffc0fcf9f49a6b8eff8274312950627b7c045595e25c221472f97b87af34",
+      "log_sha256": "1861d36dbcc2cdaf55555fbcaa447defad723cc8ab7300f02d4e007a9573d97b",
+      "diagnostic_status": "OBSERVED_COMPLETED_LOG_CHECKS",
+      "occupation_check": {
+        "status": "PRINTED_BLOCKS_COMPLETE",
+        "nbnd": 84,
+        "printed_band_blocks": 2,
+        "printed_occupation_blocks": 2,
+        "fermi_energy_ev": 10.7786,
+        "maximum_abs_printed_highest_band_occupation": 0.0,
+        "occupation_print_resolution": 0.0001,
+        "minimum_highest_band_above_fermi_ev": 12.802599999999998,
+        "minimum_margin_in_smearing_widths": 47.04868720860405,
+        "highest_band_empty_at_print_precision": true,
+        "interpretation": "Checks truncation of occupied bands at printed precision; does not establish k-mesh or smearing convergence"
+      },
+      "volume_check": {
+        "qe_printed_bohr3": 1055.6945,
+        "derived_bohr3": 1055.6944879525417,
+        "relative_difference": 1.1411879525961599e-08,
+        "within_print_precision": true,
+        "definition": "det(A,B,C)=2*a^2*c; Angstrom^3 converted using CODATA bohr"
+      },
+      "energy_residual_check": {
+        "qe_estimated_scf_accuracy_ry_cell": 8e-08,
+        "qe_estimated_scf_accuracy_mev_fe": 0.00027211386245988003,
+        "last_printed_iteration_energy_change_mev_fe": 0.00044218499057816,
+        "interpretation": "Electronic self-consistency diagnostics only; not a total discretization error bound"
+      }
+    }
+  ]
+}

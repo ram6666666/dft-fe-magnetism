@@ -1,0 +1,56 @@
+hwloc/linux: failed to find sysfs cpu topology directory, aborting linux discovery.
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+#0  0x7f66b737f2ba in ???
+#1  0x7f66b737e375 in ???
+#2  0x7f66b6f8fd6f in ???
+#3  0x7f66b455542c in mca_btl_sm_poll_handle_frag
+#4  0x7f66b455582a in ???
+#5  0x7f66b4492d23 in opal_progress
+#6  0x7f66b6c14c9f in ompi_request_default_wait
+#7  0x7f66b6c94c2f in ompi_coll_base_barrier_intra_recursivedoubling
+#8  0x7f66b6c2b94e in MPI_Barrier
+#9  0x7f66b76ac356 in MPI_BARRIER
+#10  0x559aa56c6f00 in ???
+#11  0x559aa56c5a57 in ???
+#12  0x559aa543dca8 in ???
+#13  0x559aa54449c8 in ???
+#14  0x559aa543dbf4 in ???
+#15  0x559aa5188487 in ???
+#16  0x559aa5188174 in ???
+#17  0x7f66b6f79ca7 in ???
+#18  0x7f66b6f79d64 in __libc_start_main
+#19  0x559aa51881a0 in ???
+#20  0xffffffffffffffff in ???
+#0  0x7f0f5514b2ba in ???
+#1  0x7f0f5514a375 in ???
+#2  0x7f0f54d5bd6f in ???
+#3  0x7f0f5231d42c in mca_btl_sm_poll_handle_frag
+#4  0x7f0f5231d6b3 in ???
+#5  0x7f0f5225ad23 in opal_progress
+#6  0x7f0f549e1754 in ompi_request_default_wait_all
+#7  0x7f0f54a4de51 in ompi_coll_base_bcast_intra_basic_linear
+#8  0x7f0f54a8658f in ompi_coll_tuned_bcast_intra_dec_fixed
+#9  0x7f0f549f7d6f in PMPI_Bcast
+#10  0x7f0f55478445 in mpi_bcast__
+#11  0x55912c4f708a in ???
+#12  0x55912c4f06e6 in ???
+#13  0x55912c26dcd5 in ???
+#14  0x55912c2749c8 in ???
+#15  0x55912c26dbf4 in ???
+#16  0x55912bfb8487 in ???
+#17  0x55912bfb8174 in ???
+#18  0x7f0f54d45ca7 in ???
+#19  0x7f0f54d45d64 in __libc_start_main
+#20  0x55912bfb81a0 in ???
+#21  0xffffffffffffffff in ???
+--------------------------------------------------------------------------
+prterun noticed that process rank 0 with PID 15 on node e3865bf49b68 exited on
+signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

@@ -1,0 +1,2 @@
+              MCA btl sm: parameter "btl_sm_backing_directory" (current value: "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runtime/btl_probe_tmp", data source: environment, level: 3 user/all, type: string, synonyms: btl_vader_backing_directory)
+                          Directory to place backing files for shared memory communication. This directory should be on a local filesystem such as /tmp or /dev/shm (default: (linux) /dev/shm, (others) session directory)

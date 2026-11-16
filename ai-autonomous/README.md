@@ -14,6 +14,8 @@ established conclusions are separate objects.
 ## Files and evidence
 
 - `fese.py`: geometry/input generator, bounded runner, fail-closed parser, collection.
+- `batch.py`: bounded same-session subprocess supervision, when present.
+- `analysis_plot.py`: raw-evidence verification, common-zero points and sensitivity plots.
 - `campaigns/`: explicit planned case dictionaries, including pilots and repairs.
 - `runs/<id>/`: exact actual input/config, raw outputs, receipts and parsed values.
 - `results.json` and `results.csv`: actual evidence rows; null/empty means missing.
@@ -41,20 +43,30 @@ cd ai-autonomous
 python fetch_pseudos.py
 python runtime/restore_runtime.py
 export QE_RUNTIME_ROOT="$PWD/runtime"
-export LD_LIBRARY_PATH="$QE_RUNTIME_ROOT/qe/usr/lib/x86_64-linux-gnu${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+export LD_LIBRARY_PATH="$QE_RUNTIME_ROOT/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread:$QE_RUNTIME_ROOT/qe/usr/lib/x86_64-linux-gnu"
 export OMP_NUM_THREADS=1
 export OPENBLAS_NUM_THREADS=1
-python fese.py run campaigns/pilot.json \
+python fese.py run campaigns/baseline_retry03.json \
+  --only B_a100_STRIPE_r03 --new-run-id REPLAY_local_001 \
   --pw "$QE_RUNTIME_ROOT/qe/usr/bin/pw.x" \
-  --proj "$QE_RUNTIME_ROOT/qe/usr/bin/projwfc.x" --ranks 4
+  --proj "$QE_RUNTIME_ROOT/qe/usr/bin/projwfc.x" --ranks 2
 python fese.py analyze
+python analysis_plot.py --production-ids 'B_*' --comparison-ids 'B_*' 'C_*' \
+  --energy-reference-run B_a100_STRIPE_r03 --target-mev-fe 1 --outdir analysis/local
 ```
 
 Saved attempts are immutable: the runner refuses a reused run ID. For a fresh
-replay, copy the selected case to a new campaign JSON and assign a new `run_id`.
+replay, use `--only ORIGINAL_ID --new-run-id NEW_UNIQUE_ID`, or copy the selected
+case to a new campaign JSON and assign a new `run_id`. The example's new ID must
+be changed if it already exists. Replay rows stay separate from the baseline.
 Inputs do not depend on previous charge/wavefunction files. Subsequent optimized
 runtime settings, if actually tested, are recorded in that attempt's receipt
 and runtime addendum; do not silently substitute libraries into an existing run.
+The active production profile uses one BLAS/OpenMP thread and two MPI ranks with
+two k pools. The runner isolates PRTE and MPI shared-memory paths for each stage.
+For a controlled stop, write `CANCEL_REQUEST` inside a future run directory;
+the runner records interruption and terminates its child process group. A normal
+SCF completion remains subject to the explicit convergence gate.
 
 ## Interpretation rules
 

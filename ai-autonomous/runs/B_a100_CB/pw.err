@@ -1,0 +1,52 @@
+hwloc/linux: failed to find sysfs cpu topology directory, aborting linux discovery.
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+#0  0x7ff8726fb2ba in ???
+#1  0x7ff8726fa375 in ???
+#2  0x7ff87230bd6f in ???
+#3  0x7ff86f8cd42c in mca_btl_sm_poll_handle_frag
+#4  0x7ff86f8cd6b3 in ???
+#5  0x7ff86f80ad23 in opal_progress
+#6  0x7ff87218182b in ???
+#7  0x7ff8721838cd in mca_pml_ob1_send
+#8  0x7ff871fd40b9 in MPI_Send
+#9  0x7ff872a338b9 in ompi_send_f
+#10  0x55a991075df4 in ???
+#11  0x55a990fd0893 in ???
+#12  0x55a990fd7b60 in ???
+#13  0x55a9910c2c0f in ???
+#14  0x55a990fc848f in ???
+#15  0x55a990fc8174 in ???
+#16  0x7ff8722f5ca7 in ???
+#17  0x7ff8722f5d64 in __libc_start_main
+#18  0x55a990fc81a0 in ???
+#19  0xffffffffffffffff in ???
+#0  0x7f23467002ba in ???
+#1  0x7f23466ff375 in ???
+#2  0x7f2346310d6f in ???
+#3  0x7f23438d542c in mca_btl_sm_poll_handle_frag
+#4  0x7f23438d56b3 in ???
+#5  0x7f2343812d23 in opal_progress
+#6  0x7f234618460f in mca_pml_ob1_recv
+#7  0x7f2345fd36c6 in MPI_Recv
+#8  0x7f2346a377d4 in MPI_Recv_f08
+#9  0x5651eb019d50 in ???
+#10  0x5651eaf74893 in ???
+#11  0x5651eaf7bb60 in ???
+#12  0x5651eb066c0f in ???
+#13  0x5651eaf6c48f in ???
+#14  0x5651eaf6c174 in ???
+#15  0x7f23462faca7 in ???
+#16  0x7f23462fad64 in __libc_start_main
+#17  0x5651eaf6c1a0 in ???
+#18  0xffffffffffffffff in ???
+--------------------------------------------------------------------------
+prterun noticed that process rank 0 with PID 15 on node e3865bf49b68 exited on
+signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

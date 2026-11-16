@@ -1,0 +1,9 @@
+{
+  "observed_utc": "2026-11-16T20:16:43.665986+00:00",
+  "action": "write_stdin owning exec session with Ctrl-C via String.fromCharCode(3)",
+  "owning_tool_session": 59221,
+  "tool_exit_code": 130,
+  "qe_exit_code": null,
+  "reason": "Stalled at input after concurrent shared-memory MPI failure; same scientific input is being retried with isolated runtime paths",
+  "limits": "Tool reports session exit130; QE did not emit a normal final exit receipt. Last live pw_execution.json is retained unchanged. No energy accepted. Backend descendant teardown tested only with bounded engineering dummy."
+}

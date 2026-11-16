@@ -1,0 +1,2 @@
+{"utc": "2026-11-16T20:14:51.283545+00:00", "role": "parent", "pid": 2, "event": "started"}
+{"utc": "2026-11-16T20:14:51.468231+00:00", "role": "child_new_session", "pid": 5, "event": "started"}

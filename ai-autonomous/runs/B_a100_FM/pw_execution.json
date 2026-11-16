@@ -1,0 +1,26 @@
+{
+  "command": [
+    "mpirun",
+    "-np",
+    "2",
+    "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+    "-nk",
+    "2",
+    "-in",
+    "input.in"
+  ],
+  "cwd": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_FM",
+  "start": "2026-11-16T20:09:24.322529+00:00",
+  "end": "2026-11-16T20:09:24.807905+00:00",
+  "exit_code": 213,
+  "elapsed_seconds": 0.4853796369970951,
+  "timed_out": false,
+  "child_cpu_seconds": 0.363251,
+  "child_maxrss_kib": 14676,
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "LD_LIBRARY_PATH": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread:/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/lib/x86_64-linux-gnu"
+  },
+  "status": "PROCESS_EXITED"
+}
