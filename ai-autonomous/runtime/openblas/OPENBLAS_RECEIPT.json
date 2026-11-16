@@ -1,0 +1,50 @@
+{
+  "status": "EXTRACTED_SYMBOLS_AND_LOADER_VERIFIED_NOT_SCIENTIFICALLY_TESTED",
+  "created_at": "2026-11-16T19:44:02.933076+00:00",
+  "source_url": "https://deb.debian.org/debian/pool/main/o/openblas/libopenblas0-pthread_0.3.29+ds-3_amd64.deb",
+  "checksum_source": "https://packages.debian.org/trixie/amd64/libopenblas0-pthread/download",
+  "package_sha256": "e3541ee2c956c64383054ba116fb6ef86bbaf40035d64e1795185029fdcf0807",
+  "package_bytes": 6740184,
+  "package_checksum_matches_official": true,
+  "opt_in_environment": {
+    "LD_LIBRARY_PATH": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread:/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/lib/x86_64-linux-gnu",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "no_existing_library_modified": true,
+  "no_running_process_environment_changed": true,
+  "library_hashes": [
+    {
+      "name": "libopenblas.so.0",
+      "target": "libopenblasp-r0.3.29.so",
+      "sha256": "10d1c640ecccd21063a7d80f90e949b1d48202830b6ec0b52b2796c5d0fbce63",
+      "bytes": 39608152
+    },
+    {
+      "name": "liblapack.so.3",
+      "target": "liblapack.so.3",
+      "sha256": "336a9b0a527ae2d558b4ff59844e787e49e38d5a1c39d5ae36651252badf28cd",
+      "bytes": 7572240
+    },
+    {
+      "name": "libopenblasp-r0.3.29.so",
+      "target": "libopenblasp-r0.3.29.so",
+      "sha256": "10d1c640ecccd21063a7d80f90e949b1d48202830b6ec0b52b2796c5d0fbce63",
+      "bytes": 39608152
+    },
+    {
+      "name": "libblas.so.3",
+      "target": "libblas.so.3",
+      "sha256": "6bcdc34466e1ff7155f60b6365abe51d9125fc97c90d4c6e392c3f6260acf44d",
+      "bytes": 522656
+    }
+  ],
+  "all_shared_libraries_resolved": true,
+  "abi": "LP64 (ordinary dgemm_ and LAPACK symbols present); not an ILP64 library",
+  "direct_library_initialization": {
+    "config": "OpenBLAS 0.3.29 NO_LAPACKE DYNAMIC_ARCH NO_AFFINITY Zen MAX_THREADS=128",
+    "threads": 1,
+    "parallel_backend_code": 1,
+    "boundary": "Direct library initialization probe only, not QE SCF or timing benchmark"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "config": "OpenBLAS 0.3.29 NO_LAPACKE DYNAMIC_ARCH NO_AFFINITY Zen MAX_THREADS=128",
+  "threads": 1,
+  "parallel_backend_code": 1,
+  "boundary": "Direct library initialization probe only, not QE SCF or timing benchmark"
+}

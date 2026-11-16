@@ -1,0 +1,19 @@
+[
+  "+++ ./Modules/read_pseudo.f90\t2021-01-06 21:15:21.523514195 +0100",
+  "+++ espresso/install/make.inc.in",
+  "+++ espresso/Makefile",
+  "+++ espresso/Makefile",
+  "+++ espresso/atomic/examples/pseudo-test/clean.sh",
+  "+++ espresso/atomic/examples/vdw-in-tfvw/clean.sh",
+  "+++ espresso/CPV/examples/EXX-wf-example/example-job-script",
+  "+++ espresso/EPW/examples/diamond/phonons/pp.py",
+  "+++ espresso/EPW/examples/sic/phonons/pp.py",
+  "+++ espresso/atomic/examples/all-electron/clean.sh",
+  "+++ espresso/atomic/examples/pseudo-gen/clean.sh",
+  "+++ espresso/atomic/examples/pseudo-LDA-0.5/clean.sh",
+  "+++ espresso/EPW/examples/mgb2/phonons/pp.py",
+  "+++ espresso/test-suite/Makefile",
+  "+++ espresso/install/extlibs_makefile",
+  "+++ espresso/EPW/src/Makefile",
+  "+++ b/test-suite/testcode/lib/testcode2/__init__.py"
+]

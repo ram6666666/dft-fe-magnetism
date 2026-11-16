@@ -1,0 +1,25 @@
+$ curl -I --max-time 15 https://micro.mamba.pm/api/micromamba/linux-64/latest
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
+  0    31    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
+HTTP/1.1 200 OK
+date: Mon, 16 Nov 2026 19:33:46 GMT
+
+HTTP/2 405 
+allow: GET
+alt-svc: h3=":443"; ma=2592000
+content-type: application/json
+date: Mon, 16 Nov 2026 19:33:47 GMT
+server: envoy
+strict-transport-security: max-age=31536000
+via: 1.1 Caddy
+content-length: 31
+x-envoy-upstream-service-time: 1129
+

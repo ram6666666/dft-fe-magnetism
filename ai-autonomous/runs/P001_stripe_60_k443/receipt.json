@@ -1,0 +1,42 @@
+{
+  "run_id": "P001_stripe_60_k443",
+  "status": "RUN_FAILED",
+  "prepared_at": "2026-11-16T19:40:41.858341+00:00",
+  "input_sha256": "3829f63f81019f34bb7f118a52b95fadbf9269ea4c9aac7c1a0d18471adf4b94",
+  "pseudo_sha256": {
+    "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+    "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+  },
+  "source_sha256": "d5a91f1c681fe168fa10f7d80e2db484dea5d8acc34deb13b6775dd41444b175",
+  "pw_executable": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+  "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+  "pw": {
+    "command": [
+      "mpirun",
+      "-np",
+      "4",
+      "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+      "-in",
+      "input.in"
+    ],
+    "cwd": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/P001_stripe_60_k443",
+    "start": "2026-11-16T19:40:41.881073+00:00",
+    "end": "2026-11-16T19:46:52.193239+00:00",
+    "exit_code": 2,
+    "elapsed_seconds": 370.31216531200334,
+    "timed_out": false,
+    "child_cpu_seconds": 728.853613,
+    "child_maxrss_kib": 163296,
+    "environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "LD_LIBRARY_PATH": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/lib/x86_64-linux-gnu"
+    }
+  },
+  "file_hashes": {
+    "input.in": "3829f63f81019f34bb7f118a52b95fadbf9269ea4c9aac7c1a0d18471adf4b94",
+    "config.json": "1e02c95c6c1d8fb776be822405063abca4115ef4875bb6e331c4bb5d2124a84d",
+    "pw.out": "ac2415851d59209f1a53af7071597212d7dba5108565e062037071bccd8b4d21",
+    "pw.err": "dae86e0014cf071a63033d1718935db5da83ef1cd5622a256464bd2cc39983b8"
+  }
+}

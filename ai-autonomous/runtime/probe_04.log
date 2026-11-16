@@ -1,0 +1,36 @@
+$ curl -I --max-time 15 https://deb.debian.org/debian/pool/main/e/espresso/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0
+HTTP/1.1 200 OK
+date: Mon, 16 Nov 2026 19:33:42 GMT
+
+HTTP/2 200 
+server: envoy
+x-content-type-options: nosniff
+x-frame-options: sameorigin
+referrer-policy: no-referrer
+x-xss-protection: 1
+permissions-policy: interest-cohort=()
+x-clacks-overhead: GNU Terry Pratchett
+content-type: text/html;charset=UTF-8
+backend: 4qpvL1tJyeV1P6Tmf0Lj8g--F_conova_debian_backend_mirrors_debian_org
+via: 1.1 varnish, 1.1 varnish
+accept-ranges: bytes
+age: 0
+date: Mon, 16 Nov 2026 19:33:43 GMT
+x-served-by: cache-ams-eham8680051-AMS, cache-ber1080047-BER
+x-cache: MISS, MISS
+x-cache-hits: 0, 0
+x-timer: S1794857623.999999,VS0,VE37
+vary: Accept-Encoding
+x-envoy-upstream-service-time: 156
+

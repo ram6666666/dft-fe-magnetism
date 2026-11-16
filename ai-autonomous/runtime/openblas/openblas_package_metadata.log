@@ -1,0 +1,36 @@
+$ dpkg-deb -I /workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/libopenblas0-pthread_0.3.29+ds-3_amd64.deb
+ new Debian package, version 2.0.
+ size 6740184 bytes: control archive=1596 bytes.
+    1064 bytes,    25 lines      control
+     613 bytes,     7 lines      md5sums
+     637 bytes,    18 lines   *  postinst             #!/bin/sh
+     510 bytes,    18 lines   *  prerm                #!/bin/sh
+     446 bytes,     8 lines      shlibs
+      68 bytes,     2 lines      triggers
+ Package: libopenblas0-pthread
+ Source: openblas
+ Version: 0.3.29+ds-3
+ Architecture: amd64
+ Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+ Installed-Size: 46660
+ Depends: libc6 (>= 2.38), libgfortran5 (>= 8)
+ Breaks: libatlas3-base (<< 3.10.3-4~), libblas3 (<< 3.7.1-2~), liblapack3 (<< 3.7.1-2~), libopenblas-dev (<< 0.2.20+ds-3~)
+ Provides: libblas.so.3, liblapack.so.3
+ Section: libs
+ Priority: optional
+ Multi-Arch: same
+ Homepage: https://www.openblas.net/
+ Description: Optimized BLAS (linear algebra) library (shared lib, pthread)
+  OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.
+  .
+  On amd64, arm64, i386, loong64, ppc64el, riscv64 and s390x, all kernels are
+  included in the library and the one matching best your processor is selected
+  at runtime.
+  .
+  On other architectures, for maximum performance, you may want to rebuild
+  OpenBLAS locally, see the section: “Building an optimized OpenBLAS package for
+  your machine” in README.Debian.
+  .
+  Configuration: USE_THREAD=1 USE_OPENMP=0 INTERFACE64=0
+
+returncode=0

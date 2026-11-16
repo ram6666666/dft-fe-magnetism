@@ -1,0 +1,159 @@
+{
+  "scope": "PRODUCER_SELF_CHECK_NOT_INDEPENDENT_AUDIT",
+  "reviewed_source_sha256": "b55c18dbebc649310ac5da4ce7e0733ad8157987d654b6ad682b3dd1f1386abe",
+  "reviewed_at": "2026-11-16T19:46:25.783539+00:00",
+  "geometry_neighbor_check": {
+    "FM": [
+      {
+        "site": 1,
+        "same_NN": 4,
+        "opposite_NN": 0
+      },
+      {
+        "site": 2,
+        "same_NN": 4,
+        "opposite_NN": 0
+      },
+      {
+        "site": 3,
+        "same_NN": 4,
+        "opposite_NN": 0
+      },
+      {
+        "site": 4,
+        "same_NN": 4,
+        "opposite_NN": 0
+      }
+    ],
+    "CB": [
+      {
+        "site": 1,
+        "same_NN": 0,
+        "opposite_NN": 4
+      },
+      {
+        "site": 2,
+        "same_NN": 0,
+        "opposite_NN": 4
+      },
+      {
+        "site": 3,
+        "same_NN": 0,
+        "opposite_NN": 4
+      },
+      {
+        "site": 4,
+        "same_NN": 0,
+        "opposite_NN": 4
+      }
+    ],
+    "STRIPE": [
+      {
+        "site": 1,
+        "same_NN": 2,
+        "opposite_NN": 2
+      },
+      {
+        "site": 2,
+        "same_NN": 2,
+        "opposite_NN": 2
+      },
+      {
+        "site": 3,
+        "same_NN": 2,
+        "opposite_NN": 2
+      },
+      {
+        "site": 4,
+        "same_NN": 2,
+        "opposite_NN": 2
+      }
+    ]
+  },
+  "volume_formula": "2*a^2*c",
+  "parser_fixture_results": {
+    "completed": {
+      "status": "RUN_COMPLETED",
+      "scf_converged": true,
+      "job_done": true,
+      "energy_total_ry": -1.0,
+      "scf_accuracy_ry": null,
+      "scf_iterations": 8,
+      "total_magnetization_muB_cell": null,
+      "absolute_magnetization_muB_cell": null,
+      "smearing_contribution_ry": null,
+      "qe_version": "6.7MaX"
+    },
+    "appended_empty": {
+      "status": "UNCONVERGED",
+      "scf_converged": false,
+      "job_done": false,
+      "energy_total_ry": null,
+      "scf_accuracy_ry": null,
+      "scf_iterations": null,
+      "total_magnetization_muB_cell": null,
+      "absolute_magnetization_muB_cell": null,
+      "smearing_contribution_ry": null,
+      "qe_version": "6.7MaX"
+    },
+    "unconverged": {
+      "status": "UNCONVERGED",
+      "scf_converged": false,
+      "job_done": true,
+      "energy_total_ry": -1.0,
+      "scf_accuracy_ry": null,
+      "scf_iterations": null,
+      "total_magnetization_muB_cell": null,
+      "absolute_magnetization_muB_cell": null,
+      "smearing_contribution_ry": null,
+      "qe_version": "6.7MaX"
+    },
+    "nonzero_exit": {
+      "status": "RUN_FAILED",
+      "scf_converged": true,
+      "job_done": true,
+      "energy_total_ry": -1.0,
+      "scf_accuracy_ry": null,
+      "scf_iterations": 8,
+      "total_magnetization_muB_cell": null,
+      "absolute_magnetization_muB_cell": null,
+      "smearing_contribution_ry": null,
+      "qe_version": "6.7MaX"
+    },
+    "trailing_error": {
+      "status": "RUN_FAILED",
+      "scf_converged": true,
+      "job_done": true,
+      "energy_total_ry": -1.0,
+      "scf_accuracy_ry": null,
+      "scf_iterations": 8,
+      "total_magnetization_muB_cell": null,
+      "absolute_magnetization_muB_cell": null,
+      "smearing_contribution_ry": null,
+      "qe_version": "6.7MaX"
+    },
+    "second_scf_unconverged": {
+      "status": "UNCONVERGED",
+      "scf_converged": false,
+      "job_done": true,
+      "energy_total_ry": null,
+      "scf_accuracy_ry": null,
+      "scf_iterations": null,
+      "total_magnetization_muB_cell": null,
+      "absolute_magnetization_muB_cell": null,
+      "smearing_contribution_ry": null,
+      "qe_version": "6.7MaX"
+    }
+  },
+  "projection_fixture_result": [
+    0.2,
+    -0.2,
+    0.2,
+    -0.2,
+    0.2,
+    -0.2,
+    0.2,
+    -0.2
+  ],
+  "fixture_boundary": "Synthetic fixtures validate negative parsing and exact QE6.7 Lowdin format; they do not replace actual pilot output checks."
+}

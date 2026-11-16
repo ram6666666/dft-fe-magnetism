@@ -1,0 +1,32 @@
+[
+  {
+    "path": "PP/Doc/INPUT_PROJWFC.def",
+    "local": "PP_Doc_INPUT_PROJWFC.def",
+    "url": "https://raw.githubusercontent.com/QEF/q-e/a34dabb0f802ee27085d6f5cc0127e2c94cd2a93/PP/Doc/INPUT_PROJWFC.def",
+    "bytes": 10673,
+    "sha256": "e37d4f259f51ec7585f3c3c65e4c4a3af37f7b3ecb9c30e78873342e71b25cd6",
+    "status": "DOWNLOADED"
+  },
+  {
+    "path": "Modules/random_numbers.f90",
+    "local": "Modules_random_numbers.f90",
+    "url": "https://raw.githubusercontent.com/QEF/q-e/a34dabb0f802ee27085d6f5cc0127e2c94cd2a93/Modules/random_numbers.f90",
+    "bytes": 8711,
+    "sha256": "9614e86bd2d9a39891470f13ff69aa3f3d641424dcf7d9e18c0abb517617db26",
+    "status": "DOWNLOADED"
+  },
+  {
+    "path": "PW/src/wfcinit.f90",
+    "local": "PW_src_wfcinit.f90",
+    "url": "https://raw.githubusercontent.com/QEF/q-e/a34dabb0f802ee27085d6f5cc0127e2c94cd2a93/PW/src/wfcinit.f90",
+    "bytes": 12191,
+    "sha256": "3dc62e70b647af40f2ffb8db3cc73eaa4e09e01d6ccc62cd289c9d053592b32f",
+    "status": "DOWNLOADED"
+  },
+  {
+    "path": "PW/src/random_wfc.f90",
+    "url": "https://raw.githubusercontent.com/QEF/q-e/a34dabb0f802ee27085d6f5cc0127e2c94cd2a93/PW/src/random_wfc.f90",
+    "status": "FAILED",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

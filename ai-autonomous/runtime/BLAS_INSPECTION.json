@@ -1,0 +1,19 @@
+{
+  "blas_symlink_target": "/usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.1",
+  "lapack_symlink_target": "/usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.1",
+  "system_openblas_candidates": [],
+  "numpy_location": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy",
+  "numpy_blas_candidates": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so"
+  ],
+  "scipy_location": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy",
+  "scipy_blas_candidates": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so"
+  ],
+  "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so_fortran_symbols": [
+    "00000000000efdd0 T scipy_dgemm_64_"
+  ],
+  "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so_fortran_symbols": [
+    "00000000000eb6b0 T scipy_dgemm_"
+  ]
+}

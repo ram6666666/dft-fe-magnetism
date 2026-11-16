@@ -1,0 +1,5 @@
+Command: python restore_runtime.py
+Verified and extracted quantum-espresso_6.7-3+b1_amd64.deb
+Verified and extracted libscalapack-openmpi2.2_2.2.2-1_amd64.deb
+Observed return code: 0
+Post-restore pw.x checksum unchanged: True

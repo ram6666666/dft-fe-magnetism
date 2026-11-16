@@ -1,0 +1,7 @@
+{
+  "source": "https://deb.debian.org/debian/pool/main/e/espresso/quantum-espresso_6.7-3+b1_amd64.deb",
+  "start": "2026-11-16T19:34:18.706802+00:00",
+  "end": "2026-11-16T19:34:34.316479+00:00",
+  "bytes": 49514884,
+  "sha256": "44f9f38afc08fa53148cdddf8936464ba992b894a0843cc4aaf8749809b54bca"
+}

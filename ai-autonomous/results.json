@@ -1,0 +1,72 @@
+[
+  {
+    "a_ang": 3.765,
+    "c_ang": 5.518,
+    "z_se": 0.2343,
+    "ecutwfc_ry": 60.0,
+    "kgrid": [
+      4,
+      4,
+      3
+    ],
+    "kshift": [
+      0,
+      0,
+      0
+    ],
+    "degauss_ry": 0.02,
+    "conv_thr_ry": 1e-07,
+    "mixing_beta": 0.3,
+    "electron_maxstep": 120,
+    "starting_polarization": 0.15,
+    "nbnd": 84,
+    "max_seconds": 360,
+    "project": true,
+    "stage": "PILOT",
+    "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+    "run_id": "P001_stripe_60_k443",
+    "initial_state": "STRIPE",
+    "ecutrho_ry": 240.0,
+    "n_fe": 4,
+    "functional": "PBE",
+    "smearing": "mv",
+    "relativistic": "scalar; collinear; no SOC",
+    "status": "RUN_FAILED",
+    "scf_converged": false,
+    "job_done": true,
+    "energy_total_ry": null,
+    "scf_accuracy_ry": 1.83287617,
+    "scf_iterations": null,
+    "total_magnetization_muB_cell": 0.0,
+    "absolute_magnetization_muB_cell": 6.57,
+    "smearing_contribution_ry": null,
+    "qe_version": "6.7MaX",
+    "fe_lowdin_moments_muB": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "all_lowdin_moments_muB": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "magnetic_diagnostic": "Lowdin atomic spin population plus cell spin integrals",
+    "final_state": "UNVERIFIED_FINAL_STATE",
+    "input_path": "runs/P001_stripe_60_k443/input.in",
+    "log_path": "runs/P001_stripe_60_k443/pw.out",
+    "input_sha256": "3829f63f81019f34bb7f118a52b95fadbf9269ea4c9aac7c1a0d18471adf4b94",
+    "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+    "exit_code": 2,
+    "elapsed_seconds": 370.31216531200334,
+    "energy_per_fe_ry": null,
+    "relative_to_group_min_mev_fe": null,
+    "relative_to_nm_mev_fe": null
+  }
+]

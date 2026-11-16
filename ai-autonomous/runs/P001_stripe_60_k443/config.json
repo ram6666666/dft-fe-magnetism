@@ -1,0 +1,33 @@
+{
+  "a_ang": 3.765,
+  "c_ang": 5.518,
+  "z_se": 0.2343,
+  "ecutwfc_ry": 60.0,
+  "kgrid": [
+    4,
+    4,
+    3
+  ],
+  "kshift": [
+    0,
+    0,
+    0
+  ],
+  "degauss_ry": 0.02,
+  "conv_thr_ry": 1e-07,
+  "mixing_beta": 0.3,
+  "electron_maxstep": 120,
+  "starting_polarization": 0.15,
+  "nbnd": 84,
+  "max_seconds": 360,
+  "project": true,
+  "stage": "PILOT",
+  "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+  "run_id": "P001_stripe_60_k443",
+  "initial_state": "STRIPE",
+  "ecutrho_ry": 240.0,
+  "n_fe": 4,
+  "functional": "PBE",
+  "smearing": "mv",
+  "relativistic": "scalar; collinear; no SOC"
+}

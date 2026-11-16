@@ -1,0 +1,10 @@
+$ rg -n -i set_random_seed|randy\s*\(\s*[A-Za-z0-9_-]+ /workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/upstream-qe/PW/src /workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/upstream-qe/Modules /workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/upstream-qe/UtilXlib
+/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/upstream-qe/PW/src/dynamics_module.f90:695:         USE random_numbers, ONLY : gauss_dist, set_random_seed
+/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/upstream-qe/PW/src/dynamics_module.f90:705:         CALL set_random_seed( )
+/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/upstream-qe/PW/src/fcp.f90:405:         USE random_numbers, ONLY : gauss_dist, set_random_seed
+/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/upstream-qe/PW/src/fcp.f90:414:         CALL set_random_seed()
+/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/upstream-qe/Modules/random_numbers.f90:25:    FUNCTION randy ( irand )
+/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/upstream-qe/Modules/random_numbers.f90:28:      ! x=randy(n): reseed with initial seed idum=n ( 0 <= n <= ic, see below)
+/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/upstream-qe/Modules/random_numbers.f90:74:    SUBROUTINE set_random_seed ( )
+/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/upstream-qe/Modules/random_numbers.f90:86:      irand = randy ( iseed )
+/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/upstream-qe/Modules/random_numbers.f90:88:    END SUBROUTINE set_random_seed

@@ -1,0 +1,38 @@
+{
+  "status": "SELF_CHECK_PASS",
+  "geometry": [
+    {
+      "state": "FM",
+      "nearest_neighbor_correlation": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "state": "CB",
+      "nearest_neighbor_correlation": [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "state": "STRIPE",
+      "nearest_neighbor_correlation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "volume_ang3": 156.43778310000002,
+  "nn_distance_ang": 2.6622570311673512,
+  "se_height_ang": 1.2928674,
+  "parser_cases": 5,
+  "magnetic_classifier_cases": 3,
+  "independent_audit": false
+}

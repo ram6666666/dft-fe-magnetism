@@ -1,0 +1,6 @@
+$ mpirun --version
+mpirun (Open MPI) 5.0.7
+
+Report bugs to https://www.open-mpi.org/community/help/
+
+returncode=0

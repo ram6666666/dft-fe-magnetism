@@ -1,0 +1,16 @@
+hwloc/linux: failed to find sysfs cpu topology directory, aborting linux discovery.
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_DIVIDE_BY_ZERO
+STOP 2
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_DIVIDE_BY_ZERO
+STOP 2
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_DIVIDE_BY_ZERO
+STOP 2
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_DIVIDE_BY_ZERO
+STOP 2
+--------------------------------------------------------------------------
+prterun detected that one or more processes exited with non-zero status,
+thus causing the job to be terminated. The first process to do so was:
+
+   Process name: [prterun-e3865bf49b68-5@1,0]
+   Exit code:    2
+--------------------------------------------------------------------------

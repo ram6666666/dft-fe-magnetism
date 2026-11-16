@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "task": "FESE-GPT-WORK-20261116-R01",
+  "agent": "/root/gpt_fese_independent_r01/qe_runtime_probe",
+  "role": "ENGINEERING_ONLY_RUNTIME_REPAIR",
+  "execution_location": "CLOUD",
+  "status": "EXECUTABLE_STARTUP_VERIFIED_SCF_NOT_TESTED_BY_THIS_AGENT",
+  "created_at": "2026-11-16T19:36:02.205916+00:00",
+  "runtime_root": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime",
+  "qe_package_version": "6.7-3+b1",
+  "qe_banner_version": "6.7MaX",
+  "mpi_version": "Open MPI 5.0.7",
+  "startup_ranks_verified": [
+    1,
+    2
+  ],
+  "startup_exit_status": 1,
+  "startup_exit_explanation": "-h is not handled as a help request; the executable reads empty stdin and reports missing &control. This demonstrates loader/MPI/parser startup only, not a completed scientific calculation.",
+  "warnings": [
+    "hwloc cannot find sysfs CPU topology directory",
+    "UCX cannot create a VFS socket in the cloud runtime"
+  ],
+  "required_environment": {
+    "LD_LIBRARY_PATH": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/lib/x86_64-linux-gnu",
+    "OMP_NUM_THREADS": "1"
+  },
+  "package_official_checksums_verified": true,
+  "checksum_source_urls": [
+    "https://packages.debian.org/trixie/amd64/quantum-espresso/download",
+    "https://packages.debian.org/trixie/amd64/libscalapack-openmpi2.2/download"
+  ],
+  "artifact_records": [
+    {
+      "path": "quantum-espresso_6.7-3+b1_amd64.deb",
+      "size_bytes": 49514884,
+      "sha256": "44f9f38afc08fa53148cdddf8936464ba992b894a0843cc4aaf8749809b54bca"
+    },
+    {
+      "path": "libscalapack-openmpi2.2_2.2.2-1_amd64.deb",
+      "size_bytes": 1593568,
+      "sha256": "19edff3e0d4d27b350965246ac93de8bc0328fa3c42f1b9a93048873ec2aeb7d"
+    },
+    {
+      "path": "qe/usr/bin/pw.x",
+      "size_bytes": 9138936,
+      "sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f"
+    },
+    {
+      "path": "qe/usr/bin/projwfc.x",
+      "size_bytes": 5941560,
+      "sha256": "1bb5632fd9292ba7f544e7cfc9ff38c89906d0527ea3f7e81a287f12575460ed"
+    },
+    {
+      "path": "qe/usr/bin/pp.x",
+      "size_bytes": 5966104,
+      "sha256": "9b67fca6bbfc1e86e975e9ba195bc98553f3b4a6aed9606761ae64b04d86ce1a"
+    },
+    {
+      "path": "qe/usr/lib/x86_64-linux-gnu/libscalapack-openmpi.so.2.2",
+      "size_bytes": 6025536,
+      "sha256": "dc09400498e5806e6ef05e7278fab28820d6a74caa36ba5a804f7c96ff1e3939"
+    }
+  ],
+  "version_matched_documentation": {
+    "url": "https://raw.githubusercontent.com/QEF/q-e/a34dabb0f802ee27085d6f5cc0127e2c94cd2a93/PW/Doc/INPUT_PW.def",
+    "tag": "qe-6.7.0",
+    "commit": "a34dabb0f802ee27085d6f5cc0127e2c94cd2a93",
+    "path": "INPUT_PW_qe-6.7.0.def",
+    "status": "DOWNLOADED",
+    "bytes": 142178,
+    "sha256": "70c30a8e60cad64ff56aa3264fcf95ff9040a5d9394d499a3d91f7db9fc9f01d",
+    "first_attempt_preserved": {
+      "url": "https://raw.githubusercontent.com/QEF/q-e/qe-6.7/PW/Doc/INPUT_PW.def",
+      "status": "FAILED",
+      "error": "HTTP Error 404: Not Found"
+    }
+  },
+  "system_mutation": false,
+  "paid_compute": false,
+  "other_lane_science_accessed": false,
+  "scientific_parameters_selected": false,
+  "restore_boundary": "System runtime libraries listed by ldd must remain ABI-compatible. Extracted user-space QE and ScaLAPACK are regenerable using restore_runtime.py. An actual SCF is the parent executor next capability check.",
+  "restore_script_verified": "CACHED_PACKAGE_VERIFICATION_AND_REEXTRACTION_EXIT_0",
+  "post_restore_pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+  "post_restore_identity_unchanged": true,
+  "verification_finished_at": "2026-11-16T19:37:45.566371+00:00"
+}

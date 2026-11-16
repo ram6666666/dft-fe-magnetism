@@ -1,0 +1,3 @@
+[
+  {"run_id":"P002_stripe_openblas_serial", "initial_state":"STRIPE", "stage":"PILOT_RUNTIME_REPAIR", "max_seconds":360}
+]

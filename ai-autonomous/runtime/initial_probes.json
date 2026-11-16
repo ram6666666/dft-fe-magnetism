@@ -1,0 +1,63 @@
+[
+  {
+    "command": [
+      "uname",
+      "-a"
+    ],
+    "returncode": 0,
+    "log": "probe_00.log",
+    "output": "Linux e3865bf49b68 6.18.57 #1 SMP Tue Oct 20 21:56:04 UTC 2026 x86_64 GNU/Linux\n"
+  },
+  {
+    "command": [
+      "cat",
+      "/etc/os-release"
+    ],
+    "returncode": 0,
+    "log": "probe_01.log",
+    "output": "PRETTY_NAME=\"Debian GNU/Linux 13 (trixie)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"13\"\nVERSION=\"13 (trixie)\"\nVERSION_CODENAME=trixie\nDEBIAN_VERSION_FULL=13.6\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"\n"
+  },
+  {
+    "command": [
+      "ldconfig",
+      "-p"
+    ],
+    "returncode": 0,
+    "log": "probe_02.log",
+    "output": "\tlibvtkmdiympi_nompi.so.2.2 (libc6,x86-64) => /lib/x86_64-linux-gnu/libvtkmdiympi_nompi.so.2.2\n\tlibvtkmdiympi_nompi.so (libc6,x86-64) => /lib/x86_64-linux-gnu/libvtkmdiympi_nompi.so\n\tlibmpi_usempif08.so.40 (libc6,x86-64) => /lib/x86_64-linux-gnu/libmpi_usempif08.so.40\n\tlibmpi_usempif08-gfortran.so.40 (libc6,x86-64) => /lib/x86_64-linux-gnu/libmpi_usempif08-gfortran.so.40\n\tlibmpi_usempi_ignore_tkr.so.40 (libc6,x86-64) => /lib/x86_64-linux-gnu/libmpi_usempi_ignore_tkr.so.40\n\tlibmpi_usempi_ignore_tkr-gfortran.so.40 (libc6,x86-64) => /lib/x86_64-linux-gnu/libmpi_usempi_ignore_tkr-gfortran.so.40\n\tlibmpi_mpifh.so.40 (libc6,x86-64) => /lib/x86_64-linux-gnu/libmpi_mpifh.so.40\n\tlibmpi_mpifh-gfortran.so.40 (libc6,x86-64) => /lib/x86_64-linux-gnu/libmpi_mpifh-gfortran.so.40\n\tlibmpi_java.so.40 (libc6,x86-64) => /lib/x86_64-linux-gnu/libmpi_java.so.40\n\tlibmpi.so.40 (libc6,x86-64) => /lib/x86_64-linux-gnu/libmpi.so.40\n\tliblastlog2.so.2 (libc6,x86-64) => /lib/x86_64-linux-gnu/liblastlog2.so.2\n\tliblapack.so.3 (libc6,x86-64) => /lib/x86_64-linux-gnu/liblapack.so.3\n\tlibhdf5_openmpi_hl.so.310 (libc6,x86-64) => /lib/x86_64-linux-gnu/libhdf5_openmpi_hl.so.310\n\tlibhdf5_openmpi.so.310 (libc6,x86-64) => /lib/x86_64-linux-gnu/libhdf5_openmpi.so.310\n\tlibgslcblas.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libgslcblas.so.0\n\tlibgfortran.so.5 (libc6,x86-64) => /lib/x86_64-linux-gnu/libgfortran.so.5\n\tlibfftw3f_threads.so.3 (libc6,x86-64) => /lib/x86_64-linux-gnu/libfftw3f_threads.so.3\n\tlibfftw3f_omp.so.3 (libc6,x86-64) => /lib/x86_64-linux-gnu/libfftw3f_omp.so.3\n\tlibfftw3f.so.3 (libc6,x86-64) => /lib/x86_64-linux-gnu/libfftw3f.so.3\n\tlibfftw3_threads.so.3 (libc6,x86-64) => /lib/x86_64-linux-gnu/libfftw3_threads.so.3\n\tlibfftw3_omp.so.3 (libc6,x86-64) => /lib/x86_64-linux-gnu/libfftw3_omp.so.3\n\tlibfftw3.so.3 (libc6,x86-64) => /lib/x86_64-linux-gnu/libfftw3.so.3\n\tlibblas.so.3 (libc6,x86-64) => /lib/x86_64-linux-gnu/libblas.so.3\n\tlibadios2_mpi_perfstubs.so.2.10 (libc6,x86-64) => /lib/x86_64-linux-gnu/libadios2_mpi_perfstubs.so.2.10\n\tlibadios2_mpi_h5vol.so.2.10 (libc6,x86-64) => /lib/x86_64-linux-gnu/libadios2_mpi_h5vol.so.2.10\n\tlibadios2_mpi_ffs.so.2.10 (libc6,x86-64) => /lib/x86_64-linux-gnu/libadios2_mpi_ffs.so.2.10\n\tlibadios2_mpi_evpath.so.2.10 (libc6,x86-64) => /lib/x86_64-linux-gnu/libadios2_mpi_evpath.so.2.10\n\tlibadios2_mpi_dill.so.2.10 (libc6,x86-64) => /lib/x86_64-linux-gnu/libadios2_mpi_dill.so.2.10\n\tlibadios2_mpi_cxx11_mpi.so.2.10 (libc6,x86-64) => /lib/x86_64-linux-gnu/libadios2_mpi_cxx11_mpi.so.2.10\n\tlibadios2_mpi_cxx11.so.2.10 (libc6,x86-64) => /lib/x86_64-linux-gnu/libadios2_mpi_cxx11.so.2.10\n\tlibadios2_mpi_core_mpi.so.2.10 (libc6,x86-64) => /lib/x86_64-linux-gnu/libadios2_mpi_core_mpi.so.2.10\n\tlibadios2_mpi_core.so.2.10 (libc6,x86-64) => /lib/x86_64-linux-gnu/libadios2_mpi_core.so.2.10\n\tlibadios2_mpi_c_mpi.so.2.10 (libc6,x86-64) => /lib/x86_64-linux-gnu/libadios2_mpi_c_mpi.so.2.10\n\tlibadios2_mpi_c.so.2.10 (libc6,x86-64) => /lib/x86_64-linux-gnu/libadios2_mpi_c.so.2.10\n\tlibadios2_mpi_atl.so.2.10 (libc6,x86-64) => /lib/x86_64-linux-gnu/libadios2_mpi_atl.so.2.10\n\tlibTECkit_Compiler.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libTECkit_Compiler.so.0"
+  },
+  {
+    "command": [
+      "apt-get",
+      "download",
+      "quantum-espresso"
+    ],
+    "returncode": 100,
+    "log": "probe_03.log",
+    "output": "W: Unable to read /etc/apt/apt.conf.d/80-applied-apt-retries - open (13: Permission denied)\nE: Unable to locate package quantum-espresso\n"
+  },
+  {
+    "command": [
+      "curl",
+      "-I",
+      "--max-time",
+      "15",
+      "https://deb.debian.org/debian/pool/main/e/espresso/"
+    ],
+    "returncode": 0,
+    "log": "probe_04.log",
+    "output": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0\nHTTP/1.1 200 OK\ndate: Mon, 16 Nov 2026 19:33:42 GMT\n\nHTTP/2 200 \nserver: envoy\nx-content-type-options: nosniff\nx-frame-options: sameorigin\nreferrer-policy: no-referrer\nx-xss-protection: 1\npermissions-policy: interest-cohort=()\nx-clacks-overhead: GNU Terry Pratchett\ncontent-type: text/html;charset=UTF-8\nbackend: 4qpvL1tJyeV1P6Tmf0Lj8g--F_conova_debian_backend_mirrors_debian_org\nvia: 1.1 varnish, 1.1 varnish\naccept-ranges: bytes\nage: 0\ndate: Mon, 16 Nov 2026 19:33:43 GMT\nx-served-by: cache-ams-eham8680051-AMS, cache-ber1080047-BER\nx-cache: MISS, MISS\nx-cache-hits: 0, 0\nx-timer: S1794857623.999999,VS0,VE37\nvary: Accept-Encoding\nx-envoy-upstream-service-time: 156\n\n"
+  },
+  {
+    "command": [
+      "curl",
+      "-I",
+      "--max-time",
+      "15",
+      "https://micro.mamba.pm/api/micromamba/linux-64/latest"
+    ],
+    "returncode": 0,
+    "log": "probe_05.log",
+    "output": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0\n  0    31    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0\nHTTP/1.1 200 OK\ndate: Mon, 16 Nov 2026 19:33:46 GMT\n\nHTTP/2 405 \nallow: GET\nalt-svc: h3=\":443\"; ma=2592000\ncontent-type: application/json\ndate: Mon, 16 Nov 2026 19:33:47 GMT\nserver: envoy\nstrict-transport-security: max-age=31536000\nvia: 1.1 Caddy\ncontent-length: 31\nx-envoy-upstream-service-time: 1129\n\n"
+  }
+]

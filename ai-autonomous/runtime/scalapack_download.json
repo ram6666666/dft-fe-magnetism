@@ -1,0 +1,7 @@
+{
+  "source": "https://deb.debian.org/debian/pool/main/s/scalapack/libscalapack-openmpi2.2_2.2.2-1_amd64.deb",
+  "bytes": 1593568,
+  "sha256": "19edff3e0d4d27b350965246ac93de8bc0328fa3c42f1b9a93048873ec2aeb7d",
+  "official_checksum_match": true,
+  "checksum_source": "https://packages.debian.org/trixie/amd64/libscalapack-openmpi2.2/download"
+}

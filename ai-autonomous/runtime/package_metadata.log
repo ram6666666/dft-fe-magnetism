@@ -1,0 +1,41 @@
+$ dpkg-deb -I /workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/quantum-espresso_6.7-3+b1_amd64.deb
+ new Debian package, version 2.0.
+ size 49514884 bytes: control archive=3272 bytes.
+    1824 bytes,    34 lines      control
+    4205 bytes,    78 lines      md5sums
+ Package: quantum-espresso
+ Source: espresso (6.7-3)
+ Version: 6.7-3+b1
+ Architecture: amd64
+ Maintainer: Debichem Team <debichem-devel@lists.alioth.debian.org>
+ Installed-Size: 281365
+ Depends: libblas3 | libblas.so.3, libc6 (>= 2.35), libfftw3-double3 (>= 3.3.10), libgcc-s1 (>= 4.0), libgfortran5 (>= 10), liblapack3 | liblapack.so.3, libopenmpi40 (>= 5.0.6), libscalapack-openmpi2.2 (>= 2.2.1)
+ Recommends: quantum-espresso-data
+ Section: science
+ Priority: optional
+ Homepage: http://www.quantum-espresso.org/
+ Description: Electronic-Structure and Ab-Initio Molecular Dynamics Suite
+  Quantum ESPRESSO (formerly known as PWscf) is an integrated suite of computer
+  codes for electronic-structure calculations and materials modeling at the
+  nanoscale. It is based on density-functional theory, plane waves, and
+  pseudopotentials (both norm-conserving, ultrasoft, and PAW).
+  .
+  Features include:
+   * Ground-state single-point and band structure calculations using plane-wave
+     self-consistent total energies, forces and stresses
+   * Separable norm-conserving and ultrasoft (Vanderbilt) pseudo-potentials, PAW
+     (Projector Augmented Waves)
+   * Various exchange-correlation functionals, from LDA to generalized-gradient
+     corrections (PW91, PBE, B88-P86, BLYP) to meta-GGA, exact exchange (HF) and
+     hybrid functionals (PBE0, B3LYP, HSE)
+   * Car-Parrinello and Born-Oppenheimer Molecular Dynamics
+   * Structural Optimization including transition states and minimum energy
+     paths
+   * Spin-orbit coupling and noncollinear magnetism
+   * Response properties including phonon frequencies and
+     eigenvectors, effective charges and dielectric tensors, Infrared and
+     Raman cross-sections, EPR and NMR chemical shifts
+   * Spectroscopic properties like K- and L1-edge X-ray Absorption Spectra (XAS)
+     and electronic excitations
+
+returncode=0

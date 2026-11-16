@@ -1,0 +1,9 @@
+$ nm -D /workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblas.so.0
+00000000007af720 T dgemm_
+000000000040aeb0 T dsyev_
+0000000000413460 T dsygvx_
+0000000000a07520 T openblas_get_config
+0000000000a06c80 T openblas_get_num_threads
+0000000000a07620 T openblas_get_parallel
+
+returncode=0
