@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "task_id": "FESE-GPT-WORK-20261116-R01",
+  "record_type": "CONTROLLER_INTERRUPTION_NOTICE",
+  "recorded_utc": "2026-11-16 21:29:42 UTC",
+  "status": "EXECUTOR_UNAVAILABLE__PARTIAL_CHECKPOINT_SAVED__LIVE_QE_EXIT_UNKNOWN",
+  "last_complete_checkpoint": "CP05_CENTRAL_RESULTS",
+  "last_scientific_snapshot_commit": "8eaef71a96011cfde464e7271f36205adea85225",
+  "completed_production_targets": 4,
+  "planned_production_targets": 23,
+  "completed_pilots": 2,
+  "observation": [
+    "Orchestration wait was interrupted.",
+    "No independent executor was present in the subsequent active-agent registry.",
+    "Polling the recorded owned session returned Unknown process id.",
+    "The three later attempt logs have neither JOB DONE nor SCF convergence markers; original RUNNING receipts are preserved verbatim."
+  ],
+  "unresolved_attempt_ids": [
+    "B_a098_FM",
+    "B_a098_CB",
+    "B_a098_STRIPE"
+  ],
+  "partial_snapshot": {
+    "relative_manifest": "MANIFEST.json",
+    "primary_archive_sha256": "5d09d15a3e71fdd3d34cb445aafafaf5cd3ab019a0134e9c3da467ae9dbd2baa",
+    "primary_archive_bytes": 26675,
+    "raw_text_payloads": 22,
+    "manifest": "22 payloads plus the manifest itself are preserved in this directory"
+  },
+  "scientific_acceptance": "NONE__FULL_SCAN_NUMERICAL_ACCEPTANCE_AND_PAPER_REPORT_NOT_COMPLETE",
+  "independent_first_outcome_freeze": "NOT_COMPLETED",
+  "resume_rule": "Reconcile owned-session/process and file identity before any resubmission; restore exact CP05 and these partial records; retain failed/interrupted attempts and use fresh attempt IDs if retrying. Continue only through the independent lane authority.",
+  "comparison_open": false,
+  "scope": "Administrative status and verbatim evidence preservation only; no scientific input, code, computed output or conclusion was edited."
+}

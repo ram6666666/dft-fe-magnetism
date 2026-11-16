@@ -1,0 +1,121 @@
+{
+  "batch_id": "lattice_a098_r01",
+  "status": "RUNNING",
+  "started_at": "2026-11-16T21:22:15.747433+00:00",
+  "supervisor_pid": 2,
+  "pid_namespace": "pid:[4026532309]",
+  "supervisor_command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/batch.py",
+    "campaigns/baseline.json",
+    "--only",
+    "B_a098_FM",
+    "B_a098_CB",
+    "B_a098_STRIPE",
+    "--pw",
+    "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+    "--proj",
+    "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/projwfc.x",
+    "--ranks",
+    "2",
+    "--max-concurrent",
+    "3",
+    "--batch-id",
+    "lattice_a098_r01"
+  ],
+  "supervisor_sha256": "a9f5b8bb61eac97485bbc29d0ec2274bc1f9305bab1258fd80f85fbc71ba9837",
+  "runner_sha256": "123481991de56f4c38d31cbd0f6705751e2533f1552980afe7b40583dce29cd7",
+  "campaign": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/campaigns/baseline.json",
+  "campaign_sha256": "2378d197f8819752dbf1b6086107cc3d3b64e25e7147cd9145fb6f38e0da1ff8",
+  "max_concurrent": 3,
+  "max_seconds": null,
+  "cancel_request_file": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/batches/lattice_a098_r01/CANCEL_REQUEST",
+  "cancellation": null,
+  "selected_ids": [
+    "B_a098_FM",
+    "B_a098_CB",
+    "B_a098_STRIPE"
+  ],
+  "workers": [
+    {
+      "run_id": "B_a098_FM",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/fese.py",
+        "run",
+        "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/campaigns/baseline.json",
+        "--only",
+        "B_a098_FM",
+        "--pw",
+        "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+        "--proj",
+        "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/projwfc.x",
+        "--ranks",
+        "2",
+        "--no-analyze"
+      ],
+      "run_directory_exists": false,
+      "status": "RUNNING",
+      "started_at": "2026-11-16T21:22:15.749138+00:00",
+      "stdout": "batches/lattice_a098_r01/workers/B_a098_FM.stdout",
+      "stderr": "batches/lattice_a098_r01/workers/B_a098_FM.stderr",
+      "pid": 5
+    },
+    {
+      "run_id": "B_a098_CB",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/fese.py",
+        "run",
+        "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/campaigns/baseline.json",
+        "--only",
+        "B_a098_CB",
+        "--pw",
+        "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+        "--proj",
+        "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/projwfc.x",
+        "--ranks",
+        "2",
+        "--no-analyze"
+      ],
+      "run_directory_exists": false,
+      "status": "RUNNING",
+      "started_at": "2026-11-16T21:22:15.749884+00:00",
+      "stdout": "batches/lattice_a098_r01/workers/B_a098_CB.stdout",
+      "stderr": "batches/lattice_a098_r01/workers/B_a098_CB.stderr",
+      "pid": 6
+    },
+    {
+      "run_id": "B_a098_STRIPE",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/fese.py",
+        "run",
+        "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/campaigns/baseline.json",
+        "--only",
+        "B_a098_STRIPE",
+        "--pw",
+        "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+        "--proj",
+        "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/projwfc.x",
+        "--ranks",
+        "2",
+        "--no-analyze"
+      ],
+      "run_directory_exists": false,
+      "status": "RUNNING",
+      "started_at": "2026-11-16T21:22:15.750871+00:00",
+      "stdout": "batches/lattice_a098_r01/workers/B_a098_STRIPE.stdout",
+      "stderr": "batches/lattice_a098_r01/workers/B_a098_STRIPE.stderr",
+      "pid": 7
+    }
+  ],
+  "updated_at": "2026-11-16T21:23:41.627219+00:00",
+  "elapsed_seconds": 85.87982298499992,
+  "active_ids": [
+    "B_a098_FM",
+    "B_a098_CB",
+    "B_a098_STRIPE"
+  ],
+  "pending_ids": []
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "B_a098_STRIPE",
+  "status": "RUNNING",
+  "prepared_at": "2026-11-16T21:22:15.814508+00:00",
+  "input_sha256": "d1b6ca2024b6556cba1d7c56da3a729ff266f1fe82a573a3f45fe7979a31877b",
+  "pseudo_sha256": {
+    "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+    "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+  },
+  "source_sha256": "123481991de56f4c38d31cbd0f6705751e2533f1552980afe7b40583dce29cd7",
+  "source_path": "source_versions/123481991de56f4c38d31cbd0f6705751e2533f1552980afe7b40583dce29cd7.py",
+  "pw_executable": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+  "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+  "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+  "projwfc_sha256": "1bb5632fd9292ba7f544e7cfc9ff38c89906d0527ea3f7e81a287f12575460ed"
+}

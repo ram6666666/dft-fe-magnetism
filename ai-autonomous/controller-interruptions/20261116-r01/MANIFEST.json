@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.0",
+  "snapshot_utc": "2026-11-16T21:28:09.101979+00:00",
+  "status": "INCOMPLETE_ATTEMPT_BYTES_ONLY__QE_EXIT_UNKNOWN",
+  "task_id": "FESE-GPT-WORK-20261116-R01",
+  "source_base_commit": "8eaef71a96011cfde464e7271f36205adea85225",
+  "files": [
+    {
+      "path": "attempts/B_a098_FM/config.json",
+      "source_relative": "runs/B_a098_FM/config.json",
+      "bytes": 922,
+      "sha256": "d963c6923c40e1593bdb50ec8be6941328a86a1d161e12d20bafb6e29f1dcacd",
+      "git_blob_sha1": "932ca0ce108c480ff286ad47ca924bd4dda71bd1"
+    },
+    {
+      "path": "attempts/B_a098_FM/input.in",
+      "source_relative": "runs/B_a098_FM/input.in",
+      "bytes": 1401,
+      "sha256": "56ae225f990e051632b7add1a77918bedbb6ad9c16a4dabeaf21c462b903ef49",
+      "git_blob_sha1": "10d62315c507cb8e1ce7a58c905ed2761ad2483a"
+    },
+    {
+      "path": "attempts/B_a098_FM/pw.err",
+      "source_relative": "runs/B_a098_FM/pw.err",
+      "bytes": 84,
+      "sha256": "d84a8f6edd548536575c09062a5223f548c67f753be238589d44f2210121f646",
+      "git_blob_sha1": "498f5fa6ba964ca76184f66239d69b6cfc9ab253"
+    },
+    {
+      "path": "attempts/B_a098_FM/pw.out",
+      "source_relative": "runs/B_a098_FM/pw.out",
+      "bytes": 14025,
+      "sha256": "30af73342bb6ababf7852c40a73151808aefeec88db5a9086359b3eb9e9763a2",
+      "git_blob_sha1": "c42f0f993877c5f59de66053d490f189e825a52b"
+    },
+    {
+      "path": "attempts/B_a098_FM/pw_execution.json",
+      "source_relative": "runs/B_a098_FM/pw_execution.json",
+      "bytes": 1291,
+      "sha256": "44878c7178d7bb3c49b562631102623d044a57b95fbdd0510c3e94ffcc20247c",
+      "git_blob_sha1": "df85a2982a70ea789c508adfd321541f0ae00f99"
+    },
+    {
+      "path": "attempts/B_a098_FM/receipt.json",
+      "source_relative": "runs/B_a098_FM/receipt.json",
+      "bytes": 936,
+      "sha256": "840a0e62b63bc25cb9ed710c752a693af869be97080656bf77a9264a024e7f78",
+      "git_blob_sha1": "9312f7c6bee910b8e170972909270e3390692fa6"
+    },
+    {
+      "path": "attempts/B_a098_FM/runtime.json",
+      "source_relative": "runs/B_a098_FM/runtime.json",
+      "bytes": 5023,
+      "sha256": "59eaf4b6adc2648a45deb8077efc2d81f4f4575176787ed74df1988bc50b41e9",
+      "git_blob_sha1": "9c4cbec343b1b2f09b6d53ba7d9c3589348864c3"
+    },
+    {
+      "path": "attempts/B_a098_CB/config.json",
+      "source_relative": "runs/B_a098_CB/config.json",
+      "bytes": 922,
+      "sha256": "9c91e8f0e006af508386a612b7eb3ee2fa7c173bbd023cc8dd3ad8f34a932426",
+      "git_blob_sha1": "4fb3d917698d4bdd033d5843344088b2d1d8bfa3"
+    },
+    {
+      "path": "attempts/B_a098_CB/input.in",
+      "source_relative": "runs/B_a098_CB/input.in",
+      "bytes": 1457,
+      "sha256": "0437807d494d9765d7f25fc86969cb5ae634d70a7866392da8595fefd2bd56aa",
+      "git_blob_sha1": "616ed3509043ac8bf953ba39a38822bc437f3bbe"
+    },
+    {
+      "path": "attempts/B_a098_CB/pw.err",
+      "source_relative": "runs/B_a098_CB/pw.err",
+      "bytes": 84,
+      "sha256": "d84a8f6edd548536575c09062a5223f548c67f753be238589d44f2210121f646",
+      "git_blob_sha1": "498f5fa6ba964ca76184f66239d69b6cfc9ab253"
+    },
+    {
+      "path": "attempts/B_a098_CB/pw.out",
+      "source_relative": "runs/B_a098_CB/pw.out",
+      "bytes": 14725,
+      "sha256": "8f26d34cf947f9307a7a38c50ccbbed5492f717505db0abbf3d15f2da25aea7b",
+      "git_blob_sha1": "657dd7b89d97e95aff2cabc87e801b219c1f00e3"
+    },
+    {
+      "path": "attempts/B_a098_CB/pw_execution.json",
+      "source_relative": "runs/B_a098_CB/pw_execution.json",
+      "bytes": 1291,
+      "sha256": "ae04f44d26fc19d66740755df2adb63eb7c64f651cb56d9490f23269a9ff2b9c",
+      "git_blob_sha1": "19f077faf24e4fea4b608fd388743cfaa329c23a"
+    },
+    {
+      "path": "attempts/B_a098_CB/receipt.json",
+      "source_relative": "runs/B_a098_CB/receipt.json",
+      "bytes": 936,
+      "sha256": "d78e134933bd0513e2fa938a8963aae0fb0684da8bd17b2fc7a7d56bc865b3f7",
+      "git_blob_sha1": "9a40df5d3f4e70e31b756f797b2b8148285b25d2"
+    },
+    {
+      "path": "attempts/B_a098_CB/runtime.json",
+      "source_relative": "runs/B_a098_CB/runtime.json",
+      "bytes": 5023,
+      "sha256": "842002a6e0b017076e77cfd8b4e31e6ac9d8761335bb5a2a8b6e5b89cb691960",
+      "git_blob_sha1": "76a8e5d69a22e75bdd1533083076ecc25d5c84f8"
+    },
+    {
+      "path": "attempts/B_a098_STRIPE/config.json",
+      "source_relative": "runs/B_a098_STRIPE/config.json",
+      "bytes": 930,
+      "sha256": "7bc6bf8f655936a2430ce977a0f25722165577a9c1168e3471506e3de9a331c1",
+      "git_blob_sha1": "ad4bb4716db6c6275e3f514552c19eab2da0ecde"
+    },
+    {
+      "path": "attempts/B_a098_STRIPE/input.in",
+      "source_relative": "runs/B_a098_STRIPE/input.in",
+      "bytes": 1461,
+      "sha256": "d1b6ca2024b6556cba1d7c56da3a729ff266f1fe82a573a3f45fe7979a31877b",
+      "git_blob_sha1": "52c0d0ca79d741e32307f51bb9ed9ee15546fb49"
+    },
+    {
+      "path": "attempts/B_a098_STRIPE/pw.err",
+      "source_relative": "runs/B_a098_STRIPE/pw.err",
+      "bytes": 84,
+      "sha256": "d84a8f6edd548536575c09062a5223f548c67f753be238589d44f2210121f646",
+      "git_blob_sha1": "498f5fa6ba964ca76184f66239d69b6cfc9ab253"
+    },
+    {
+      "path": "attempts/B_a098_STRIPE/pw.out",
+      "source_relative": "runs/B_a098_STRIPE/pw.out",
+      "bytes": 14587,
+      "sha256": "4eb77671e7c7bf68af14e519b1e3a68267dfa4f34ebfc966a0c36e81678c7beb",
+      "git_blob_sha1": "6677f34ece2fbe59f6d2d6ca11fde8f6a154c16c"
+    },
+    {
+      "path": "attempts/B_a098_STRIPE/pw_execution.json",
+      "source_relative": "runs/B_a098_STRIPE/pw_execution.json",
+      "bytes": 1315,
+      "sha256": "2fc877f23ad6fd27febe87754a56ff88a1f568cf3dbfc1f1c5e97d5db8e6ea52",
+      "git_blob_sha1": "bb85eddd89e1cf5df4c2e2185055dc824f7535fe"
+    },
+    {
+      "path": "attempts/B_a098_STRIPE/receipt.json",
+      "source_relative": "runs/B_a098_STRIPE/receipt.json",
+      "bytes": 940,
+      "sha256": "dd730f2f11f0de4709d949a4c988ce9375f49886543611763a0adf2eff77270d",
+      "git_blob_sha1": "657641ca2204c6220704f41a311eb0c80d13c63d"
+    },
+    {
+      "path": "attempts/B_a098_STRIPE/runtime.json",
+      "source_relative": "runs/B_a098_STRIPE/runtime.json",
+      "bytes": 5023,
+      "sha256": "a6a77032ddbe830c20c65381a783961948d5525e165864405de5b457099ed4d0",
+      "git_blob_sha1": "50f9b7426337f251ba7f4b399adbfdbd1fdd870c"
+    },
+    {
+      "path": "batch/supervisor.json",
+      "source_relative": "batches/lattice_a098_r01/supervisor.json",
+      "bytes": 4330,
+      "sha256": "9c8efb5fbaf0b29c9af62e8deb6ceb6ca392767c79063d691b5297dcdc2500ad",
+      "git_blob_sha1": "ecc4cbfdb222202ecad7b59e4b5acb221ae69d25"
+    }
+  ],
+  "terminal_marker_checks": [
+    {
+      "run_id": "B_a098_FM",
+      "job_done_marker": false,
+      "scf_convergence_marker": false,
+      "original_receipt_status": "RUNNING",
+      "original_exit_code": null
+    },
+    {
+      "run_id": "B_a098_CB",
+      "job_done_marker": false,
+      "scf_convergence_marker": false,
+      "original_receipt_status": "RUNNING",
+      "original_exit_code": null
+    },
+    {
+      "run_id": "B_a098_STRIPE",
+      "job_done_marker": false,
+      "scf_convergence_marker": false,
+      "original_receipt_status": "RUNNING",
+      "original_exit_code": null
+    }
+  ],
+  "exclusions": [
+    "MPI process/session shared-memory temporary files; not scientific restart data and not required for a fresh retry"
+  ],
+  "privacy_pattern_flags": [],
+  "interpretation": "Original RUNNING receipts retained unchanged. These bytes do not establish process liveness, a successful result, or a QE exit code."
+}
