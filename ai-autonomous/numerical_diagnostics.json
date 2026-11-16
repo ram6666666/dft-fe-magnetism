@@ -1,5 +1,5 @@
 {
-  "source_sha256": "4c96401aa035b0190d615ba72ea6f1f8ee12a843687c0f34371289ddd33b8bfc",
+  "source_sha256": "2256fb99f73a2c1864de20f176552481e7c1a35a4eb87a7a05ec9c3e2c98c226",
   "bohr_in_angstrom": 0.529177210903,
   "scope": "Actual completed logs; no synthetic scientific values",
   "runs": [
@@ -15,13 +15,46 @@
     },
     {
       "run_id": "B_a100_CB_r03",
-      "run_status": "RUNNING",
+      "run_status": "RUN_FAILED",
       "input_sha256": "c7f977e0c951b7209e95733e412db0e898ee70e21ba3ecba1dcc11441e8ef92a",
-      "log_sha256": "b0f57902d3827e6aca2a7a1771791deae09cdea8af63d383a3c37a0c44341e7a",
+      "log_sha256": "9d125463b2d63f0e25e4555f595ca9f72c8b182036f103a600bb136f2b96142f",
       "diagnostic_status": "NOT_COMPLETED",
       "occupation_check": null,
       "volume_check": null,
       "energy_residual_check": null
+    },
+    {
+      "run_id": "B_a100_CB_r04",
+      "run_status": "RUN_COMPLETED",
+      "input_sha256": "38bc3c9fc23429077ae057cb6ace7ab89c950ccbe804e8264047f6f49ab2f98e",
+      "log_sha256": "4d5c6a56d271d8af793cdfc7dca083615b2fd601140b108098c2ecae12c9b29d",
+      "diagnostic_status": "OBSERVED_COMPLETED_LOG_CHECKS",
+      "occupation_check": {
+        "status": "PRINTED_BLOCKS_COMPLETE",
+        "nbnd": 84,
+        "printed_band_blocks": 12,
+        "printed_occupation_blocks": 12,
+        "fermi_energy_ev": 10.6942,
+        "maximum_abs_printed_highest_band_occupation": 0.0,
+        "occupation_print_resolution": 0.0001,
+        "minimum_highest_band_above_fermi_ev": 8.2247,
+        "minimum_margin_in_smearing_widths": 30.22521500981096,
+        "highest_band_empty_at_print_precision": true,
+        "interpretation": "Checks truncation of occupied bands at printed precision; does not establish k-mesh or smearing convergence"
+      },
+      "volume_check": {
+        "qe_printed_bohr3": 1055.6945,
+        "derived_bohr3": 1055.6944879525417,
+        "relative_difference": 1.1411879525961599e-08,
+        "within_print_precision": true,
+        "definition": "det(A,B,C)=2*a^2*c; Angstrom^3 converted using CODATA bohr"
+      },
+      "energy_residual_check": {
+        "qe_estimated_scf_accuracy_ry_cell": 8e-08,
+        "qe_estimated_scf_accuracy_mev_fe": 0.00027211386245988003,
+        "last_printed_iteration_energy_change_mev_fe": 0.10119234283015309,
+        "interpretation": "Electronic self-consistency diagnostics only; not a total discretization error bound"
+      }
     },
     {
       "run_id": "B_a100_FM",
@@ -45,13 +78,79 @@
     },
     {
       "run_id": "B_a100_FM_r03",
-      "run_status": "RUNNING",
+      "run_status": "RUN_FAILED",
       "input_sha256": "424b08a14fb87360f5a17cd59b57739499444df7172c55c456f2e9c9ff670a84",
-      "log_sha256": "5806f70104afbfd69ce3c3d4fc18b3b32b3ed9e5e42a0c490519cde1d9c20727",
+      "log_sha256": "eb71c01534374d1701e0771abcaf486854b797547e8daa2941aa6e6dbbdf4564",
       "diagnostic_status": "NOT_COMPLETED",
       "occupation_check": null,
       "volume_check": null,
       "energy_residual_check": null
+    },
+    {
+      "run_id": "B_a100_FM_r04",
+      "run_status": "RUN_COMPLETED",
+      "input_sha256": "00d1f3fa1a30b44d588d3813f152110e0175d7120a09dc2ce6169dede3a07113",
+      "log_sha256": "26330dd7607fcc49e15bc1483aa0ac999523fdc3eea2363281ccd80293fd6a2c",
+      "diagnostic_status": "OBSERVED_COMPLETED_LOG_CHECKS",
+      "occupation_check": {
+        "status": "PRINTED_BLOCKS_COMPLETE",
+        "nbnd": 84,
+        "printed_band_blocks": 12,
+        "printed_occupation_blocks": 12,
+        "fermi_energy_ev": 10.6336,
+        "maximum_abs_printed_highest_band_occupation": 0.0,
+        "occupation_print_resolution": 0.0001,
+        "minimum_highest_band_above_fermi_ev": 8.282300000000001,
+        "minimum_margin_in_smearing_widths": 30.436891105542735,
+        "highest_band_empty_at_print_precision": true,
+        "interpretation": "Checks truncation of occupied bands at printed precision; does not establish k-mesh or smearing convergence"
+      },
+      "volume_check": {
+        "qe_printed_bohr3": 1055.6945,
+        "derived_bohr3": 1055.6944879525417,
+        "relative_difference": 1.1411879525961599e-08,
+        "within_print_precision": true,
+        "definition": "det(A,B,C)=2*a^2*c; Angstrom^3 converted using CODATA bohr"
+      },
+      "energy_residual_check": {
+        "qe_estimated_scf_accuracy_ry_cell": 9e-08,
+        "qe_estimated_scf_accuracy_mev_fe": 0.000306128095267365,
+        "last_printed_iteration_energy_change_mev_fe": 0.0009183838542496649,
+        "interpretation": "Electronic self-consistency diagnostics only; not a total discretization error bound"
+      }
+    },
+    {
+      "run_id": "B_a100_NM",
+      "run_status": "RUN_COMPLETED",
+      "input_sha256": "b8f828563138e7f31e3566b0312dab42bb9d9d386bbb0ba42277d9af74093c0b",
+      "log_sha256": "d685a4ab9cee68778243aab7fb5bf6405c6126a7364f077d4c2617fa45946724",
+      "diagnostic_status": "OBSERVED_COMPLETED_LOG_CHECKS",
+      "occupation_check": {
+        "status": "PRINTED_BLOCKS_COMPLETE",
+        "nbnd": 84,
+        "printed_band_blocks": 6,
+        "printed_occupation_blocks": 6,
+        "fermi_energy_ev": 10.6336,
+        "maximum_abs_printed_highest_band_occupation": 0.0,
+        "occupation_print_resolution": 0.0001,
+        "minimum_highest_band_above_fermi_ev": 8.282300000000001,
+        "minimum_margin_in_smearing_widths": 30.436891105542735,
+        "highest_band_empty_at_print_precision": true,
+        "interpretation": "Checks truncation of occupied bands at printed precision; does not establish k-mesh or smearing convergence"
+      },
+      "volume_check": {
+        "qe_printed_bohr3": 1055.6945,
+        "derived_bohr3": 1055.6944879525417,
+        "relative_difference": 1.1411879525961599e-08,
+        "within_print_precision": true,
+        "definition": "det(A,B,C)=2*a^2*c; Angstrom^3 converted using CODATA bohr"
+      },
+      "energy_residual_check": {
+        "qe_estimated_scf_accuracy_ry_cell": 5.6e-09,
+        "qe_estimated_scf_accuracy_mev_fe": 1.90479703721916e-05,
+        "last_printed_iteration_energy_change_mev_fe": 6.802851958080254e-05,
+        "interpretation": "Electronic self-consistency diagnostics only; not a total discretization error bound"
+      }
     },
     {
       "run_id": "B_a100_STRIPE",
@@ -75,13 +174,46 @@
     },
     {
       "run_id": "B_a100_STRIPE_r03",
-      "run_status": "RUNNING",
+      "run_status": "RUN_FAILED",
       "input_sha256": "ef6dd3a84968a5e5801b86730447ce32804baece9884fbf28e39c1c7c571ce3f",
-      "log_sha256": "9984af37846c3e1275fc259692b8334bd839e9f85653faaf0d63a51f766c10eb",
+      "log_sha256": "5bdc000d28c82093be9076be75dc25d5bae98cb119a46d04b284fc5ad845a6ac",
       "diagnostic_status": "NOT_COMPLETED",
       "occupation_check": null,
       "volume_check": null,
       "energy_residual_check": null
+    },
+    {
+      "run_id": "B_a100_STRIPE_r04",
+      "run_status": "RUN_COMPLETED",
+      "input_sha256": "0b9fe524f12d02b5e336876d0ed369f2ee0b6cd9f1fe02962141f37b6a263e1c",
+      "log_sha256": "2b3e8124a5bef1b4d403dfa2fc7f052376d99c9f0bbd6427f53670aace83f8dc",
+      "diagnostic_status": "OBSERVED_COMPLETED_LOG_CHECKS",
+      "occupation_check": {
+        "status": "PRINTED_BLOCKS_COMPLETE",
+        "nbnd": 84,
+        "printed_band_blocks": 16,
+        "printed_occupation_blocks": 16,
+        "fermi_energy_ev": 11.0485,
+        "maximum_abs_printed_highest_band_occupation": 0.0,
+        "occupation_print_resolution": 0.0001,
+        "minimum_highest_band_above_fermi_ev": 7.947099999999999,
+        "minimum_margin_in_smearing_widths": 29.205053826214773,
+        "highest_band_empty_at_print_precision": true,
+        "interpretation": "Checks truncation of occupied bands at printed precision; does not establish k-mesh or smearing convergence"
+      },
+      "volume_check": {
+        "qe_printed_bohr3": 1055.6945,
+        "derived_bohr3": 1055.6944879525417,
+        "relative_difference": 1.1411879525961599e-08,
+        "within_print_precision": true,
+        "definition": "det(A,B,C)=2*a^2*c; Angstrom^3 converted using CODATA bohr"
+      },
+      "energy_residual_check": {
+        "qe_estimated_scf_accuracy_ry_cell": 8e-08,
+        "qe_estimated_scf_accuracy_mev_fe": 0.00027211386245988003,
+        "last_printed_iteration_energy_change_mev_fe": 0.010476383508108348,
+        "interpretation": "Electronic self-consistency diagnostics only; not a total discretization error bound"
+      }
     },
     {
       "run_id": "P001_stripe_60_k443",

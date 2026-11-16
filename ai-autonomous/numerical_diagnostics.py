@@ -50,6 +50,8 @@ def inspect_run(directory):
          'log_sha256':fese.sha(logpath) if logpath.exists() else None,'diagnostic_status':'NOT_COMPLETED',
          'occupation_check':None,'volume_check':None,'energy_residual_check':None}
     if receipt.get('status')!='RUN_COMPLETED' or raw['status']!='RUN_COMPLETED':return row
+    if receipt.get('file_hashes',{}).get('config.json')!=fese.sha(directory/'config.json') or receipt.get('input_sha256')!=fese.sha(directory/'input.in'):
+        row['diagnostic_status']='INPUT_OR_CONFIG_HASH_MISMATCH';return row
     if receipt.get('file_hashes',{}).get('pw.out')!=row['log_sha256']:
         row['diagnostic_status']='RAW_LOG_HASH_MISMATCH';return row
     block=re.split(r'Program PWSCF',text)[-1]

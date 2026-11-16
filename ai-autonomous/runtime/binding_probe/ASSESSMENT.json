@@ -1,0 +1,47 @@
+{
+  "created_at": "2026-11-16T20:52:50.863812+00:00",
+  "observation_receipt": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/binding_probe/observation_20261116T205155Z_930fb0e2/receipt.json",
+  "receipt_sha256": "fdcb71521beb67bb70d68bd60c2892e1bf56ae6e493896ffee7b209981a3ee81",
+  "observed_default_masks": {
+    "0": [
+      0
+    ],
+    "1": [
+      1
+    ]
+  },
+  "same_default_masks_in_two_concurrent_jobs": true,
+  "observed_no_binding_masks": {
+    "1": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "all_probe_exit_codes_zero": true,
+  "raw_output_hashes_verified": true,
+  "scope": "Engineering CPU-affinity observation, not a QE performance benchmark",
+  "causal_claim_limits": [
+    "Does not establish the cause of the prior context interruption",
+    "Does not quantify a QE speedup or explain the entire observed slowdown",
+    "Allowed Linux CPU IDs are not a measurement of dedicated physical cores or guaranteed CPU share"
+  ],
+  "official_reference": "https://docs.open-mpi.org/en/v5.0.7/man-openmpi/man1/mpirun.1.html"
+}

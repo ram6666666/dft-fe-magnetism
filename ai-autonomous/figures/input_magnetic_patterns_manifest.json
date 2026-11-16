@@ -1,0 +1,38 @@
+{
+  "purpose": "Input geometry and signs only; not final-state evidence",
+  "source_sha256": "05e8534f58686cba84841e6b66e83b97c2f1272d10d5e3cd7593eee81f5c39a0",
+  "geometry_source_sha256": "c8477fc8e106e55546343f1373bb84222952d449875a6fe3d8698b95187acc4d",
+  "coordinate_definition": "A=a(1,1,0), B=a(-1,1,0); displayed unit lengths |A|/2=|B|/2=a/sqrt(2)",
+  "patterns": {
+    "FM": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "CB": [
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "STRIPE": [
+      1,
+      -1,
+      1,
+      -1
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "figures/input_magnetic_patterns.png",
+      "sha256": "fc0150dacb764a431037aa37aec18abdff3321dc0e733fed8950e8d74e26c2a1",
+      "bytes": 62228
+    },
+    {
+      "path": "figures/input_magnetic_patterns.svg",
+      "sha256": "125e93a461d445501f0c965cd5764ba34a6b428cf3fd2173345120082188112e",
+      "bytes": 86959
+    }
+  ]
+}

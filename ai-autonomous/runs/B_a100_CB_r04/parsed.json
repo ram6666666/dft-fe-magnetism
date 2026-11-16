@@ -1,0 +1,32 @@
+{
+  "status": "RUN_COMPLETED",
+  "scf_converged": true,
+  "job_done": true,
+  "energy_total_ry": -1972.74171215,
+  "scf_accuracy_ry": 8e-08,
+  "scf_iterations": 35,
+  "total_magnetization_muB_cell": -0.0,
+  "absolute_magnetization_muB_cell": 2.24,
+  "smearing_contribution_ry": 0.01184899,
+  "qe_version": "6.7MaX",
+  "run_id": "B_a100_CB_r04",
+  "initial_state": "CB",
+  "fe_lowdin_moments_muB": [
+    0.518,
+    -0.5215,
+    -0.5215,
+    0.5228
+  ],
+  "all_lowdin_moments_muB": [
+    0.518,
+    -0.5215,
+    -0.5215,
+    0.5228,
+    0.0001,
+    0.0001,
+    0.0001,
+    0.0001
+  ],
+  "magnetic_diagnostic": "Lowdin atomic spin population plus cell spin integrals",
+  "final_state": "CB"
+}

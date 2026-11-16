@@ -1,0 +1,85 @@
+{
+  "batch_id": "central_nm_r01",
+  "status": "COMPLETED",
+  "started_at": "2026-11-16T21:04:27.234654+00:00",
+  "supervisor_pid": 2,
+  "pid_namespace": "pid:[4026532387]",
+  "supervisor_command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/batch.py",
+    "campaigns/baseline.json",
+    "--only",
+    "B_a100_NM",
+    "--pw",
+    "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+    "--proj",
+    "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/projwfc.x",
+    "--ranks",
+    "2",
+    "--max-concurrent",
+    "1",
+    "--batch-id",
+    "central_nm_r01"
+  ],
+  "supervisor_sha256": "a9f5b8bb61eac97485bbc29d0ec2274bc1f9305bab1258fd80f85fbc71ba9837",
+  "runner_sha256": "c8477fc8e106e55546343f1373bb84222952d449875a6fe3d8698b95187acc4d",
+  "campaign": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/campaigns/baseline.json",
+  "campaign_sha256": "2378d197f8819752dbf1b6086107cc3d3b64e25e7147cd9145fb6f38e0da1ff8",
+  "max_concurrent": 1,
+  "max_seconds": null,
+  "cancel_request_file": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/batches/central_nm_r01/CANCEL_REQUEST",
+  "cancellation": null,
+  "selected_ids": [
+    "B_a100_NM"
+  ],
+  "workers": [
+    {
+      "run_id": "B_a100_NM",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/fese.py",
+        "run",
+        "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/campaigns/baseline.json",
+        "--only",
+        "B_a100_NM",
+        "--pw",
+        "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+        "--proj",
+        "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/projwfc.x",
+        "--ranks",
+        "2",
+        "--no-analyze"
+      ],
+      "run_directory_exists": false,
+      "status": "COMPLETED_RUN_RECORD",
+      "started_at": "2026-11-16T21:04:27.236395+00:00",
+      "stdout": "batches/central_nm_r01/workers/B_a100_NM.stdout",
+      "stderr": "batches/central_nm_r01/workers/B_a100_NM.stderr",
+      "pid": 5,
+      "worker_exit_code": 0,
+      "ended_at": "2026-11-16T21:07:08.503542+00:00",
+      "elapsed_seconds": 161.26716006900097,
+      "log_sha256": {
+        "B_a100_NM.stdout": "a1aa8413a00782dd5d5ec6356e390bc8b2b6978a0ce554f2ac5242adb5a7ff87",
+        "B_a100_NM.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "receipt_status": "RUN_COMPLETED",
+      "parsed_status": "RUN_COMPLETED",
+      "pw_exit_code": 0,
+      "projection_exit_code": null,
+      "projection_required": false,
+      "record_errors": {},
+      "record_sha256": {
+        "config.json": "f63008ff8f3d3d54af88aef556b426a4322b53c55e716256e6b30f2b3954e914",
+        "receipt.json": "3f56cc847f1f723d6291b333560a306d95baa809b44bb154ccecb6794005d0c8",
+        "parsed.json": "18b7131affeda2a25512ccc215f72378e658dcc48b68f24f22f201dfae84bff2",
+        "pw_execution.json": "9b4659680659a2c5181e9eedcb727c23e19217b750d89c257765aec19446d22a"
+      }
+    }
+  ],
+  "updated_at": "2026-11-16T21:07:08.508164+00:00",
+  "elapsed_seconds": 161.273525695,
+  "active_ids": [],
+  "pending_ids": [],
+  "ended_at": "2026-11-16T21:07:08.508134+00:00"
+}

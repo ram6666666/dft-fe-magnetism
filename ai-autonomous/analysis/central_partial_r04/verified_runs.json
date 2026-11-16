@@ -1,0 +1,1775 @@
+[
+  {
+    "run_id": "B_a100_CB",
+    "eligible": false,
+    "data": {
+      "a_ang": 3.765,
+      "c_ang": 5.518,
+      "z_se": 0.2343,
+      "ecutwfc_ry": 90,
+      "kgrid": [
+        2,
+        2,
+        2
+      ],
+      "kshift": [
+        0,
+        0,
+        0
+      ],
+      "degauss_ry": 0.02,
+      "conv_thr_ry": 1e-07,
+      "mixing_beta": 0.3,
+      "electron_maxstep": 120,
+      "starting_polarization": 0.15,
+      "nbnd": 84,
+      "max_seconds": 1800,
+      "project": true,
+      "stage": "BASELINE",
+      "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+      "run_id": "B_a100_CB",
+      "initial_state": "CB",
+      "kpoint_pools": 2,
+      "ecutrho_ry": 360,
+      "n_fe": 4,
+      "functional": "PBE",
+      "smearing": "mv",
+      "relativistic": "scalar; collinear; no SOC",
+      "startingwfc": "atomic+random",
+      "startingpot": "atomic",
+      "rng_algorithm": "QE6.7 randy shuffled LCG; m=714025, ia=1366, ic=150889, ntab=97",
+      "rng_default_initial_seed": 0,
+      "rng_seed_evidence": "SOURCE_DERIVED_DEFAULT_FOR_CONFIGURED_STATIC_SCF_PATH",
+      "rng_state_runtime_captured": false,
+      "status": "RUN_FAILED",
+      "scf_converged": false,
+      "job_done": false,
+      "energy_total_ry": null,
+      "scf_accuracy_ry": 2.15835293,
+      "scf_iterations": null,
+      "total_magnetization_muB_cell": -0.0,
+      "absolute_magnetization_muB_cell": 6.25,
+      "smearing_contribution_ry": null,
+      "qe_version": "6.7MaX",
+      "fe_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "all_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "magnetic_diagnostic": "Lowdin atomic spin population plus cell spin integrals",
+      "final_state": "UNVERIFIED_FINAL_STATE",
+      "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+      "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+      "pseudo_sha256": {
+        "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+        "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+      },
+      "restart_mode": "from_scratch",
+      "gamma_only": false,
+      "rng": {
+        "algorithm": "QE6.7 randy shuffled LCG",
+        "default_initial_seed": 0,
+        "evidence": "SOURCE_DERIVED_STATIC_SCF_DEFAULT",
+        "per_rank_state_captured": false
+      },
+      "parallel_layout": {
+        "ranks": 2,
+        "pools": 2,
+        "binding": "NOT_EXPLICIT_IN_COMMAND",
+        "omp_threads": "1",
+        "blas_threads": "1"
+      },
+      "mean_abs_fe_lowdin_muB": null,
+      "input_path": "runs/B_a100_CB/input.in",
+      "log_path": "runs/B_a100_CB/pw.out"
+    },
+    "issues": [
+      "run status is RUN_FAILED",
+      "raw SCF gate: RUN_FAILED",
+      "raw completed energy is absent/nonfinite"
+    ],
+    "warnings": [
+      "RNG default seed is source-derived; evolving rank states were not captured"
+    ],
+    "file_hashes": {
+      "config.json": "91f7ffa75bc8c9e68abb58d83543c30e509bf5d91c8647d0e5d441b396c0bf2f",
+      "receipt.json": "5aaa16fe412c8f1abd1150f610e46e71255efb8fab36d7bd24a35d6c0cd7928d",
+      "parsed.json": "5520f4b47f7e6f2bea99a103fea68ebf355237c46234b6fc702d271762992234",
+      "input.in": "af19a275f0dbc7e9801a62c41322756a79c75d371b45e174028ab73a8a9229bc",
+      "pw.out": "daaa8ced5f12779e01ddbfe665f3b24151474ce8ea530aee8fd3825b8f944f9e",
+      "runtime.json": "5534c2cb842b62a26cf4d67c27d87334b2170f01ce30cd59bbaad96268124eee"
+    },
+    "final_state_verified": false
+  },
+  {
+    "run_id": "B_a100_CB_r03",
+    "eligible": false,
+    "data": {
+      "a_ang": 3.765,
+      "c_ang": 5.518,
+      "z_se": 0.2343,
+      "ecutwfc_ry": 90,
+      "kgrid": [
+        2,
+        2,
+        2
+      ],
+      "kshift": [
+        0,
+        0,
+        0
+      ],
+      "degauss_ry": 0.02,
+      "conv_thr_ry": 1e-07,
+      "mixing_beta": 0.3,
+      "electron_maxstep": 120,
+      "starting_polarization": 0.15,
+      "nbnd": 84,
+      "max_seconds": 1800,
+      "project": true,
+      "stage": "BASELINE",
+      "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+      "run_id": "B_a100_CB_r03",
+      "initial_state": "CB",
+      "kpoint_pools": 2,
+      "retry_reason": "Isolate PRTE and btl_sm backing directory after shared PID namespace collision",
+      "retries": "B_a100_CB",
+      "ecutrho_ry": 360,
+      "n_fe": 4,
+      "functional": "PBE",
+      "smearing": "mv",
+      "relativistic": "scalar; collinear; no SOC",
+      "startingwfc": "atomic+random",
+      "startingpot": "atomic",
+      "rng_algorithm": "QE6.7 randy shuffled LCG; m=714025, ia=1366, ic=150889, ntab=97",
+      "rng_default_initial_seed": 0,
+      "rng_seed_evidence": "SOURCE_DERIVED_DEFAULT_FOR_CONFIGURED_STATIC_SCF_PATH",
+      "rng_state_runtime_captured": false,
+      "status": "RUN_FAILED",
+      "scf_converged": false,
+      "job_done": false,
+      "energy_total_ry": null,
+      "scf_accuracy_ry": 0.00290558,
+      "scf_iterations": null,
+      "total_magnetization_muB_cell": 0.01,
+      "absolute_magnetization_muB_cell": 7.12,
+      "smearing_contribution_ry": null,
+      "qe_version": "6.7MaX",
+      "final_state": "UNVERIFIED_FINAL_STATE",
+      "fe_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "all_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "stop_reason": "EXECUTION_CONTEXT_INTERRUPTED_UNKNOWN_CAUSE",
+      "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+      "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+      "pseudo_sha256": {
+        "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+        "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+      },
+      "restart_mode": "from_scratch",
+      "gamma_only": false,
+      "rng": {
+        "algorithm": "QE6.7 randy shuffled LCG",
+        "default_initial_seed": 0,
+        "evidence": "SOURCE_DERIVED_STATIC_SCF_DEFAULT",
+        "per_rank_state_captured": false
+      },
+      "parallel_layout": {
+        "ranks": 2,
+        "pools": 2,
+        "binding": "NOT_EXPLICIT_IN_COMMAND",
+        "omp_threads": "1",
+        "blas_threads": "1"
+      },
+      "mean_abs_fe_lowdin_muB": null,
+      "input_path": "runs/B_a100_CB_r03/input.in",
+      "log_path": "runs/B_a100_CB_r03/pw.out"
+    },
+    "issues": [
+      "run status is RUN_FAILED",
+      "raw SCF gate: RUN_FAILED",
+      "raw completed energy is absent/nonfinite"
+    ],
+    "warnings": [
+      "RNG default seed is source-derived; evolving rank states were not captured"
+    ],
+    "file_hashes": {
+      "config.json": "7d1e045e63e8936ad6670450c1a69a9b8603591b865bc12a757377503d46c408",
+      "receipt.json": "d2909cbfae73600341b1cdfaf2de4b6f7a2ef40be7c76783a71eafd32ab7feec",
+      "parsed.json": "deb3c17e24f3355ca58766deeb0eedd6b21514aff2983d629512532e1b826377",
+      "input.in": "c7f977e0c951b7209e95733e412db0e898ee70e21ba3ecba1dcc11441e8ef92a",
+      "pw.out": "9d125463b2d63f0e25e4555f595ca9f72c8b182036f103a600bb136f2b96142f",
+      "runtime.json": "6c5923dc2930e1eb23025978d3516e6e4cfd7feea49d86ac754090f5c62b7b5b"
+    },
+    "final_state_verified": false
+  },
+  {
+    "run_id": "B_a100_CB_r04",
+    "eligible": false,
+    "data": {
+      "a_ang": 3.765,
+      "c_ang": 5.518,
+      "z_se": 0.2343,
+      "ecutwfc_ry": 90,
+      "kgrid": [
+        2,
+        2,
+        2
+      ],
+      "kshift": [
+        0,
+        0,
+        0
+      ],
+      "degauss_ry": 0.02,
+      "conv_thr_ry": 1e-07,
+      "mixing_beta": 0.3,
+      "electron_maxstep": 120,
+      "starting_polarization": 0.15,
+      "nbnd": 84,
+      "max_seconds": 1800,
+      "project": true,
+      "stage": "BASELINE",
+      "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+      "mpi_bind_to": "none",
+      "run_id": "B_a100_CB_r04",
+      "initial_state": "CB",
+      "kpoint_pools": 2,
+      "retries": "B_a100_CB_r03",
+      "retry_reason": "Unknown execution-context interruption; fresh attempt with isolated MPI backing paths and explicit no binding",
+      "ecutrho_ry": 360,
+      "n_fe": 4,
+      "functional": "PBE",
+      "smearing": "mv",
+      "relativistic": "scalar; collinear; no SOC",
+      "startingwfc": "atomic+random",
+      "startingpot": "atomic",
+      "rng_algorithm": "QE6.7 randy shuffled LCG; m=714025, ia=1366, ic=150889, ntab=97",
+      "rng_default_initial_seed": 0,
+      "rng_seed_evidence": "SOURCE_DERIVED_DEFAULT_FOR_CONFIGURED_STATIC_SCF_PATH",
+      "rng_state_runtime_captured": false,
+      "status": "RUNNING",
+      "energy_total_ry": null,
+      "scf_converged": false,
+      "job_done": false,
+      "qe_version": "6.7MaX",
+      "absolute_magnetization_muB_cell": 2.62,
+      "total_magnetization_muB_cell": -0.0,
+      "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+      "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+      "pseudo_sha256": {
+        "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+        "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+      },
+      "restart_mode": "from_scratch",
+      "gamma_only": false,
+      "rng": {
+        "algorithm": "QE6.7 randy shuffled LCG",
+        "default_initial_seed": 0,
+        "evidence": "SOURCE_DERIVED_STATIC_SCF_DEFAULT",
+        "per_rank_state_captured": false
+      },
+      "parallel_layout": {
+        "ranks": 1,
+        "pools": 1,
+        "binding": "NOT_EXPLICIT_IN_COMMAND",
+        "omp_threads": null,
+        "blas_threads": null
+      },
+      "final_state": "UNVERIFIED_FINAL_STATE",
+      "fe_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "mean_abs_fe_lowdin_muB": null,
+      "input_path": "runs/B_a100_CB_r04/input.in",
+      "log_path": "runs/B_a100_CB_r04/pw.out"
+    },
+    "issues": [
+      "run status is RUNNING",
+      "completed parsed.json is absent",
+      "unverified or mismatched receipt hash: config.json",
+      "unverified or mismatched receipt hash: pw.out",
+      "raw SCF gate: RUN_FAILED",
+      "raw completed energy is absent/nonfinite"
+    ],
+    "warnings": [
+      "RNG default seed is source-derived; evolving rank states were not captured"
+    ],
+    "file_hashes": {
+      "config.json": "ea15e7634b9e4cb8f8b199ece106066e7174bb065b78f1831f78bde49e56b2d6",
+      "receipt.json": "a07f1c9b88637025ce7d5b32e4bd545d04ec1365911712915e26a3a578e30fb7",
+      "input.in": "38bc3c9fc23429077ae057cb6ace7ab89c950ccbe804e8264047f6f49ab2f98e",
+      "pw.out": "22b51fa7ac379158079fbada6c6de9c98bc1b42db37e3973d58b0d9ed7e8a0c8",
+      "runtime.json": "743db7042bfda2a6e11bfba5d9ad5a870f881d0c4337c083b828e2a9ee7a17db"
+    },
+    "final_state_verified": false
+  },
+  {
+    "run_id": "B_a100_FM",
+    "eligible": false,
+    "data": {
+      "a_ang": 3.765,
+      "c_ang": 5.518,
+      "z_se": 0.2343,
+      "ecutwfc_ry": 90,
+      "kgrid": [
+        2,
+        2,
+        2
+      ],
+      "kshift": [
+        0,
+        0,
+        0
+      ],
+      "degauss_ry": 0.02,
+      "conv_thr_ry": 1e-07,
+      "mixing_beta": 0.3,
+      "electron_maxstep": 120,
+      "starting_polarization": 0.15,
+      "nbnd": 84,
+      "max_seconds": 1800,
+      "project": true,
+      "stage": "BASELINE",
+      "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+      "run_id": "B_a100_FM",
+      "initial_state": "FM",
+      "kpoint_pools": 2,
+      "ecutrho_ry": 360,
+      "n_fe": 4,
+      "functional": "PBE",
+      "smearing": "mv",
+      "relativistic": "scalar; collinear; no SOC",
+      "startingwfc": "atomic+random",
+      "startingpot": "atomic",
+      "rng_algorithm": "QE6.7 randy shuffled LCG; m=714025, ia=1366, ic=150889, ntab=97",
+      "rng_default_initial_seed": 0,
+      "rng_seed_evidence": "SOURCE_DERIVED_DEFAULT_FOR_CONFIGURED_STATIC_SCF_PATH",
+      "rng_state_runtime_captured": false,
+      "status": "RUN_FAILED",
+      "scf_converged": false,
+      "job_done": false,
+      "energy_total_ry": null,
+      "scf_accuracy_ry": null,
+      "scf_iterations": null,
+      "total_magnetization_muB_cell": null,
+      "absolute_magnetization_muB_cell": null,
+      "smearing_contribution_ry": null,
+      "qe_version": null,
+      "fe_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "all_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "magnetic_diagnostic": "Lowdin atomic spin population plus cell spin integrals",
+      "final_state": "UNVERIFIED_FINAL_STATE",
+      "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+      "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+      "pseudo_sha256": {
+        "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+        "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+      },
+      "restart_mode": "from_scratch",
+      "gamma_only": false,
+      "rng": {
+        "algorithm": "QE6.7 randy shuffled LCG",
+        "default_initial_seed": 0,
+        "evidence": "SOURCE_DERIVED_STATIC_SCF_DEFAULT",
+        "per_rank_state_captured": false
+      },
+      "parallel_layout": {
+        "ranks": 2,
+        "pools": 2,
+        "binding": "NOT_EXPLICIT_IN_COMMAND",
+        "omp_threads": "1",
+        "blas_threads": "1"
+      },
+      "mean_abs_fe_lowdin_muB": null,
+      "input_path": "runs/B_a100_FM/input.in",
+      "log_path": "runs/B_a100_FM/pw.out"
+    },
+    "issues": [
+      "run status is RUN_FAILED",
+      "raw SCF gate: RUN_FAILED",
+      "raw completed energy is absent/nonfinite"
+    ],
+    "warnings": [
+      "RNG default seed is source-derived; evolving rank states were not captured"
+    ],
+    "file_hashes": {
+      "config.json": "84f64dcf88cdd6c742ce95e1a4cbedaad2a4890feb791a005fcdcab61e1857e5",
+      "receipt.json": "e7720e5cf7a7ac705517df3f88af62d5ce756dd5589b5c5f400814bcd735fc7f",
+      "parsed.json": "c40a02dad9539625e9fd499e4b2d7c584e541a05f204ab8025d97987c08d6d46",
+      "input.in": "61493349b3e95049c9be7119a3e013c59b75ffced58b0a2bd5b7fd2bf706be15",
+      "pw.out": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "runtime.json": "0753d23488e18194175318b58ff1ee88e9f16cd59520409803bc09239ea327e1"
+    },
+    "final_state_verified": false
+  },
+  {
+    "run_id": "B_a100_FM_r02",
+    "eligible": false,
+    "data": {
+      "a_ang": 3.765,
+      "c_ang": 5.518,
+      "z_se": 0.2343,
+      "ecutwfc_ry": 90,
+      "kgrid": [
+        2,
+        2,
+        2
+      ],
+      "kshift": [
+        0,
+        0,
+        0
+      ],
+      "degauss_ry": 0.02,
+      "conv_thr_ry": 1e-07,
+      "mixing_beta": 0.3,
+      "electron_maxstep": 120,
+      "starting_polarization": 0.15,
+      "nbnd": 84,
+      "max_seconds": 1800,
+      "project": true,
+      "stage": "BASELINE",
+      "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+      "run_id": "B_a100_FM_r02",
+      "initial_state": "FM",
+      "kpoint_pools": 2,
+      "retries": "B_a100_FM",
+      "retry_reason": "Concurrent isolated PID namespaces collided in PRTE shared temporary session directory; no scientific input change",
+      "ecutrho_ry": 360,
+      "n_fe": 4,
+      "functional": "PBE",
+      "smearing": "mv",
+      "relativistic": "scalar; collinear; no SOC",
+      "startingwfc": "atomic+random",
+      "startingpot": "atomic",
+      "rng_algorithm": "QE6.7 randy shuffled LCG; m=714025, ia=1366, ic=150889, ntab=97",
+      "rng_default_initial_seed": 0,
+      "rng_seed_evidence": "SOURCE_DERIVED_DEFAULT_FOR_CONFIGURED_STATIC_SCF_PATH",
+      "rng_state_runtime_captured": false,
+      "status": "RUN_FAILED",
+      "scf_converged": false,
+      "job_done": false,
+      "energy_total_ry": null,
+      "scf_accuracy_ry": null,
+      "scf_iterations": null,
+      "total_magnetization_muB_cell": null,
+      "absolute_magnetization_muB_cell": null,
+      "smearing_contribution_ry": null,
+      "qe_version": "6.7MaX",
+      "fe_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "all_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "magnetic_diagnostic": "Lowdin atomic spin population plus cell spin integrals",
+      "final_state": "UNVERIFIED_FINAL_STATE",
+      "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+      "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+      "pseudo_sha256": {
+        "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+        "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+      },
+      "restart_mode": "from_scratch",
+      "gamma_only": false,
+      "rng": {
+        "algorithm": "QE6.7 randy shuffled LCG",
+        "default_initial_seed": 0,
+        "evidence": "SOURCE_DERIVED_STATIC_SCF_DEFAULT",
+        "per_rank_state_captured": false
+      },
+      "parallel_layout": {
+        "ranks": 2,
+        "pools": 2,
+        "binding": "NOT_EXPLICIT_IN_COMMAND",
+        "omp_threads": "1",
+        "blas_threads": "1"
+      },
+      "mean_abs_fe_lowdin_muB": null,
+      "input_path": "runs/B_a100_FM_r02/input.in",
+      "log_path": "runs/B_a100_FM_r02/pw.out"
+    },
+    "issues": [
+      "run status is RUN_FAILED",
+      "raw SCF gate: RUN_FAILED",
+      "raw completed energy is absent/nonfinite"
+    ],
+    "warnings": [
+      "RNG default seed is source-derived; evolving rank states were not captured"
+    ],
+    "file_hashes": {
+      "config.json": "d3491b23f652d312b8b4e3090889a0f44e849bb98f4356a779b043b30fc75a87",
+      "receipt.json": "974322bd01345f191b79262a424cc4777044044ff7651e8d5fc7c47e6bba3ca2",
+      "parsed.json": "71ad90c1916fa6bd8dd57b98f63c31d7c6ceba99a084d7962b1c2340fef4eb23",
+      "input.in": "92d22e2d55d2c9724426d220d1b422bd93142003d2396b1299da15d5dfa9e2c1",
+      "pw.out": "27a230be9ba8d2deba1ca36645eb7c48b51f13453df47ed629a1135caa009b15",
+      "runtime.json": "8250c6e240e3bdba7c9951796295d55f20d32b19c16af95e04d5965a785641e6"
+    },
+    "final_state_verified": false
+  },
+  {
+    "run_id": "B_a100_FM_r03",
+    "eligible": false,
+    "data": {
+      "a_ang": 3.765,
+      "c_ang": 5.518,
+      "z_se": 0.2343,
+      "ecutwfc_ry": 90,
+      "kgrid": [
+        2,
+        2,
+        2
+      ],
+      "kshift": [
+        0,
+        0,
+        0
+      ],
+      "degauss_ry": 0.02,
+      "conv_thr_ry": 1e-07,
+      "mixing_beta": 0.3,
+      "electron_maxstep": 120,
+      "starting_polarization": 0.15,
+      "nbnd": 84,
+      "max_seconds": 1800,
+      "project": true,
+      "stage": "BASELINE",
+      "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+      "run_id": "B_a100_FM_r03",
+      "initial_state": "FM",
+      "kpoint_pools": 2,
+      "retry_reason": "Isolate PRTE and btl_sm backing directory after shared PID namespace collision",
+      "retries": "B_a100_FM",
+      "ecutrho_ry": 360,
+      "n_fe": 4,
+      "functional": "PBE",
+      "smearing": "mv",
+      "relativistic": "scalar; collinear; no SOC",
+      "startingwfc": "atomic+random",
+      "startingpot": "atomic",
+      "rng_algorithm": "QE6.7 randy shuffled LCG; m=714025, ia=1366, ic=150889, ntab=97",
+      "rng_default_initial_seed": 0,
+      "rng_seed_evidence": "SOURCE_DERIVED_DEFAULT_FOR_CONFIGURED_STATIC_SCF_PATH",
+      "rng_state_runtime_captured": false,
+      "status": "RUN_FAILED",
+      "scf_converged": false,
+      "job_done": false,
+      "energy_total_ry": null,
+      "scf_accuracy_ry": 0.10049417,
+      "scf_iterations": null,
+      "total_magnetization_muB_cell": 1.63,
+      "absolute_magnetization_muB_cell": 3.05,
+      "smearing_contribution_ry": null,
+      "qe_version": "6.7MaX",
+      "final_state": "UNVERIFIED_FINAL_STATE",
+      "fe_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "all_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "stop_reason": "EXECUTION_CONTEXT_INTERRUPTED_UNKNOWN_CAUSE",
+      "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+      "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+      "pseudo_sha256": {
+        "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+        "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+      },
+      "restart_mode": "from_scratch",
+      "gamma_only": false,
+      "rng": {
+        "algorithm": "QE6.7 randy shuffled LCG",
+        "default_initial_seed": 0,
+        "evidence": "SOURCE_DERIVED_STATIC_SCF_DEFAULT",
+        "per_rank_state_captured": false
+      },
+      "parallel_layout": {
+        "ranks": 2,
+        "pools": 2,
+        "binding": "NOT_EXPLICIT_IN_COMMAND",
+        "omp_threads": "1",
+        "blas_threads": "1"
+      },
+      "mean_abs_fe_lowdin_muB": null,
+      "input_path": "runs/B_a100_FM_r03/input.in",
+      "log_path": "runs/B_a100_FM_r03/pw.out"
+    },
+    "issues": [
+      "run status is RUN_FAILED",
+      "raw SCF gate: RUN_FAILED",
+      "raw completed energy is absent/nonfinite"
+    ],
+    "warnings": [
+      "RNG default seed is source-derived; evolving rank states were not captured"
+    ],
+    "file_hashes": {
+      "config.json": "e8110cbc133c3bfea215a0f314b127b84383434c91b015b55d5812f42f723a39",
+      "receipt.json": "be41e2a572fb6e397988d26027ad6e30cd8f49d0a9e2438924f1646f171f874b",
+      "parsed.json": "75242b6956c5bae90c3acc795e1ceed437e124c2ace8053d56bc866893583bdd",
+      "input.in": "424b08a14fb87360f5a17cd59b57739499444df7172c55c456f2e9c9ff670a84",
+      "pw.out": "eb71c01534374d1701e0771abcaf486854b797547e8daa2941aa6e6dbbdf4564",
+      "runtime.json": "f5b1ed6b8c3e1d8037787817dec557c3e531a117f4cb5603e71b603b0588a5e8"
+    },
+    "final_state_verified": false
+  },
+  {
+    "run_id": "B_a100_FM_r04",
+    "eligible": true,
+    "data": {
+      "a_ang": 3.765,
+      "c_ang": 5.518,
+      "z_se": 0.2343,
+      "ecutwfc_ry": 90,
+      "kgrid": [
+        2,
+        2,
+        2
+      ],
+      "kshift": [
+        0,
+        0,
+        0
+      ],
+      "degauss_ry": 0.02,
+      "conv_thr_ry": 1e-07,
+      "mixing_beta": 0.3,
+      "electron_maxstep": 120,
+      "starting_polarization": 0.15,
+      "nbnd": 84,
+      "max_seconds": 1800,
+      "project": true,
+      "stage": "BASELINE",
+      "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+      "mpi_bind_to": "none",
+      "run_id": "B_a100_FM_r04",
+      "initial_state": "FM",
+      "kpoint_pools": 2,
+      "retries": "B_a100_FM_r03",
+      "retry_reason": "Unknown execution-context interruption; fresh attempt with isolated MPI backing paths and explicit no binding",
+      "ecutrho_ry": 360,
+      "n_fe": 4,
+      "functional": "PBE",
+      "smearing": "mv",
+      "relativistic": "scalar; collinear; no SOC",
+      "startingwfc": "atomic+random",
+      "startingpot": "atomic",
+      "rng_algorithm": "QE6.7 randy shuffled LCG; m=714025, ia=1366, ic=150889, ntab=97",
+      "rng_default_initial_seed": 0,
+      "rng_seed_evidence": "SOURCE_DERIVED_DEFAULT_FOR_CONFIGURED_STATIC_SCF_PATH",
+      "rng_state_runtime_captured": false,
+      "status": "RUN_COMPLETED",
+      "scf_converged": true,
+      "job_done": true,
+      "energy_total_ry": -1972.74154577,
+      "scf_accuracy_ry": 9e-08,
+      "scf_iterations": 23,
+      "total_magnetization_muB_cell": -0.0,
+      "absolute_magnetization_muB_cell": 0.01,
+      "smearing_contribution_ry": 0.01652091,
+      "qe_version": "6.7MaX",
+      "fe_lowdin_moments_muB": [
+        -0.0032,
+        0.0014,
+        0.0014,
+        -0.0004
+      ],
+      "all_lowdin_moments_muB": [
+        -0.0032,
+        0.0014,
+        0.0014,
+        -0.0004,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "magnetic_diagnostic": "Lowdin atomic spin population plus cell spin integrals",
+      "final_state": "NM_COLLAPSED",
+      "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+      "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+      "pseudo_sha256": {
+        "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+        "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+      },
+      "restart_mode": "from_scratch",
+      "gamma_only": false,
+      "rng": {
+        "algorithm": "QE6.7 randy shuffled LCG",
+        "default_initial_seed": 0,
+        "evidence": "SOURCE_DERIVED_STATIC_SCF_DEFAULT",
+        "per_rank_state_captured": false
+      },
+      "parallel_layout": {
+        "ranks": 2,
+        "pools": 2,
+        "binding": "none",
+        "omp_threads": "1",
+        "blas_threads": "1"
+      },
+      "mean_abs_fe_lowdin_muB": 0.0016,
+      "input_path": "runs/B_a100_FM_r04/input.in",
+      "log_path": "runs/B_a100_FM_r04/pw.out"
+    },
+    "issues": [],
+    "warnings": [
+      "RNG default seed is source-derived; evolving rank states were not captured"
+    ],
+    "file_hashes": {
+      "config.json": "8b17b6ab39b4e2f5318bcf03e83cd3b9badf01057b55c52983da13db3648fda9",
+      "receipt.json": "af5c4f3e8a6f8fcfe95c41f5615050bd0a3b8a8b6f5b2d0433e8f7a22d60d0df",
+      "parsed.json": "4a6dd10d62d1206620275f1ec55d26cc21f2777698925053528010725d1e1280",
+      "input.in": "00d1f3fa1a30b44d588d3813f152110e0175d7120a09dc2ce6169dede3a07113",
+      "pw.out": "26330dd7607fcc49e15bc1483aa0ac999523fdc3eea2363281ccd80293fd6a2c",
+      "proj.out": "8c22d6b292556dfece11cb64cd17546b36fe28e2698ad4f3502e9408c8dfa856",
+      "runtime.json": "15a446aaf74db9a904a466fbcee36f7d275226228bdbdfd18d0c2fdcd71698d8"
+    },
+    "final_state_verified": true
+  },
+  {
+    "run_id": "B_a100_NM",
+    "eligible": false,
+    "data": {
+      "a_ang": 3.765,
+      "c_ang": 5.518,
+      "z_se": 0.2343,
+      "ecutwfc_ry": 90,
+      "kgrid": [
+        2,
+        2,
+        2
+      ],
+      "kshift": [
+        0,
+        0,
+        0
+      ],
+      "degauss_ry": 0.02,
+      "conv_thr_ry": 1e-07,
+      "mixing_beta": 0.3,
+      "electron_maxstep": 120,
+      "starting_polarization": 0.15,
+      "nbnd": 84,
+      "max_seconds": 1800,
+      "project": true,
+      "stage": "BASELINE_REFERENCE",
+      "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+      "mpi_bind_to": "none",
+      "run_id": "B_a100_NM",
+      "initial_state": "NM",
+      "kpoint_pools": 2,
+      "ecutrho_ry": 360,
+      "n_fe": 4,
+      "functional": "PBE",
+      "smearing": "mv",
+      "relativistic": "scalar; collinear; no SOC",
+      "startingwfc": "atomic+random",
+      "startingpot": "atomic",
+      "rng_algorithm": "QE6.7 randy shuffled LCG; m=714025, ia=1366, ic=150889, ntab=97",
+      "rng_default_initial_seed": 0,
+      "rng_seed_evidence": "SOURCE_DERIVED_DEFAULT_FOR_CONFIGURED_STATIC_SCF_PATH",
+      "rng_state_runtime_captured": false,
+      "status": "RUNNING",
+      "energy_total_ry": null,
+      "scf_converged": false,
+      "job_done": false,
+      "qe_version": "6.7MaX",
+      "absolute_magnetization_muB_cell": null,
+      "total_magnetization_muB_cell": null,
+      "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+      "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+      "pseudo_sha256": {
+        "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+        "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+      },
+      "restart_mode": "from_scratch",
+      "gamma_only": false,
+      "rng": {
+        "algorithm": "QE6.7 randy shuffled LCG",
+        "default_initial_seed": 0,
+        "evidence": "SOURCE_DERIVED_STATIC_SCF_DEFAULT",
+        "per_rank_state_captured": false
+      },
+      "parallel_layout": {
+        "ranks": 1,
+        "pools": 1,
+        "binding": "NOT_EXPLICIT_IN_COMMAND",
+        "omp_threads": null,
+        "blas_threads": null
+      },
+      "final_state": "UNVERIFIED_FINAL_STATE",
+      "fe_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "mean_abs_fe_lowdin_muB": null,
+      "input_path": "runs/B_a100_NM/input.in",
+      "log_path": "runs/B_a100_NM/pw.out"
+    },
+    "issues": [
+      "run status is RUNNING",
+      "completed parsed.json is absent",
+      "unverified or mismatched receipt hash: config.json",
+      "unverified or mismatched receipt hash: pw.out",
+      "raw SCF gate: RUN_FAILED",
+      "raw completed energy is absent/nonfinite"
+    ],
+    "warnings": [
+      "RNG default seed is source-derived; evolving rank states were not captured"
+    ],
+    "file_hashes": {
+      "config.json": "f63008ff8f3d3d54af88aef556b426a4322b53c55e716256e6b30f2b3954e914",
+      "receipt.json": "927c72c37be7d0fa5569def148854ed06f073cb8b9d7d5d95e09e1d534f477fe",
+      "input.in": "b8f828563138e7f31e3566b0312dab42bb9d9d386bbb0ba42277d9af74093c0b",
+      "pw.out": "edc5e20e293111953992fe92feea8dbefc52546ba1ba6127db132fa7c1a3bca9",
+      "runtime.json": "aac7cc91b15e2671d4ffa82cc2775fdb196cd3af0fc5b4dab2f483052fb77b08"
+    },
+    "final_state_verified": false
+  },
+  {
+    "run_id": "B_a100_STRIPE",
+    "eligible": false,
+    "data": {
+      "a_ang": 3.765,
+      "c_ang": 5.518,
+      "z_se": 0.2343,
+      "ecutwfc_ry": 90,
+      "kgrid": [
+        2,
+        2,
+        2
+      ],
+      "kshift": [
+        0,
+        0,
+        0
+      ],
+      "degauss_ry": 0.02,
+      "conv_thr_ry": 1e-07,
+      "mixing_beta": 0.3,
+      "electron_maxstep": 120,
+      "starting_polarization": 0.15,
+      "nbnd": 84,
+      "max_seconds": 1800,
+      "project": true,
+      "stage": "BASELINE",
+      "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+      "run_id": "B_a100_STRIPE",
+      "initial_state": "STRIPE",
+      "kpoint_pools": 2,
+      "ecutrho_ry": 360,
+      "n_fe": 4,
+      "functional": "PBE",
+      "smearing": "mv",
+      "relativistic": "scalar; collinear; no SOC",
+      "startingwfc": "atomic+random",
+      "startingpot": "atomic",
+      "rng_algorithm": "QE6.7 randy shuffled LCG; m=714025, ia=1366, ic=150889, ntab=97",
+      "rng_default_initial_seed": 0,
+      "rng_seed_evidence": "SOURCE_DERIVED_DEFAULT_FOR_CONFIGURED_STATIC_SCF_PATH",
+      "rng_state_runtime_captured": false,
+      "status": "RUN_FAILED",
+      "scf_converged": false,
+      "job_done": false,
+      "energy_total_ry": null,
+      "scf_accuracy_ry": null,
+      "scf_iterations": null,
+      "total_magnetization_muB_cell": null,
+      "absolute_magnetization_muB_cell": null,
+      "smearing_contribution_ry": null,
+      "qe_version": null,
+      "fe_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "all_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "magnetic_diagnostic": "Lowdin atomic spin population plus cell spin integrals",
+      "final_state": "UNVERIFIED_FINAL_STATE",
+      "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+      "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+      "pseudo_sha256": {
+        "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+        "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+      },
+      "restart_mode": "from_scratch",
+      "gamma_only": false,
+      "rng": {
+        "algorithm": "QE6.7 randy shuffled LCG",
+        "default_initial_seed": 0,
+        "evidence": "SOURCE_DERIVED_STATIC_SCF_DEFAULT",
+        "per_rank_state_captured": false
+      },
+      "parallel_layout": {
+        "ranks": 2,
+        "pools": 2,
+        "binding": "NOT_EXPLICIT_IN_COMMAND",
+        "omp_threads": "1",
+        "blas_threads": "1"
+      },
+      "mean_abs_fe_lowdin_muB": null,
+      "input_path": "runs/B_a100_STRIPE/input.in",
+      "log_path": "runs/B_a100_STRIPE/pw.out"
+    },
+    "issues": [
+      "run status is RUN_FAILED",
+      "raw SCF gate: RUN_FAILED",
+      "raw completed energy is absent/nonfinite"
+    ],
+    "warnings": [
+      "RNG default seed is source-derived; evolving rank states were not captured"
+    ],
+    "file_hashes": {
+      "config.json": "570fbb348f51bf356dfc956c6d4628de7864f39a734d51d37d12610653819f1e",
+      "receipt.json": "618e44eca9390c5be17e4c8cf14a1a62fc454c819c2032b22c605d81df2a65e6",
+      "parsed.json": "1a38c297898a1ffa112b97d734fec42dd66724f55083f6c74268852fe4236057",
+      "input.in": "e67c4fbba6e9141ee9abbd0d992ca145335b2ac1febbc404b7d8b7996ed803f1",
+      "pw.out": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "runtime.json": "e5fc11fd0707aaf1fcbde96610c9cf0b022ca9027130022f209ca567353c31d9"
+    },
+    "final_state_verified": false
+  },
+  {
+    "run_id": "B_a100_STRIPE_r02",
+    "eligible": false,
+    "data": {
+      "a_ang": 3.765,
+      "c_ang": 5.518,
+      "z_se": 0.2343,
+      "ecutwfc_ry": 90,
+      "kgrid": [
+        2,
+        2,
+        2
+      ],
+      "kshift": [
+        0,
+        0,
+        0
+      ],
+      "degauss_ry": 0.02,
+      "conv_thr_ry": 1e-07,
+      "mixing_beta": 0.3,
+      "electron_maxstep": 120,
+      "starting_polarization": 0.15,
+      "nbnd": 84,
+      "max_seconds": 1800,
+      "project": true,
+      "stage": "BASELINE",
+      "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+      "run_id": "B_a100_STRIPE_r02",
+      "initial_state": "STRIPE",
+      "kpoint_pools": 2,
+      "retries": "B_a100_STRIPE",
+      "retry_reason": "Concurrent isolated PID namespaces collided in PRTE shared temporary session directory; no scientific input change",
+      "ecutrho_ry": 360,
+      "n_fe": 4,
+      "functional": "PBE",
+      "smearing": "mv",
+      "relativistic": "scalar; collinear; no SOC",
+      "startingwfc": "atomic+random",
+      "startingpot": "atomic",
+      "rng_algorithm": "QE6.7 randy shuffled LCG; m=714025, ia=1366, ic=150889, ntab=97",
+      "rng_default_initial_seed": 0,
+      "rng_seed_evidence": "SOURCE_DERIVED_DEFAULT_FOR_CONFIGURED_STATIC_SCF_PATH",
+      "rng_state_runtime_captured": false,
+      "status": "RUN_FAILED",
+      "scf_converged": false,
+      "job_done": false,
+      "energy_total_ry": null,
+      "scf_accuracy_ry": null,
+      "scf_iterations": null,
+      "total_magnetization_muB_cell": null,
+      "absolute_magnetization_muB_cell": null,
+      "smearing_contribution_ry": null,
+      "qe_version": "6.7MaX",
+      "final_state": "UNVERIFIED_FINAL_STATE",
+      "fe_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "all_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "stop_reason": "SUPERVISOR_INTERRUPTED_STALLED_MPI",
+      "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+      "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+      "pseudo_sha256": {
+        "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+        "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+      },
+      "restart_mode": "from_scratch",
+      "gamma_only": false,
+      "rng": {
+        "algorithm": "QE6.7 randy shuffled LCG",
+        "default_initial_seed": 0,
+        "evidence": "SOURCE_DERIVED_STATIC_SCF_DEFAULT",
+        "per_rank_state_captured": false
+      },
+      "parallel_layout": {
+        "ranks": 2,
+        "pools": 2,
+        "binding": "NOT_EXPLICIT_IN_COMMAND",
+        "omp_threads": "1",
+        "blas_threads": "1"
+      },
+      "mean_abs_fe_lowdin_muB": null,
+      "input_path": "runs/B_a100_STRIPE_r02/input.in",
+      "log_path": "runs/B_a100_STRIPE_r02/pw.out"
+    },
+    "issues": [
+      "run status is RUN_FAILED",
+      "raw SCF gate: RUN_FAILED",
+      "raw completed energy is absent/nonfinite"
+    ],
+    "warnings": [
+      "RNG default seed is source-derived; evolving rank states were not captured"
+    ],
+    "file_hashes": {
+      "config.json": "2ed3c9650f7c82d14b0016cf4ae5f1c22c8d7c64ca67e078f8c63ff4b9b628a8",
+      "receipt.json": "d95545dfca30165d25a8e388ebdd28729e114e5d9a2b13c4a09662c1c8cc27ff",
+      "parsed.json": "be86ea189d9518d0968e2bc1fcfbbc740535fe22bdfbbb65c5a65fc3348efd70",
+      "input.in": "32bc0b995a73d8ae485c1cce58666922796f4aab1b8011d1d28a0a80d8f2c80c",
+      "pw.out": "933b34aa94d74719a2375b8d86fc457970bc0a97a63e3a98cb689e00ac8525b0",
+      "runtime.json": "ac3ef247cf55b0dbc284144b0951afc75924f5e26bd9686048baf82d7870b613"
+    },
+    "final_state_verified": false
+  },
+  {
+    "run_id": "B_a100_STRIPE_r03",
+    "eligible": false,
+    "data": {
+      "a_ang": 3.765,
+      "c_ang": 5.518,
+      "z_se": 0.2343,
+      "ecutwfc_ry": 90,
+      "kgrid": [
+        2,
+        2,
+        2
+      ],
+      "kshift": [
+        0,
+        0,
+        0
+      ],
+      "degauss_ry": 0.02,
+      "conv_thr_ry": 1e-07,
+      "mixing_beta": 0.3,
+      "electron_maxstep": 120,
+      "starting_polarization": 0.15,
+      "nbnd": 84,
+      "max_seconds": 1800,
+      "project": true,
+      "stage": "BASELINE",
+      "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+      "run_id": "B_a100_STRIPE_r03",
+      "initial_state": "STRIPE",
+      "kpoint_pools": 2,
+      "retry_reason": "Isolate PRTE and btl_sm backing directory after shared PID namespace collision",
+      "retries": "B_a100_STRIPE",
+      "ecutrho_ry": 360,
+      "n_fe": 4,
+      "functional": "PBE",
+      "smearing": "mv",
+      "relativistic": "scalar; collinear; no SOC",
+      "startingwfc": "atomic+random",
+      "startingpot": "atomic",
+      "rng_algorithm": "QE6.7 randy shuffled LCG; m=714025, ia=1366, ic=150889, ntab=97",
+      "rng_default_initial_seed": 0,
+      "rng_seed_evidence": "SOURCE_DERIVED_DEFAULT_FOR_CONFIGURED_STATIC_SCF_PATH",
+      "rng_state_runtime_captured": false,
+      "status": "RUN_FAILED",
+      "scf_converged": false,
+      "job_done": false,
+      "energy_total_ry": null,
+      "scf_accuracy_ry": 0.00571923,
+      "scf_iterations": null,
+      "total_magnetization_muB_cell": 0.01,
+      "absolute_magnetization_muB_cell": 7.61,
+      "smearing_contribution_ry": null,
+      "qe_version": "6.7MaX",
+      "final_state": "UNVERIFIED_FINAL_STATE",
+      "fe_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "all_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "stop_reason": "EXECUTION_CONTEXT_INTERRUPTED_UNKNOWN_CAUSE",
+      "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+      "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+      "pseudo_sha256": {
+        "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+        "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+      },
+      "restart_mode": "from_scratch",
+      "gamma_only": false,
+      "rng": {
+        "algorithm": "QE6.7 randy shuffled LCG",
+        "default_initial_seed": 0,
+        "evidence": "SOURCE_DERIVED_STATIC_SCF_DEFAULT",
+        "per_rank_state_captured": false
+      },
+      "parallel_layout": {
+        "ranks": 2,
+        "pools": 2,
+        "binding": "NOT_EXPLICIT_IN_COMMAND",
+        "omp_threads": "1",
+        "blas_threads": "1"
+      },
+      "mean_abs_fe_lowdin_muB": null,
+      "input_path": "runs/B_a100_STRIPE_r03/input.in",
+      "log_path": "runs/B_a100_STRIPE_r03/pw.out"
+    },
+    "issues": [
+      "run status is RUN_FAILED",
+      "raw SCF gate: RUN_FAILED",
+      "raw completed energy is absent/nonfinite"
+    ],
+    "warnings": [
+      "RNG default seed is source-derived; evolving rank states were not captured"
+    ],
+    "file_hashes": {
+      "config.json": "918fc569817d2cb51c8d0c6023eaf960c54dd033251e8bec2cd5a077c09081df",
+      "receipt.json": "1a53a79bcabdab8f0a54ea33c5ba96f88368109bc7503627a7a3a4cfbee68e6e",
+      "parsed.json": "d33cd868503296e223db98d50572dd0cac399f2dbf6104befdd68d2e3ee0f543",
+      "input.in": "ef6dd3a84968a5e5801b86730447ce32804baece9884fbf28e39c1c7c571ce3f",
+      "pw.out": "5bdc000d28c82093be9076be75dc25d5bae98cb119a46d04b284fc5ad845a6ac",
+      "runtime.json": "8503843944a247b929694931efbf6d64c5496b76c3fd6c835cd7048807c97686"
+    },
+    "final_state_verified": false
+  },
+  {
+    "run_id": "B_a100_STRIPE_r04",
+    "eligible": true,
+    "data": {
+      "a_ang": 3.765,
+      "c_ang": 5.518,
+      "z_se": 0.2343,
+      "ecutwfc_ry": 90,
+      "kgrid": [
+        2,
+        2,
+        2
+      ],
+      "kshift": [
+        0,
+        0,
+        0
+      ],
+      "degauss_ry": 0.02,
+      "conv_thr_ry": 1e-07,
+      "mixing_beta": 0.3,
+      "electron_maxstep": 120,
+      "starting_polarization": 0.15,
+      "nbnd": 84,
+      "max_seconds": 1800,
+      "project": true,
+      "stage": "BASELINE",
+      "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+      "mpi_bind_to": "none",
+      "run_id": "B_a100_STRIPE_r04",
+      "initial_state": "STRIPE",
+      "kpoint_pools": 2,
+      "retries": "B_a100_STRIPE_r03",
+      "retry_reason": "Unknown execution-context interruption; fresh attempt with isolated MPI backing paths and explicit no binding",
+      "ecutrho_ry": 360,
+      "n_fe": 4,
+      "functional": "PBE",
+      "smearing": "mv",
+      "relativistic": "scalar; collinear; no SOC",
+      "startingwfc": "atomic+random",
+      "startingpot": "atomic",
+      "rng_algorithm": "QE6.7 randy shuffled LCG; m=714025, ia=1366, ic=150889, ntab=97",
+      "rng_default_initial_seed": 0,
+      "rng_seed_evidence": "SOURCE_DERIVED_DEFAULT_FOR_CONFIGURED_STATIC_SCF_PATH",
+      "rng_state_runtime_captured": false,
+      "status": "RUN_COMPLETED",
+      "scf_converged": true,
+      "job_done": true,
+      "energy_total_ry": -1972.75514937,
+      "scf_accuracy_ry": 8e-08,
+      "scf_iterations": 15,
+      "total_magnetization_muB_cell": -0.0,
+      "absolute_magnetization_muB_cell": 7.32,
+      "smearing_contribution_ry": 0.00045831,
+      "qe_version": "6.7MaX",
+      "fe_lowdin_moments_muB": [
+        1.6843,
+        -1.6843,
+        1.6843,
+        -1.6843
+      ],
+      "all_lowdin_moments_muB": [
+        1.6843,
+        -1.6843,
+        1.6843,
+        -1.6843,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "magnetic_diagnostic": "Lowdin atomic spin population plus cell spin integrals",
+      "final_state": "STRIPE",
+      "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+      "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+      "pseudo_sha256": {
+        "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+        "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+      },
+      "restart_mode": "from_scratch",
+      "gamma_only": false,
+      "rng": {
+        "algorithm": "QE6.7 randy shuffled LCG",
+        "default_initial_seed": 0,
+        "evidence": "SOURCE_DERIVED_STATIC_SCF_DEFAULT",
+        "per_rank_state_captured": false
+      },
+      "parallel_layout": {
+        "ranks": 2,
+        "pools": 2,
+        "binding": "none",
+        "omp_threads": "1",
+        "blas_threads": "1"
+      },
+      "mean_abs_fe_lowdin_muB": 1.6843,
+      "input_path": "runs/B_a100_STRIPE_r04/input.in",
+      "log_path": "runs/B_a100_STRIPE_r04/pw.out"
+    },
+    "issues": [],
+    "warnings": [
+      "RNG default seed is source-derived; evolving rank states were not captured"
+    ],
+    "file_hashes": {
+      "config.json": "c4d0b76a52e58207f78271862b331f1d62dcead0ba840f4da74fe310ec6be078",
+      "receipt.json": "2e5d23d0b966f9de2d20baaf00f6eb3619a23308b42e1277d598346501771bd1",
+      "parsed.json": "1fa89114253f2de183faf776d60511b48219c8a4edcd35968559ab789fb9a8dd",
+      "input.in": "0b9fe524f12d02b5e336876d0ed369f2ee0b6cd9f1fe02962141f37b6a263e1c",
+      "pw.out": "2b3e8124a5bef1b4d403dfa2fc7f052376d99c9f0bbd6427f53670aace83f8dc",
+      "proj.out": "8f005fe4106192dbb20fc0f7e4d4f80437c097d8a7bd6f86c1cef16f39983ed0",
+      "runtime.json": "33a11a33179fceb7991941adfa26c56aa100d15093adde2590a2698ec5192ad2"
+    },
+    "final_state_verified": true
+  },
+  {
+    "run_id": "P001_stripe_60_k443",
+    "eligible": false,
+    "data": {
+      "a_ang": 3.765,
+      "c_ang": 5.518,
+      "z_se": 0.2343,
+      "ecutwfc_ry": 60.0,
+      "kgrid": [
+        4,
+        4,
+        3
+      ],
+      "kshift": [
+        0,
+        0,
+        0
+      ],
+      "degauss_ry": 0.02,
+      "conv_thr_ry": 1e-07,
+      "mixing_beta": 0.3,
+      "electron_maxstep": 120,
+      "starting_polarization": 0.15,
+      "nbnd": 84,
+      "max_seconds": 360,
+      "project": true,
+      "stage": "PILOT",
+      "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+      "run_id": "P001_stripe_60_k443",
+      "initial_state": "STRIPE",
+      "ecutrho_ry": 240.0,
+      "n_fe": 4,
+      "functional": "PBE",
+      "smearing": "mv",
+      "relativistic": "scalar; collinear; no SOC",
+      "status": "RUN_FAILED",
+      "scf_converged": false,
+      "job_done": true,
+      "energy_total_ry": null,
+      "scf_accuracy_ry": 1.83287617,
+      "scf_iterations": null,
+      "total_magnetization_muB_cell": 0.0,
+      "absolute_magnetization_muB_cell": 6.57,
+      "smearing_contribution_ry": null,
+      "qe_version": "6.7MaX",
+      "fe_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "all_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "magnetic_diagnostic": "Lowdin atomic spin population plus cell spin integrals",
+      "final_state": "UNVERIFIED_FINAL_STATE",
+      "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+      "runtime_profile_sha256": null,
+      "pseudo_sha256": {
+        "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+        "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+      },
+      "startingwfc": "atomic+random",
+      "startingpot": "atomic",
+      "restart_mode": "from_scratch",
+      "gamma_only": false,
+      "rng": {
+        "algorithm": "QE6.7 randy shuffled LCG",
+        "default_initial_seed": 0,
+        "evidence": "SOURCE_DERIVED_STATIC_SCF_DEFAULT",
+        "per_rank_state_captured": false
+      },
+      "parallel_layout": {
+        "ranks": 4,
+        "pools": 1,
+        "binding": "NOT_EXPLICIT_IN_COMMAND",
+        "omp_threads": "1",
+        "blas_threads": "1"
+      },
+      "mean_abs_fe_lowdin_muB": null,
+      "input_path": "runs/P001_stripe_60_k443/input.in",
+      "log_path": "runs/P001_stripe_60_k443/pw.out"
+    },
+    "issues": [
+      "run status is RUN_FAILED",
+      "raw SCF gate: RUN_FAILED",
+      "raw completed energy is absent/nonfinite",
+      "missing comparability identity: runtime_profile_sha256"
+    ],
+    "warnings": [
+      "RNG default seed is source-derived; evolving rank states were not captured"
+    ],
+    "file_hashes": {
+      "config.json": "1e02c95c6c1d8fb776be822405063abca4115ef4875bb6e331c4bb5d2124a84d",
+      "receipt.json": "9cb6f18f4ab869856e504903666c7d0a491a77c2c7257d6a2137d5b9dffb1067",
+      "parsed.json": "be3849d7c78251064ff7930533f1052b03bcb0c46dfff897d63e39dd19f5b0fe",
+      "input.in": "3829f63f81019f34bb7f118a52b95fadbf9269ea4c9aac7c1a0d18471adf4b94",
+      "pw.out": "ac2415851d59209f1a53af7071597212d7dba5108565e062037071bccd8b4d21"
+    },
+    "final_state_verified": false
+  },
+  {
+    "run_id": "P002_stripe_openblas_serial",
+    "eligible": false,
+    "data": {
+      "a_ang": 3.765,
+      "c_ang": 5.518,
+      "z_se": 0.2343,
+      "ecutwfc_ry": 60.0,
+      "kgrid": [
+        4,
+        4,
+        3
+      ],
+      "kshift": [
+        0,
+        0,
+        0
+      ],
+      "degauss_ry": 0.02,
+      "conv_thr_ry": 1e-07,
+      "mixing_beta": 0.3,
+      "electron_maxstep": 120,
+      "starting_polarization": 0.15,
+      "nbnd": 84,
+      "max_seconds": 360,
+      "project": true,
+      "stage": "PILOT_RUNTIME_REPAIR",
+      "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+      "run_id": "P002_stripe_openblas_serial",
+      "initial_state": "STRIPE",
+      "ecutrho_ry": 240.0,
+      "n_fe": 4,
+      "functional": "PBE",
+      "smearing": "mv",
+      "relativistic": "scalar; collinear; no SOC",
+      "status": "RUN_FAILED",
+      "scf_converged": false,
+      "job_done": true,
+      "energy_total_ry": null,
+      "scf_accuracy_ry": 0.08760108,
+      "scf_iterations": null,
+      "total_magnetization_muB_cell": -0.0,
+      "absolute_magnetization_muB_cell": 7.72,
+      "smearing_contribution_ry": null,
+      "qe_version": "6.7MaX",
+      "fe_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "all_lowdin_moments_muB": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "magnetic_diagnostic": "Lowdin atomic spin population plus cell spin integrals",
+      "final_state": "UNVERIFIED_FINAL_STATE",
+      "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+      "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+      "pseudo_sha256": {
+        "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+        "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+      },
+      "startingwfc": "atomic+random",
+      "startingpot": "atomic",
+      "restart_mode": "from_scratch",
+      "gamma_only": false,
+      "rng": {
+        "algorithm": "QE6.7 randy shuffled LCG",
+        "default_initial_seed": 0,
+        "evidence": "SOURCE_DERIVED_STATIC_SCF_DEFAULT",
+        "per_rank_state_captured": false
+      },
+      "parallel_layout": {
+        "ranks": 1,
+        "pools": 1,
+        "binding": "NOT_EXPLICIT_IN_COMMAND",
+        "omp_threads": "1",
+        "blas_threads": "1"
+      },
+      "mean_abs_fe_lowdin_muB": null,
+      "input_path": "runs/P002_stripe_openblas_serial/input.in",
+      "log_path": "runs/P002_stripe_openblas_serial/pw.out"
+    },
+    "issues": [
+      "run status is RUN_FAILED",
+      "raw SCF gate: RUN_FAILED",
+      "raw completed energy is absent/nonfinite"
+    ],
+    "warnings": [
+      "RNG default seed is source-derived; evolving rank states were not captured"
+    ],
+    "file_hashes": {
+      "config.json": "3998e8948b85b0965554b54f0d9b21722701ac8c823ef62b2a2513707ef344ce",
+      "receipt.json": "3abff5a88fb328e0557c341f65d966bffc19d2c467cec7d3a3d01eec94267caf",
+      "parsed.json": "aae204b8b9ef85141c533b7a97ed45f07397463e46aeb1c94b4369accf0236ef",
+      "input.in": "3cddb7c33a6f005fb755162da7cd3004867c9bc63a1f5d66f2d792b30ce43b6e",
+      "pw.out": "dc207063dd6c16f8d203e878cd80547a0f0680fe9cdbd67251c521cf8bb4e8e4",
+      "runtime.json": "efbd78c7d000b851ba87055f9e17fbafaf85f790b57b28a0fca358d45a101e40"
+    },
+    "final_state_verified": false
+  },
+  {
+    "run_id": "P003_stripe_openblas_pool2",
+    "eligible": true,
+    "data": {
+      "a_ang": 3.765,
+      "c_ang": 5.518,
+      "z_se": 0.2343,
+      "ecutwfc_ry": 60.0,
+      "kgrid": [
+        4,
+        4,
+        3
+      ],
+      "kshift": [
+        0,
+        0,
+        0
+      ],
+      "degauss_ry": 0.02,
+      "conv_thr_ry": 1e-07,
+      "mixing_beta": 0.3,
+      "electron_maxstep": 120,
+      "starting_polarization": 0.15,
+      "nbnd": 84,
+      "max_seconds": 1800,
+      "project": true,
+      "stage": "PILOT_RUNTIME_POOLING",
+      "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+      "run_id": "P003_stripe_openblas_pool2",
+      "initial_state": "STRIPE",
+      "kpoint_pools": 2,
+      "ecutrho_ry": 240.0,
+      "n_fe": 4,
+      "functional": "PBE",
+      "smearing": "mv",
+      "relativistic": "scalar; collinear; no SOC",
+      "status": "RUN_COMPLETED",
+      "scf_converged": true,
+      "job_done": true,
+      "energy_total_ry": -1971.71337925,
+      "scf_accuracy_ry": 3e-08,
+      "scf_iterations": 15,
+      "total_magnetization_muB_cell": -0.0,
+      "absolute_magnetization_muB_cell": 7.87,
+      "smearing_contribution_ry": 0.00828395,
+      "qe_version": "6.7MaX",
+      "fe_lowdin_moments_muB": [
+        1.8143,
+        -1.8143,
+        1.8143,
+        -1.8143
+      ],
+      "all_lowdin_moments_muB": [
+        1.8143,
+        -1.8143,
+        1.8143,
+        -1.8143,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "magnetic_diagnostic": "Lowdin atomic spin population plus cell spin integrals",
+      "final_state": "STRIPE",
+      "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+      "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+      "pseudo_sha256": {
+        "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+        "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+      },
+      "startingwfc": "atomic+random",
+      "startingpot": "atomic",
+      "restart_mode": "from_scratch",
+      "gamma_only": false,
+      "rng": {
+        "algorithm": "QE6.7 randy shuffled LCG",
+        "default_initial_seed": 0,
+        "evidence": "SOURCE_DERIVED_STATIC_SCF_DEFAULT",
+        "per_rank_state_captured": false
+      },
+      "parallel_layout": {
+        "ranks": 2,
+        "pools": 2,
+        "binding": "NOT_EXPLICIT_IN_COMMAND",
+        "omp_threads": "1",
+        "blas_threads": "1"
+      },
+      "mean_abs_fe_lowdin_muB": 1.8143,
+      "input_path": "runs/P003_stripe_openblas_pool2/input.in",
+      "log_path": "runs/P003_stripe_openblas_pool2/pw.out"
+    },
+    "issues": [],
+    "warnings": [
+      "RNG default seed is source-derived; evolving rank states were not captured"
+    ],
+    "file_hashes": {
+      "config.json": "a7800c8b5d61c6b3c311d312590c18fea651f6232b442976882e17dfa31742c5",
+      "receipt.json": "6b00373d53c700d1b58cf254db1ab80e9dc9d3ad0e41733aed74298f1d145e41",
+      "parsed.json": "f2662e786d3d58dff00183c58a36e0f0bd6970ef9917cfaf763108a644dd810c",
+      "input.in": "418194cf3fb684388bb788792d9d87a0351adafc45c427b388e2a1d1590f3fac",
+      "pw.out": "f74aa495b2f3f454b99f2c79790b0a5e8951961ca0f92410121dd152946776f3",
+      "proj.out": "4d453a27ebf2013b061606826564ec5f76a187de07c60796bcc06055daf3d3a3",
+      "runtime.json": "9abf4d6f0ef7efb2afbfa7d20aba9f76ec2f1947525208f99eb48ac090ce75b5"
+    },
+    "final_state_verified": true
+  },
+  {
+    "run_id": "P004_stripe_gamma_pipeline",
+    "eligible": true,
+    "data": {
+      "a_ang": 3.765,
+      "c_ang": 5.518,
+      "z_se": 0.2343,
+      "ecutwfc_ry": 60.0,
+      "kgrid": [
+        1,
+        1,
+        1
+      ],
+      "kshift": [
+        0,
+        0,
+        0
+      ],
+      "degauss_ry": 0.02,
+      "conv_thr_ry": 1e-07,
+      "mixing_beta": 0.3,
+      "electron_maxstep": 120,
+      "starting_polarization": 0.15,
+      "nbnd": 84,
+      "max_seconds": 900,
+      "project": true,
+      "stage": "PILOT_PIPELINE_ONLY",
+      "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+      "run_id": "P004_stripe_gamma_pipeline",
+      "initial_state": "STRIPE",
+      "gamma_only": true,
+      "ecutrho_ry": 240.0,
+      "n_fe": 4,
+      "functional": "PBE",
+      "smearing": "mv",
+      "relativistic": "scalar; collinear; no SOC",
+      "status": "RUN_COMPLETED",
+      "scf_converged": true,
+      "job_done": true,
+      "energy_total_ry": -1971.59423608,
+      "scf_accuracy_ry": 8e-08,
+      "scf_iterations": 19,
+      "total_magnetization_muB_cell": -0.0,
+      "absolute_magnetization_muB_cell": 10.42,
+      "smearing_contribution_ry": -0.01085175,
+      "qe_version": "6.7MaX",
+      "fe_lowdin_moments_muB": [
+        2.4792,
+        -2.4797,
+        2.4792,
+        -2.4797
+      ],
+      "all_lowdin_moments_muB": [
+        2.4792,
+        -2.4797,
+        2.4792,
+        -2.4797,
+        -0.0001,
+        -0.0001,
+        -0.0001,
+        -0.0001
+      ],
+      "magnetic_diagnostic": "Lowdin atomic spin population plus cell spin integrals",
+      "final_state": "STRIPE",
+      "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+      "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+      "pseudo_sha256": {
+        "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+        "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+      },
+      "startingwfc": "atomic+random",
+      "startingpot": "atomic",
+      "restart_mode": "from_scratch",
+      "rng": {
+        "algorithm": "QE6.7 randy shuffled LCG",
+        "default_initial_seed": 0,
+        "evidence": "SOURCE_DERIVED_STATIC_SCF_DEFAULT",
+        "per_rank_state_captured": false
+      },
+      "parallel_layout": {
+        "ranks": 1,
+        "pools": 1,
+        "binding": "NOT_EXPLICIT_IN_COMMAND",
+        "omp_threads": "1",
+        "blas_threads": "1"
+      },
+      "mean_abs_fe_lowdin_muB": 2.47945,
+      "input_path": "runs/P004_stripe_gamma_pipeline/input.in",
+      "log_path": "runs/P004_stripe_gamma_pipeline/pw.out"
+    },
+    "issues": [],
+    "warnings": [
+      "RNG default seed is source-derived; evolving rank states were not captured"
+    ],
+    "file_hashes": {
+      "config.json": "e99ed0337bdacb83719be4b7b0ce5e70eaefd7e593d88c98507d8019b440091d",
+      "receipt.json": "f04c48ec76f143b915233c49e86a86169b7091a7c8abeeba58f2d7cc8d9fddd1",
+      "parsed.json": "d00db023ceae361cf973dd1854c1b1279f795982553e0d29d2868a69f53634d7",
+      "input.in": "ecb3ffc0fcf9f49a6b8eff8274312950627b7c045595e25c221472f97b87af34",
+      "pw.out": "1861d36dbcc2cdaf55555fbcaa447defad723cc8ab7300f02d4e007a9573d97b",
+      "proj.out": "7947c4d9c2d1ebc9f35345d5f3e9088d4bf7c8112e71691bffb0834c1bc1dfa8",
+      "runtime.json": "19a43eb185c05482b2a45b4361dde1fa380a43989ffcfc96fbfbdb79f68f5f1b"
+    },
+    "final_state_verified": true
+  }
+]

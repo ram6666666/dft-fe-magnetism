@@ -1,0 +1,141 @@
+{
+  "created_at_utc": "2026-11-16T21:05:15.480713+00:00",
+  "analysis_source_sha256": "8d71018fe3e5e2a7535bd3b81eb0f107a9f3bb2a7961e3de86c3c87d7c6d11a0",
+  "parser_source_sha256": "c8477fc8e106e55546343f1373bb84222952d449875a6fe3d8698b95187acc4d",
+  "results_index_sha256": "5c483453457b76c3587e57dd3309adaa762f4bf799198f0cfa47e80640532ee3",
+  "record_count": 16,
+  "eligible_record_count": 4,
+  "index_diagnostics": [],
+  "production_selection_patterns": [
+    "B_a100_FM_r04",
+    "B_a100_STRIPE_r04"
+  ],
+  "comparison_selection_patterns": [
+    "B_a100_FM_r04",
+    "B_a100_STRIPE_r04"
+  ],
+  "production_selected_ids": [
+    "B_a100_FM_r04",
+    "B_a100_STRIPE_r04"
+  ],
+  "comparison_selected_ids": [
+    "B_a100_FM_r04",
+    "B_a100_STRIPE_r04"
+  ],
+  "production_exclusions": [],
+  "production_unmatched_patterns": [],
+  "comparison_exclusions": [],
+  "comparison_unmatched_patterns": [],
+  "production": {
+    "status": "MEASURED_DISCRETE_POINTS_ONLY",
+    "energy_zero": {
+      "run_id": "B_a100_STRIPE_r04",
+      "energy_ry_fe": -493.1887873425,
+      "definition": "one common zero for every selected lattice value and magnetic start",
+      "selection": "explicit reference"
+    }
+  },
+  "convergence_pair_count": 0,
+  "energy_difference_convergence_count": 0,
+  "rejected_pairs": [
+    {
+      "run_ids": [
+        "B_a100_FM_r04",
+        "B_a100_STRIPE_r04"
+      ],
+      "reason": "invariant mismatch",
+      "fields": [
+        "initial_state"
+      ]
+    }
+  ],
+  "units": {
+    "energy_input": "Ry per cell",
+    "differences": "meV/Fe",
+    "a_c": "Angstrom",
+    "z": "fractional",
+    "moments": "Lowdin spin-population difference, muB"
+  },
+  "energy_conversion_eV_per_Ry": 13.605693122994,
+  "scientific_status": "ANALYSIS_OF_OBSERVED_RECORDS_ONLY_NOT_INDEPENDENT_AUDIT",
+  "fitted_minimum": null,
+  "missing_values_are_zero": false,
+  "artifacts": [
+    {
+      "path": "convergence_pairs.csv",
+      "bytes": 306,
+      "sha256": "acbf0d0c2008f75a94e34a8ee6f4e5a5f30d5118a3a7260296d22de1cf0cec77"
+    },
+    {
+      "path": "convergence_pairs.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "convergence_table.png",
+      "bytes": 41234,
+      "sha256": "0e4ce6f3be7d0b88dd62f6727829f900c02c6ef94313c564672e22a8e89f9630"
+    },
+    {
+      "path": "convergence_table.svg",
+      "bytes": 2782,
+      "sha256": "027fa138cfc14b150b1619b830fe3c1983105e872daa5eaa430b0706bce58250"
+    },
+    {
+      "path": "energy_difference_convergence.csv",
+      "bytes": 215,
+      "sha256": "6cc1eab1afa1c83ff54cdee4e3bf0fe7c8a9706b6d77f2ee6ae02ee16e24cf91"
+    },
+    {
+      "path": "energy_difference_convergence.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "energy_difference_convergence.png",
+      "bytes": 44964,
+      "sha256": "9291511584cacf5284f50b76107367aebcdf92f27a7c361a9c9b6dd6cd3abaa0"
+    },
+    {
+      "path": "energy_difference_convergence.svg",
+      "bytes": 2813,
+      "sha256": "a004d5255347fb36ce52fb1257b9682bf0bcccd0a83ccb40f1481b79e5b67971"
+    },
+    {
+      "path": "energy_vs_a.png",
+      "bytes": 64585,
+      "sha256": "4d6a5fe1d7f4a37bc3f2a0c7c436415dd53bc4b101a4c59559dc8467910ddafc"
+    },
+    {
+      "path": "energy_vs_a.svg",
+      "bytes": 16662,
+      "sha256": "61b381862d73ca9e4087190e73dc94013b04215c3dbc35cd6ddb3fe63768e1d8"
+    },
+    {
+      "path": "magnetic_moments.png",
+      "bytes": 68168,
+      "sha256": "f82cb87e5c19dba75b3119bfaa051ec9b947535d970c178c3af367789ae9866e"
+    },
+    {
+      "path": "magnetic_moments.svg",
+      "bytes": 18632,
+      "sha256": "e3a02cd4d4196df9c0d0dbc2d6153535d00e8927b9fb5ca2bd0d14ff2c676733"
+    },
+    {
+      "path": "production_points.csv",
+      "bytes": 777,
+      "sha256": "7289dba63f84c1aa9cf43b89a3833cc2655ab39fb315bc261f9c0638f08e00ad"
+    },
+    {
+      "path": "production_points.json",
+      "bytes": 1425,
+      "sha256": "00c8e9f3fd63d9dbe573ebe4df1221d399a927b11fbe6ac554ea4f2a4154a57a"
+    },
+    {
+      "path": "verified_runs.json",
+      "bytes": 58593,
+      "sha256": "40e60e45c4c2551e0fa530f21dfabbe0b362c60a07ee4cb109c2a8f67af6baee"
+    }
+  ],
+  "unreferenced_existing_files": []
+}

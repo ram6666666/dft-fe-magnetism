@@ -1,0 +1,52 @@
+[
+  {
+    "run_id": "B_a100_FM_r04",
+    "initial_state": "FM",
+    "final_state": "NM_COLLAPSED",
+    "final_state_verified": true,
+    "a_ang": 3.765,
+    "c_ang": 5.518,
+    "z_se": 0.2343,
+    "n_fe": 4,
+    "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+    "energy_total_ry": -1972.74154577,
+    "energy_per_fe_ry": -493.1853864425,
+    "energy_relative_common_zero_mev_fe": 46.27160174241228,
+    "reference_run_id": "B_a100_STRIPE_r04",
+    "reference_energy_ry_fe": -493.1887873425,
+    "fe_lowdin_moments_muB": [
+      -0.0032,
+      0.0014,
+      0.0014,
+      -0.0004
+    ],
+    "mean_abs_fe_lowdin_muB": 0.0016,
+    "input_path": "runs/B_a100_FM_r04/input.in",
+    "log_path": "runs/B_a100_FM_r04/pw.out"
+  },
+  {
+    "run_id": "B_a100_STRIPE_r04",
+    "initial_state": "STRIPE",
+    "final_state": "STRIPE",
+    "final_state_verified": true,
+    "a_ang": 3.765,
+    "c_ang": 5.518,
+    "z_se": 0.2343,
+    "n_fe": 4,
+    "path_id": "FIXED_C_Z_TETRAGONAL_R01",
+    "energy_total_ry": -1972.75514937,
+    "energy_per_fe_ry": -493.1887873425,
+    "energy_relative_common_zero_mev_fe": 0.0,
+    "reference_run_id": "B_a100_STRIPE_r04",
+    "reference_energy_ry_fe": -493.1887873425,
+    "fe_lowdin_moments_muB": [
+      1.6843,
+      -1.6843,
+      1.6843,
+      -1.6843
+    ],
+    "mean_abs_fe_lowdin_muB": 1.6843,
+    "input_path": "runs/B_a100_STRIPE_r04/input.in",
+    "log_path": "runs/B_a100_STRIPE_r04/pw.out"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "source_sha256": "dd4a27ce70dbb324259c46f7b9b9537bbee48ec05fe3bd86133b9537e15a46b3",
+  "analysis_source_sha256": "8d71018fe3e5e2a7535bd3b81eb0f107a9f3bb2a7961e3de86c3c87d7c6d11a0",
+  "reference_selection": "Explicit central production r04 references, independently frozen before D cases",
+  "index_diagnostics": [],
+  "rows": [
+    {
+      "run_id": "D_replay_STRIPE",
+      "reference_run_id": "B_a100_STRIPE_r04",
+      "comparison_kind": "CLEAN_REPLAY",
+      "status": "NOT_RUN",
+      "energy_change_mev_fe": null
+    },
+    {
+      "run_id": "D_seed003_FM",
+      "reference_run_id": "B_a100_FM_r04",
+      "comparison_kind": "LOWER_SPIN_SEED",
+      "status": "NOT_RUN",
+      "energy_change_mev_fe": null
+    },
+    {
+      "run_id": "D_seed003_CB",
+      "reference_run_id": "B_a100_CB_r04",
+      "comparison_kind": "LOWER_SPIN_SEED",
+      "status": "NOT_RUN",
+      "energy_change_mev_fe": null
+    },
+    {
+      "run_id": "D_seed003_STRIPE",
+      "reference_run_id": "B_a100_STRIPE_r04",
+      "comparison_kind": "LOWER_SPIN_SEED",
+      "status": "NOT_RUN",
+      "energy_change_mev_fe": null
+    }
+  ]
+}

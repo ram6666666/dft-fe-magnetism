@@ -32,3 +32,7 @@ Source-level qualification: installed OpenMPI5.0.7 btl_sm filenames combine node
 ## Execution-context interruption and recovery
 
 At2026-11-16T20:45:08Z the three retry03 owning tool sessions were unavailable, their last outputs dated20:23–20:24Z, and no terminal SCF/receipt existed. The cause is unknown. They are preserved as failed/incomplete interrupted attempts with QE exit code and total elapsed cost unknown, not as platform time-limit evidence. Original last-live execution files and separate CONTEXT_INTERRUPTION receipts are retained. Resubmission uses new IDs and starts from scratch; no unbacked old binary state is imported.
+
+## Collected-data metadata correction
+
+The first completed nspin=1 reference carries the older generic parser phrase describing Lowdin magnetic diagnostics, although all such moments are null and no projection was executed. The original parsed record is preserved. The collected view now describes it explicitly as an imposed non-spin-polarized reference; source/pseudo/receipt identities are also included directly in result rows. This is a metadata correction, not a numerical/input change. DATA_DICTIONARY.md defines both layers.

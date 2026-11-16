@@ -373,7 +373,7 @@ def execute(case, pw, proj, ranks):
             moments=parse_projection((d/'proj.out').read_text())
     p.update(run_id=c['run_id'], initial_state=c['initial_state'],
              fe_lowdin_moments_muB=moments[:4], all_lowdin_moments_muB=moments,
-             magnetic_diagnostic='Lowdin atomic spin population plus cell spin integrals',
+             magnetic_diagnostic=('Non-spin-polarized nspin=1 reference; no magnetic projection computed' if c['initial_state']=='NM' else 'Lowdin atomic spin population plus cell spin integrals'),
              final_state=final_state(c,p,moments))
     receipt['status']=p['status']
     receipt['file_hashes']={f.name:sha(f) for f in d.iterdir() if f.is_file() and f.name not in ('receipt.json','parsed.json') and f.suffix in ('.in','.out','.err','.json')}
@@ -396,9 +396,17 @@ def analyze():
         r=json.loads((d/'receipt.json').read_text())
         p=json.loads((d/'parsed.json').read_text()) if (d/'parsed.json').exists() else {'status':r.get('status','NOT_RUN'),'energy_total_ry':None,'final_state':'UNVERIFIED_FINAL_STATE'}
         row={**c,**p,'input_path':f'runs/{d.name}/input.in','log_path':f'runs/{d.name}/pw.out',
-             'input_sha256':r['input_sha256'],'pw_sha256':r.get('pw_sha256'),
+             'receipt_path':f'runs/{d.name}/receipt.json','input_sha256':r['input_sha256'],
+             'source_sha256':r.get('source_sha256'),'pseudo_sha256':r.get('pseudo_sha256'),
+             'pw_sha256':r.get('pw_sha256'),'projwfc_sha256':r.get('projwfc_sha256'),
+             'projection_exit_code':r.get('projection',{}).get('exit_code'),
              'runtime_profile_sha256':r.get('runtime_profile_sha256'),
              'exit_code':r.get('pw',{}).get('exit_code'),'elapsed_seconds':r.get('pw',{}).get('elapsed_seconds')}
+        if c['initial_state']=='NM':
+            # The first NM parsed record used the runner's generic diagnostic
+            # description; preserve that record but make the collected meaning
+            # precise. Null projected moments are not measured zero moments.
+            row['magnetic_diagnostic']='Non-spin-polarized nspin=1 reference; no magnetic projection computed'
         row['energy_per_fe_ry']=row['energy_total_ry']/4 if row['energy_total_ry'] is not None else None
         rows.append(row)
     keys=['a_ang','c_ang','z_se','ecutwfc_ry','ecutrho_ry','kgrid','kshift','gamma_only','degauss_ry','smearing','functional','pw_sha256','runtime_profile_sha256','nbnd','conv_thr_ry']
@@ -416,7 +424,7 @@ def analyze():
             r['relative_to_group_min_mev_fe']=(r['energy_total_ry']-emin)*RY_EV*1000/4 if ok else None
             r['relative_to_nm_mev_fe']=(r['energy_total_ry']-enm)*RY_EV*1000/4 if ok and enm is not None else None
     dump(ROOT/'results.json',rows)
-    fields=['run_id','stage','initial_state','final_state','status','path_id','a_ang','c_ang','z_se','n_fe','functional','ecutwfc_ry','ecutrho_ry','kgrid','kshift','degauss_ry','conv_thr_ry','starting_polarization','qe_version','exit_code','scf_converged','scf_iterations','energy_total_ry','relative_to_group_min_mev_fe','relative_to_nm_mev_fe','total_magnetization_muB_cell','absolute_magnetization_muB_cell','fe_lowdin_moments_muB','elapsed_seconds','input_path','log_path']
+    fields=['run_id','stage','initial_state','final_state','status','path_id','a_ang','c_ang','z_se','n_fe','functional','ecutwfc_ry','ecutrho_ry','kgrid','kshift','degauss_ry','conv_thr_ry','starting_polarization','qe_version','exit_code','projection_exit_code','scf_converged','scf_iterations','energy_total_ry','relative_to_group_min_mev_fe','relative_to_nm_mev_fe','total_magnetization_muB_cell','absolute_magnetization_muB_cell','fe_lowdin_moments_muB','magnetic_diagnostic','elapsed_seconds','input_sha256','pseudo_sha256','pw_sha256','runtime_profile_sha256','source_sha256','input_path','log_path','receipt_path']
     csv_temp=ROOT/f'results.csv.{os.getpid()}.tmp'
     with csv_temp.open('w',newline='') as f:
         w=csv.DictWriter(f,fieldnames=fields,extrasaction='ignore',lineterminator='\n');w.writeheader()

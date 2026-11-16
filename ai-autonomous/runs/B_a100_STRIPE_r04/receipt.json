@@ -1,0 +1,92 @@
+{
+  "run_id": "B_a100_STRIPE_r04",
+  "status": "RUN_COMPLETED",
+  "prepared_at": "2026-11-16T20:55:32.124613+00:00",
+  "input_sha256": "0b9fe524f12d02b5e336876d0ed369f2ee0b6cd9f1fe02962141f37b6a263e1c",
+  "pseudo_sha256": {
+    "Fe_std.upf": "79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105",
+    "Se_std.upf": "1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c"
+  },
+  "source_sha256": "c8477fc8e106e55546343f1373bb84222952d449875a6fe3d8698b95187acc4d",
+  "source_path": "source_versions/c8477fc8e106e55546343f1373bb84222952d449875a6fe3d8698b95187acc4d.py",
+  "pw_executable": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+  "pw_sha256": "bcd96679f8a8b77d1a26abe8cba9f34a17f8aef7ad2f6688c6d11fb8cf16ec6f",
+  "runtime_profile_sha256": "a1f7372ada6e588f9651aafaaf17a779978e26fe6d39a08beedb18d170a8376c",
+  "projwfc_sha256": "1bb5632fd9292ba7f544e7cfc9ff38c89906d0527ea3f7e81a287f12575460ed",
+  "pw": {
+    "command": [
+      "mpirun",
+      "--bind-to",
+      "none",
+      "-np",
+      "2",
+      "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/pw.x",
+      "-nk",
+      "2",
+      "-in",
+      "input.in"
+    ],
+    "cwd": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_STRIPE_r04",
+    "start": "2026-11-16T20:55:32.485936+00:00",
+    "end": "2026-11-16T21:03:32.933558+00:00",
+    "exit_code": 0,
+    "elapsed_seconds": 480.4475155910004,
+    "timed_out": false,
+    "stop_reason": null,
+    "child_cpu_seconds": 959.7633989999999,
+    "child_maxrss_kib": 491508,
+    "environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "LD_LIBRARY_PATH": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread:/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/lib/x86_64-linux-gnu",
+      "TMPDIR": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_STRIPE_r04/tmp/pw",
+      "PRTE_MCA_prte_tmpdir_base": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_STRIPE_r04/tmp/pw",
+      "OMPI_MCA_btl_sm_backing_directory": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_STRIPE_r04/tmp/pw",
+      "OMPI_MCA_osc_sm_backing_directory": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_STRIPE_r04/tmp/pw",
+      "OMPI_MCA_osc_rdma_backing_directory": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_STRIPE_r04/tmp/pw"
+    }
+  },
+  "projection": {
+    "command": [
+      "mpirun",
+      "--bind-to",
+      "none",
+      "-np",
+      "2",
+      "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/projwfc.x",
+      "-in",
+      "proj.in"
+    ],
+    "cwd": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_STRIPE_r04",
+    "start": "2026-11-16T21:03:32.946541+00:00",
+    "end": "2026-11-16T21:03:38.067826+00:00",
+    "exit_code": 0,
+    "elapsed_seconds": 5.121292507999897,
+    "timed_out": false,
+    "stop_reason": null,
+    "child_cpu_seconds": 9.881441999999996,
+    "child_maxrss_kib": 491508,
+    "environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "LD_LIBRARY_PATH": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread:/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/lib/x86_64-linux-gnu",
+      "TMPDIR": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_STRIPE_r04/tmp/proj",
+      "PRTE_MCA_prte_tmpdir_base": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_STRIPE_r04/tmp/proj",
+      "OMPI_MCA_btl_sm_backing_directory": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_STRIPE_r04/tmp/proj",
+      "OMPI_MCA_osc_sm_backing_directory": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_STRIPE_r04/tmp/proj",
+      "OMPI_MCA_osc_rdma_backing_directory": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_STRIPE_r04/tmp/proj"
+    }
+  },
+  "file_hashes": {
+    "input.in": "0b9fe524f12d02b5e336876d0ed369f2ee0b6cd9f1fe02962141f37b6a263e1c",
+    "proj.out": "8f005fe4106192dbb20fc0f7e4d4f80437c097d8a7bd6f86c1cef16f39983ed0",
+    "proj.err": "c73159cc4f61a4a455aad34a2bc8a04f87170edd22b2009ab1240257fa212d94",
+    "proj.in": "6da0d7ab9bbb718f7961ffef4123d39c5c9f0b44815c0aec73801250c7949931",
+    "runtime.json": "33a11a33179fceb7991941adfa26c56aa100d15093adde2590a2698ec5192ad2",
+    "config.json": "c4d0b76a52e58207f78271862b331f1d62dcead0ba840f4da74fe310ec6be078",
+    "pw_execution.json": "b89d4b19a9ddbcce799c19c51b092f38148657886ffa81f3553b43fbc35a065f",
+    "pw.out": "2b3e8124a5bef1b4d403dfa2fc7f052376d99c9f0bbd6427f53670aace83f8dc",
+    "proj_execution.json": "79b9af2ef986396baeab79259a80fe96719dc86da89365f38f393c62ba688056",
+    "pw.err": "c73159cc4f61a4a455aad34a2bc8a04f87170edd22b2009ab1240257fa212d94"
+  }
+}

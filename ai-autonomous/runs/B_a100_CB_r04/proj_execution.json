@@ -1,0 +1,32 @@
+{
+  "command": [
+    "mpirun",
+    "--bind-to",
+    "none",
+    "-np",
+    "2",
+    "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/bin/projwfc.x",
+    "-in",
+    "proj.in"
+  ],
+  "cwd": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_CB_r04",
+  "start": "2026-11-16T21:09:44.570359+00:00",
+  "end": "2026-11-16T21:09:48.956606+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 4.386253884000325,
+  "timed_out": false,
+  "stop_reason": null,
+  "child_cpu_seconds": 8.309823999999963,
+  "child_maxrss_kib": 451776,
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "LD_LIBRARY_PATH": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/openblas/usr/lib/x86_64-linux-gnu/openblas-pthread:/workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/qe/usr/lib/x86_64-linux-gnu",
+    "TMPDIR": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_CB_r04/tmp/proj",
+    "PRTE_MCA_prte_tmpdir_base": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_CB_r04/tmp/proj",
+    "OMPI_MCA_btl_sm_backing_directory": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_CB_r04/tmp/proj",
+    "OMPI_MCA_osc_sm_backing_directory": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_CB_r04/tmp/proj",
+    "OMPI_MCA_osc_rdma_backing_directory": "/workspace/scratch/47b868c7a5c6/gpt_fese_r01/ai-autonomous/runs/B_a100_CB_r04/tmp/proj"
+  },
+  "status": "PROCESS_EXITED"
+}

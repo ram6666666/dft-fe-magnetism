@@ -22,6 +22,8 @@ established conclusions are separate objects.
 - `runtime/`: package/version/probe records and deterministic package recovery.
 - `fetch_pseudos.py`: fixed-commit, SHA256-checked common UPF recovery.
 - `SOURCE_READING.md`: live original reading receipt and source-to-calculation map.
+- `draw_magnetic_cell.py`: derived input-pattern illustration, separate from measured final states.
+- `numerical_diagnostics.py`: observed units, final-band occupation and electronic residual checks.
 - `SELF_CHECK.json`: geometry/parser producer checks, not an independent audit.
 - `FIRST_OUTCOME.json` and `RESUME.md`, when present: immutable outcome and continuation.
 
@@ -36,6 +38,8 @@ Large QE scratch is retained during execution but is regenerable by a fresh SCF.
 Use a Linux x86-64 cloud machine with compatible MPI, FFTW, BLAS/LAPACK, libc and
 Fortran runtime dependencies, or install the QE version recorded in the manifest.
 The tested repair uses official Debian 6.7-3+b1 packages without root changes.
+Install the optional plotting dependencies with `pip install -r requirements-analysis.txt`;
+the runner and collector themselves use Python standard-library modules only.
 The build prints `6.7MaX`; later QE versions require separate validation.
 
 ```bash
@@ -51,6 +55,7 @@ python fese.py run campaigns/baseline_retry03.json \
   --pw "$QE_RUNTIME_ROOT/qe/usr/bin/pw.x" \
   --proj "$QE_RUNTIME_ROOT/qe/usr/bin/projwfc.x" --ranks 2
 python fese.py analyze
+python numerical_diagnostics.py
 python analysis_plot.py --production-ids 'B_*' --comparison-ids 'B_*' 'C_*' \
   --energy-reference-run B_a100_STRIPE_r03 --target-mev-fe 1 --outdir analysis/local
 ```
@@ -63,7 +68,7 @@ Inputs do not depend on previous charge/wavefunction files. Subsequent optimized
 runtime settings, if actually tested, are recorded in that attempt's receipt
 and runtime addendum; do not silently substitute libraries into an existing run.
 The active production profile uses one BLAS/OpenMP thread and two MPI ranks with
-two k pools. The runner isolates PRTE and MPI shared-memory paths for each stage.
+two k pools and explicit `--bind-to none` to avoid overlapping default affinity. The runner isolates PRTE and MPI shared-memory paths for each stage.
 For a controlled stop, write `CANCEL_REQUEST` inside a future run directory;
 the runner records interruption and terminates its child process group. A normal
 SCF completion remains subject to the explicit convergence gate.

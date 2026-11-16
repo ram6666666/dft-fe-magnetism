@@ -1,0 +1,326 @@
+{
+  "created_at_utc": "2026-11-16T21:14:18.739637+00:00",
+  "analysis_source_sha256": "8d71018fe3e5e2a7535bd3b81eb0f107a9f3bb2a7961e3de86c3c87d7c6d11a0",
+  "parser_source_sha256": "123481991de56f4c38d31cbd0f6705751e2533f1552980afe7b40583dce29cd7",
+  "results_index_sha256": "d20927ddb5ec1f90ea387767e9a951a6d5eacee6a158b74cf17634ed2e7023ba",
+  "record_count": 16,
+  "eligible_record_count": 6,
+  "index_diagnostics": [],
+  "production_selection_patterns": [
+    "B_*"
+  ],
+  "comparison_selection_patterns": [
+    "B_*",
+    "C_*"
+  ],
+  "production_selected_ids": [
+    "B_a100_CB_r04",
+    "B_a100_FM_r04",
+    "B_a100_NM",
+    "B_a100_STRIPE_r04"
+  ],
+  "comparison_selected_ids": [
+    "B_a100_CB_r04",
+    "B_a100_FM_r04",
+    "B_a100_NM",
+    "B_a100_STRIPE_r04"
+  ],
+  "production_exclusions": [
+    {
+      "run_id": "B_a100_CB",
+      "reasons": [
+        "run status is RUN_FAILED",
+        "raw SCF gate: RUN_FAILED",
+        "raw completed energy is absent/nonfinite"
+      ]
+    },
+    {
+      "run_id": "B_a100_CB_r03",
+      "reasons": [
+        "run status is RUN_FAILED",
+        "raw SCF gate: RUN_FAILED",
+        "raw completed energy is absent/nonfinite"
+      ]
+    },
+    {
+      "run_id": "B_a100_FM",
+      "reasons": [
+        "run status is RUN_FAILED",
+        "raw SCF gate: RUN_FAILED",
+        "raw completed energy is absent/nonfinite"
+      ]
+    },
+    {
+      "run_id": "B_a100_FM_r02",
+      "reasons": [
+        "run status is RUN_FAILED",
+        "raw SCF gate: RUN_FAILED",
+        "raw completed energy is absent/nonfinite"
+      ]
+    },
+    {
+      "run_id": "B_a100_FM_r03",
+      "reasons": [
+        "run status is RUN_FAILED",
+        "raw SCF gate: RUN_FAILED",
+        "raw completed energy is absent/nonfinite"
+      ]
+    },
+    {
+      "run_id": "B_a100_STRIPE",
+      "reasons": [
+        "run status is RUN_FAILED",
+        "raw SCF gate: RUN_FAILED",
+        "raw completed energy is absent/nonfinite"
+      ]
+    },
+    {
+      "run_id": "B_a100_STRIPE_r02",
+      "reasons": [
+        "run status is RUN_FAILED",
+        "raw SCF gate: RUN_FAILED",
+        "raw completed energy is absent/nonfinite"
+      ]
+    },
+    {
+      "run_id": "B_a100_STRIPE_r03",
+      "reasons": [
+        "run status is RUN_FAILED",
+        "raw SCF gate: RUN_FAILED",
+        "raw completed energy is absent/nonfinite"
+      ]
+    }
+  ],
+  "production_unmatched_patterns": [],
+  "comparison_exclusions": [
+    {
+      "run_id": "B_a100_CB",
+      "reasons": [
+        "run status is RUN_FAILED",
+        "raw SCF gate: RUN_FAILED",
+        "raw completed energy is absent/nonfinite"
+      ]
+    },
+    {
+      "run_id": "B_a100_CB_r03",
+      "reasons": [
+        "run status is RUN_FAILED",
+        "raw SCF gate: RUN_FAILED",
+        "raw completed energy is absent/nonfinite"
+      ]
+    },
+    {
+      "run_id": "B_a100_FM",
+      "reasons": [
+        "run status is RUN_FAILED",
+        "raw SCF gate: RUN_FAILED",
+        "raw completed energy is absent/nonfinite"
+      ]
+    },
+    {
+      "run_id": "B_a100_FM_r02",
+      "reasons": [
+        "run status is RUN_FAILED",
+        "raw SCF gate: RUN_FAILED",
+        "raw completed energy is absent/nonfinite"
+      ]
+    },
+    {
+      "run_id": "B_a100_FM_r03",
+      "reasons": [
+        "run status is RUN_FAILED",
+        "raw SCF gate: RUN_FAILED",
+        "raw completed energy is absent/nonfinite"
+      ]
+    },
+    {
+      "run_id": "B_a100_STRIPE",
+      "reasons": [
+        "run status is RUN_FAILED",
+        "raw SCF gate: RUN_FAILED",
+        "raw completed energy is absent/nonfinite"
+      ]
+    },
+    {
+      "run_id": "B_a100_STRIPE_r02",
+      "reasons": [
+        "run status is RUN_FAILED",
+        "raw SCF gate: RUN_FAILED",
+        "raw completed energy is absent/nonfinite"
+      ]
+    },
+    {
+      "run_id": "B_a100_STRIPE_r03",
+      "reasons": [
+        "run status is RUN_FAILED",
+        "raw SCF gate: RUN_FAILED",
+        "raw completed energy is absent/nonfinite"
+      ]
+    }
+  ],
+  "comparison_unmatched_patterns": [
+    "C_*"
+  ],
+  "production": {
+    "status": "MEASURED_DISCRETE_POINTS_ONLY",
+    "energy_zero": {
+      "run_id": "B_a100_STRIPE_r04",
+      "energy_ry_fe": -493.1887873425,
+      "definition": "one common zero for every selected lattice value and magnetic start",
+      "selection": "explicit reference"
+    }
+  },
+  "convergence_pair_count": 0,
+  "energy_difference_convergence_count": 0,
+  "rejected_pairs": [
+    {
+      "run_ids": [
+        "B_a100_CB_r04",
+        "B_a100_FM_r04"
+      ],
+      "reason": "invariant mismatch",
+      "fields": [
+        "initial_state"
+      ]
+    },
+    {
+      "run_ids": [
+        "B_a100_CB_r04",
+        "B_a100_NM"
+      ],
+      "reason": "invariant mismatch",
+      "fields": [
+        "initial_state"
+      ]
+    },
+    {
+      "run_ids": [
+        "B_a100_CB_r04",
+        "B_a100_STRIPE_r04"
+      ],
+      "reason": "invariant mismatch",
+      "fields": [
+        "initial_state"
+      ]
+    },
+    {
+      "run_ids": [
+        "B_a100_FM_r04",
+        "B_a100_NM"
+      ],
+      "reason": "invariant mismatch",
+      "fields": [
+        "initial_state"
+      ]
+    },
+    {
+      "run_ids": [
+        "B_a100_FM_r04",
+        "B_a100_STRIPE_r04"
+      ],
+      "reason": "invariant mismatch",
+      "fields": [
+        "initial_state"
+      ]
+    },
+    {
+      "run_ids": [
+        "B_a100_NM",
+        "B_a100_STRIPE_r04"
+      ],
+      "reason": "invariant mismatch",
+      "fields": [
+        "initial_state"
+      ]
+    }
+  ],
+  "units": {
+    "energy_input": "Ry per cell",
+    "differences": "meV/Fe",
+    "a_c": "Angstrom",
+    "z": "fractional",
+    "moments": "Lowdin spin-population difference, muB"
+  },
+  "energy_conversion_eV_per_Ry": 13.605693122994,
+  "scientific_status": "ANALYSIS_OF_OBSERVED_RECORDS_ONLY_NOT_INDEPENDENT_AUDIT",
+  "fitted_minimum": null,
+  "missing_values_are_zero": false,
+  "artifacts": [
+    {
+      "path": "convergence_pairs.csv",
+      "bytes": 306,
+      "sha256": "acbf0d0c2008f75a94e34a8ee6f4e5a5f30d5118a3a7260296d22de1cf0cec77"
+    },
+    {
+      "path": "convergence_pairs.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "convergence_table.png",
+      "bytes": 41234,
+      "sha256": "0e4ce6f3be7d0b88dd62f6727829f900c02c6ef94313c564672e22a8e89f9630"
+    },
+    {
+      "path": "convergence_table.svg",
+      "bytes": 2782,
+      "sha256": "c677bba26a644fccf8e7878228108e7ce8f97f1cd56b864d4bc9c75f15bcf715"
+    },
+    {
+      "path": "energy_difference_convergence.csv",
+      "bytes": 215,
+      "sha256": "6cc1eab1afa1c83ff54cdee4e3bf0fe7c8a9706b6d77f2ee6ae02ee16e24cf91"
+    },
+    {
+      "path": "energy_difference_convergence.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "energy_difference_convergence.png",
+      "bytes": 44964,
+      "sha256": "9291511584cacf5284f50b76107367aebcdf92f27a7c361a9c9b6dd6cd3abaa0"
+    },
+    {
+      "path": "energy_difference_convergence.svg",
+      "bytes": 2813,
+      "sha256": "3bce31d2cc2d96b6802400b5a573d4d3177ab88f15a160b3c389876391f08c41"
+    },
+    {
+      "path": "energy_vs_a.png",
+      "bytes": 70471,
+      "sha256": "74650c9b6f9a1c235810af6c87231b900e7b7e46e488475cabb410962ed49797"
+    },
+    {
+      "path": "energy_vs_a.svg",
+      "bytes": 19137,
+      "sha256": "fdef89d3ce977c1be5c6eafb7fc668d96219416efedf35419c882943c41adbb9"
+    },
+    {
+      "path": "magnetic_moments.png",
+      "bytes": 71321,
+      "sha256": "de69bb8b8e1c7d1aa828c3bd59e65be2a6b9375e72a75f5f231c0a4934b07c49"
+    },
+    {
+      "path": "magnetic_moments.svg",
+      "bytes": 19871,
+      "sha256": "5d5927c8dca54533148d7dc8b813509723523eaee4d0cdecf2920a120ab3869d"
+    },
+    {
+      "path": "production_points.csv",
+      "bytes": 1270,
+      "sha256": "7dfa8a134874d2ece5ddc9d9d91f195315fd75c76c15b4d3acebe481b3e7ff16"
+    },
+    {
+      "path": "production_points.json",
+      "bytes": 2824,
+      "sha256": "84a3361d52f3c0ed5547dcd76e93f2313432acb17a2f3a282b1097f833cfec82"
+    },
+    {
+      "path": "verified_runs.json",
+      "bytes": 58990,
+      "sha256": "f5156f49fa981beb9f925d3f0d1d51141be48b9a4f77a5c217cb7e5f59548953"
+    }
+  ],
+  "unreferenced_existing_files": []
+}
