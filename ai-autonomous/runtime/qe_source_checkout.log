@@ -17,18 +17,5 @@ Or undo this operation with:
 
 Turn off this advice by setting config variable advice.detachedHead to false
 
-Updating files:   7% (1/13)
-Updating files:  15% (2/13)
-Updating files:  23% (3/13)
-Updating files:  30% (4/13)
-Updating files:  38% (5/13)
-Updating files:  46% (6/13)
-Updating files:  53% (7/13)
-Updating files:  61% (8/13)
-Updating files:  69% (9/13)
-Updating files:  76% (10/13)
-Updating files:  84% (11/13)
-Updating files:  92% (12/13)
-Updating files: 100% (13/13)
-Updating files: 100% (13/13), done.
+Updating files:   7% (1/13)Updating files:  15% (2/13)Updating files:  23% (3/13)Updating files:  30% (4/13)Updating files:  38% (5/13)Updating files:  46% (6/13)Updating files:  53% (7/13)Updating files:  61% (8/13)Updating files:  69% (9/13)Updating files:  76% (10/13)Updating files:  84% (11/13)Updating files:  92% (12/13)Updating files: 100% (13/13)Updating files: 100% (13/13), done.
 $ git -C /workspace/scratch/47b868c7a5c6/gpt_fese_r01/runtime/upstream-qe sparse-checkout set PW/src Modules UtilXlib PP/src PP/Doc
