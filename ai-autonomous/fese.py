@@ -98,13 +98,16 @@ def make_input(case):
     rho_cutoff = case.get("rho", 4 * cutoff)
     electronic_tol = case.get("tol", 1.e-8)
     force_flag = ".true." if case.get("forces", False) else ".false."
+    start_files = (" startingpot='file', startingwfc='file',\n"
+                   if case.get("start_from") else "")
+    disk_io = case.get("disk_io", "nowf")
     species_card = "\n".join(f"{name} {chemical_data[name]}" for name in species)
     return f"""! {case['id']} | periodic c-repeat of a single FeSe slab.
 ! Common 4-Fe supercell, a is the crystallographic 2-Fe cell parameter in Å.
 ! Species split initializes spin, without imposing local or total moments.
 &CONTROL
  calculation='scf', prefix='fese', pseudo_dir='./pseudo',
- outdir='./scratch', disk_io='nowf', tprnfor={force_flag},
+ outdir='./scratch', disk_io='{disk_io}', tprnfor={force_flag},
 /
 &SYSTEM
  ibrav=0, nat=8, ntyp={len(species)}, input_dft='PBE',
@@ -114,7 +117,7 @@ def make_input(case):
 &ELECTRONS
  conv_thr={electronic_tol}, electron_maxstep={case.get('maxiter', 110)},
  mixing_beta={case.get('mixing', 0.32)}, mixing_mode='local-TF',
-/
+{start_files}/
 ATOMIC_SPECIES
 {species_card}
 CELL_PARAMETERS angstrom
@@ -126,6 +129,39 @@ ATOMIC_POSITIONS crystal
 K_POINTS automatic
 {kmesh} 0 0 0
 """
+
+
+def seed_from_saved_state(case, base, target):
+    """Copy a converged compatible same-cell parent scratch checkpoint.
+
+    This supports smearing-only sensitivity. Geometry, basis, mesh, species,
+    seed label and spin formalism are held fixed. A warm restart may track an
+    existing basin, so a cold replay is recorded as an independent check.
+    """
+    parent_id = case.get("start_from")
+    if not parent_id:
+        return None
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", parent_id):
+        raise ValueError("Invalid parent attempt ID")
+    parent = base / parent_id
+    meta = json.loads((parent / "attempt.json").read_text())
+    stdout = (parent / "pw.stdout").read_text()
+    parent_case = meta["case"]
+    comparables = ("a", "c", "z", "pattern", "k", "ecut", "rho", "seed")
+    if any(parent_case.get(key) != case.get(key) for key in comparables):
+        raise ValueError("Parent starting checkpoint has incompatible physical/numerical settings")
+    if meta.get("returncode") != 0 or "convergence has been achieved" not in stdout or "JOB DONE" not in stdout:
+        raise ValueError("Parent starting checkpoint lacks terminal SCF evidence")
+    source = parent / "scratch" / "fese.save"
+    if not (source / "charge-density.dat").is_file():
+        raise FileNotFoundError("Parent starting checkpoint has no charge density")
+    if not any(source.glob("wfc*")):
+        raise FileNotFoundError("Parent starting checkpoint has no portable wavefunctions")
+    shutil.copytree(source, target)
+    return {"parent_id": parent_id, "parent_input_sha256": meta["input_sha256"],
+            "parent_stdout_sha256": sha256(parent / "pw.stdout"),
+            "copied_files_sha256": {filename.name: sha256(filename)
+                                      for filename in sorted(target.iterdir()) if filename.is_file()}}
 
 
 def execute(case, base, pseudo_dir, pw, ranks, launcher):
@@ -155,11 +191,13 @@ def execute(case, base, pseudo_dir, pw, ranks, launcher):
               "state": "STARTING", "command": command, "command_shell": shlex.join(command),
               "input_sha256": sha256(input_path), "pseudopotential_sha256": PSEUDOS,
               "pw_sha256": sha256(pw), "mpi_ranks": ranks,
-              "thread_env": {k: run_env[k] for k in (
-                  "OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "LC_ALL")}}
+              "thread_env": {k: run_env.get(k) for k in (
+                  "OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "LC_ALL",
+                  "HWLOC_COMPONENTS", "LD_LIBRARY_PATH")}}
     write_json(folder / "attempt.json", record)
     started = time.monotonic()
     try:
+        record["starting_checkpoint"] = seed_from_saved_state(case, base, folder / "scratch" / "fese.save")
         with (folder / "pw.stdout").open("wb") as stdout, (folder / "pw.stderr").open("wb") as stderr:
             with subprocess.Popen(command, cwd=folder, env=run_env, stdin=subprocess.DEVNULL,
                                   stdout=stdout, stderr=stderr) as proc:
@@ -167,7 +205,7 @@ def execute(case, base, pseudo_dir, pw, ranks, launcher):
                 write_json(folder / "attempt.json", record)
                 record["returncode"] = proc.wait()
         record["state"] = "PROCESS_EXITED"
-    except OSError as exc:
+    except (OSError, ValueError) as exc:
         record.update(state="LAUNCH_FAILED", launch_error=str(exc), returncode=None)
     finally:
         record.update(ended_utc=timestamp(), wall_seconds=round(time.monotonic() - started, 3))

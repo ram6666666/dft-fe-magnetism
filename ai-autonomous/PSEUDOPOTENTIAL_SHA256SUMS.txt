@@ -1,0 +1,2 @@
+79848bdb660ac0fe3f93ac0967cba01fe200f5cc2cf37e7f01e6ac051f107105  common/Fe_std.upf
+1f5d0f8b99028dee90766aab811ce5d8bb2c2b2ad38ec60436d1c2888ef5109c  common/Se_std.upf

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "replay-anchor-stripe",
+    "pattern": "stripe",
+    "a": 3.765,
+    "k": [
+      4,
+      4,
+      3
+    ],
+    "ecut": 60,
+    "sigma": 0.021,
+    "tol": 1e-07,
+    "mixing": 0.4
+  }
+]

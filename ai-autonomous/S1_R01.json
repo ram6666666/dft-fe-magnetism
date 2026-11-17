@@ -1,0 +1,47 @@
+[
+  {
+    "id": "s1-anchor-stripe",
+    "pattern": "stripe",
+    "a": 3.765,
+    "k": [
+      6,
+      6,
+      5
+    ],
+    "ecut": 60,
+    "sigma": 0.012,
+    "tol": 1e-07,
+    "mixing": 0.4,
+    "start_from": "k1-anchor-stripe"
+  },
+  {
+    "id": "s1-anchor-checker",
+    "pattern": "checker",
+    "a": 3.765,
+    "k": [
+      6,
+      6,
+      5
+    ],
+    "ecut": 60,
+    "sigma": 0.012,
+    "tol": 1e-07,
+    "mixing": 0.4,
+    "start_from": "k1-anchor-checker"
+  },
+  {
+    "id": "s1-anchor-nm",
+    "pattern": "nm",
+    "a": 3.765,
+    "k": [
+      6,
+      6,
+      5
+    ],
+    "ecut": 60,
+    "sigma": 0.012,
+    "tol": 1e-07,
+    "mixing": 0.4,
+    "start_from": "k1-anchor-nm"
+  }
+]
