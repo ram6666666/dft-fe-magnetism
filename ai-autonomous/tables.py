@@ -56,9 +56,12 @@ def result_tables(rows, comparisons):
         for check in group["checks"]:
             numerical.append([opponent, check["name"], fmt(check["gap"]["mev_fe"]),
                               fmt(check["shift_mev_fe"]), check["gap"]["status"]])
-    refinement = comparisons["adaptive_basis_refinement"]
-    numerical.append(["nm", refinement["name"], fmt(refinement["gap"]["mev_fe"]),
-                      fmt(refinement["shift_mev_fe"]), refinement["gap"]["status"]])
+    adaptive = {"adaptive_basis_refinement": "nm", "adaptive_smearing_refinement": "nm",
+                "adaptive_mesh_refinement": "checker"}
+    for name, competitor in adaptive.items():
+        refinement = comparisons[name]
+        numerical.append([competitor, refinement["name"], fmt(refinement["gap"]["mev_fe"]),
+                          fmt(refinement["shift_mev_fe"]), refinement["gap"]["status"]])
     checks = join_table(("Competitor", "Treatment", "E(stripe) − E(competitor) (meV/Fe)",
                          "Change from matched reference (meV/Fe)", "Evidence"), numerical)
     return "\n\n".join(("# Actual case tables", "## Main fixed-height scan", scan,

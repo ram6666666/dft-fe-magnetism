@@ -17,6 +17,7 @@ import re
 import shlex
 import shutil
 import subprocess
+import tempfile
 import time
 from datetime import datetime, timezone
 
@@ -98,8 +99,10 @@ def make_input(case):
     rho_cutoff = case.get("rho", 4 * cutoff)
     electronic_tol = case.get("tol", 1.e-8)
     force_flag = ".true." if case.get("forces", False) else ".false."
-    start_files = (" startingpot='file', startingwfc='file',\n"
-                   if case.get("start_from") else "")
+    start_files = ""
+    if case.get("start_from"):
+        wfc_source = "atomic+random" if case.get("density_only") else "file"
+        start_files = f" startingpot='file', startingwfc='{wfc_source}',\n"
     disk_io = case.get("disk_io", "nowf")
     species_card = "\n".join(f"{name} {chemical_data[name]}" for name in species)
     return f"""! {case['id']} | periodic c-repeat of a single FeSe slab.
@@ -134,9 +137,10 @@ K_POINTS automatic
 def seed_from_saved_state(case, base, target):
     """Copy a converged compatible same-cell parent scratch checkpoint.
 
-    This supports smearing-only sensitivity. Geometry, basis, mesh, species,
-    seed label and spin formalism are held fixed. A warm restart may track an
-    existing basin, so a cold replay is recorded as an independent check.
+    Refined smearing reuses the density and orbitals at the same k points.
+    Refined mesh can reuse only the real-space density at unchanged geometry,
+    basis and spin formalism. Orbitals are rebuilt on the new k grid. A warm
+    restart tracks a basin, complemented by the independent cold replay.
     """
     parent_id = case.get("start_from")
     if not parent_id:
@@ -153,7 +157,10 @@ def seed_from_saved_state(case, base, target):
         meta = json.loads(parent_record.read_text())
     stdout = (parent / "pw.stdout").read_text()
     parent_case = meta["case"]
-    comparables = ("a", "c", "z", "pattern", "k", "ecut", "rho", "seed")
+    density_only = case.get("density_only", False)
+    comparables = ("a", "c", "z", "pattern", "ecut", "rho", "seed")
+    if not density_only:
+        comparables += ("k",)
     if any(parent_case.get(key) != case.get(key) for key in comparables):
         raise ValueError("Parent starting checkpoint has incompatible physical/numerical settings")
     if meta.get("returncode") != 0 or "convergence has been achieved" not in stdout or "JOB DONE" not in stdout:
@@ -161,10 +168,16 @@ def seed_from_saved_state(case, base, target):
     source = parent / "scratch" / "fese.save"
     if not (source / "charge-density.dat").is_file():
         raise FileNotFoundError("Parent starting checkpoint has no charge density")
-    if not any(source.glob("wfc*")):
-        raise FileNotFoundError("Parent starting checkpoint has no portable wavefunctions")
-    shutil.copytree(source, target)
-    return {"parent_id": parent_id, "parent_input_sha256": meta["input_sha256"],
+    if density_only:
+        target.mkdir()
+        for filename in ("charge-density.dat", "data-file-schema.xml"):
+            shutil.copy2(source / filename, target / filename)
+    else:
+        if not any(source.glob("wfc*")):
+            raise FileNotFoundError("Parent starting checkpoint has no portable wavefunctions")
+        shutil.copytree(source, target)
+    return {"parent_id": parent_id, "kind": "density-only" if density_only else "density-and-orbitals",
+            "parent_input_sha256": meta["input_sha256"],
             "parent_stdout_sha256": sha256(parent / "pw.stdout"),
             "copied_files_sha256": {filename.name: sha256(filename)
                                       for filename in sorted(target.iterdir()) if filename.is_file()}}
@@ -187,8 +200,15 @@ def execute(case, base, pseudo_dir, pw, ranks, launcher):
     command = [pw, "-nk", str(ranks), "-in", "pw.in"]
     if ranks > 1:
         command = [launcher, "--bind-to", "none", "-n", str(ranks), *command]
+    # Independent cloud process namespaces can reuse PIDs while sharing /tmp.
+    # Give Open MPI/PRRTE a short unique session directory before it launches.
+    mpi_temp = tempfile.mkdtemp(prefix="fese-mpi-", dir="/tmp")
     run_env = dict(os.environ, OMP_NUM_THREADS="1", OPENBLAS_NUM_THREADS="1",
-                   MKL_NUM_THREADS="1", LC_ALL="C")
+                   MKL_NUM_THREADS="1", LC_ALL="C", TMPDIR=mpi_temp,
+                   PRTE_MCA_prte_tmpdir_base=mpi_temp,
+                   OMPI_MCA_btl_sm_backing_directory=mpi_temp)
+    if case.get("mpi_transport"):
+        run_env["OMPI_MCA_btl"] = case["mpi_transport"]
     structural = {"a": A_REF, "c": C_REF, "z": Z_REF, "n_fe": FE_COUNT,
                   "units": {"a": "angstrom", "c": "angstrom", "z": "fractional"},
                   "path": "fixed-c-fixed-fractional-z-tetragonal-a"}
@@ -199,7 +219,8 @@ def execute(case, base, pseudo_dir, pw, ranks, launcher):
               "pw_sha256": sha256(pw), "mpi_ranks": ranks,
               "thread_env": {k: run_env.get(k) for k in (
                   "OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "LC_ALL",
-                  "HWLOC_COMPONENTS", "LD_LIBRARY_PATH")}}
+                  "HWLOC_COMPONENTS", "LD_LIBRARY_PATH", "TMPDIR", "PRTE_MCA_prte_tmpdir_base",
+                  "OMPI_MCA_btl", "OMPI_MCA_btl_sm_backing_directory")}}
     write_json(folder / "attempt.json", record)
     started = time.monotonic()
     launched = None

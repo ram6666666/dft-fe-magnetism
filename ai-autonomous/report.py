@@ -47,6 +47,18 @@ def report(rows, comparisons, data_url):
         f"{refinement['shift_mev_fe']:.3f} meV/Fe."
         if refinement["shift_mev_fe"] is not None else
         "The adaptive tighter-basis stripe–NM pair has no matched comparison.")
+    width = comparisons["adaptive_smearing_refinement"]
+    width_text = (
+        f"The second width reduction on the same dense mesh shifts the previous stripe–NM "
+        f"gap by {width['shift_mev_fe']:.3f} meV/Fe."
+        if width["shift_mev_fe"] is not None else
+        "The second width reduction has no matched stripe–NM comparison.")
+    dense = comparisons["adaptive_mesh_refinement"]
+    dense_text = (
+        f"The further in-plane mesh refinement shifts its previous stripe–checkerboard gap by "
+        f"{dense['shift_mev_fe']:.3f} meV/Fe."
+        if dense["shift_mev_fe"] is not None else
+        "The further mesh refinement has no matched stripe–checkerboard comparison.")
     checked = [key for key,value in comparisons["anchor_numerical_sensitivity"].items()
                if value["complete"]]
     statuses = [
@@ -137,7 +149,7 @@ The values are relative to the sampled anchor for the total-energy curve, or to 
 
 {replay_text}
 
-{refinement_text}
+{refinement_text} {width_text} {dense_text}
 
 The empirical sum of observed shifts accounts for the checked changes in basis, mesh and smearing. It has no formal coverage of higher-order coupled changes or arbitrary k-mesh sequences. Endpoint rankings have their own finite-mesh and finite-basis limitations. Full relaxation, c-axis antiferromagnetic stacking, additional in-plane ordering vectors, SOC and exchange-coupling extraction are outside the present scope.
 

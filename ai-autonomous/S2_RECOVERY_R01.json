@@ -1,0 +1,51 @@
+[
+  {
+    "id": "s2-anchor-stripe-retry01",
+    "pattern": "stripe",
+    "a": 3.765,
+    "k": [
+      6,
+      6,
+      5
+    ],
+    "ecut": 60,
+    "sigma": 0.006,
+    "tol": 1e-07,
+    "mixing": 0.4,
+    "start_from": "k1-anchor-stripe",
+    "repairs": "s2-anchor-stripe"
+  },
+  {
+    "id": "s2-anchor-stripe-retry02",
+    "pattern": "stripe",
+    "a": 3.765,
+    "k": [
+      6,
+      6,
+      5
+    ],
+    "ecut": 60,
+    "sigma": 0.006,
+    "tol": 1e-07,
+    "mixing": 0.4,
+    "start_from": "k1-anchor-stripe",
+    "repairs": "s2-anchor-stripe",
+    "mpi_transport": "self,tcp"
+  },
+  {
+    "id": "s2-anchor-stripe-retry03",
+    "pattern": "stripe",
+    "a": 3.765,
+    "k": [
+      6,
+      6,
+      5
+    ],
+    "ecut": 60,
+    "sigma": 0.006,
+    "tol": 1e-07,
+    "mixing": 0.4,
+    "start_from": "k1-anchor-stripe",
+    "repairs": "s2-anchor-stripe"
+  }
+]

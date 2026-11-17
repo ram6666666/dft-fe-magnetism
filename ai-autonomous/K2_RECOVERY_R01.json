@@ -1,0 +1,20 @@
+[
+  {
+    "id": "k2-anchor-stripe-retry01",
+    "pattern": "stripe",
+    "a": 3.765,
+    "k": [
+      8,
+      8,
+      5
+    ],
+    "ecut": 60,
+    "sigma": 0.021,
+    "tol": 1e-07,
+    "mixing": 0.4,
+    "disk_io": "nowf",
+    "start_from": "k1-anchor-stripe",
+    "density_only": true,
+    "repairs": "k2-anchor-stripe"
+  }
+]

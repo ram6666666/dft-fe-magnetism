@@ -10,7 +10,7 @@ import argparse
 import json
 from pathlib import Path
 
-from analysis import SCIENCE_STATUS, primary_matrix_outcomes
+from analysis import SCIENCE_STATUS, primary_matrix_outcomes, measured_outcomes
 from fese import RY_TO_MEV, write_json
 
 
@@ -52,7 +52,9 @@ def differences(current, variants):
 
 def run(rows):
     """Create the complete pair ledger for all explicitly planned route checks."""
-    primary = primary_matrix_outcomes(list(rows.values()))
+    all_attempts = list(rows.values())
+    primary = primary_matrix_outcomes(all_attempts)
+    rows = measured_outcomes(all_attempts)
     scan = {}
     for lattice_point in ("compression", "anchor", "expansion"):
         left = f"p1-{lattice_point}-"
@@ -79,13 +81,20 @@ def run(rows):
     high_basis = gap(rows, "b2-anchor-stripe", "b2-anchor-nm")
     first_basis = sensitivity["nm"]["checks"][0]["gap"]
     refinement = differences(first_basis, {"basis_106_vs_90_ry":high_basis})[0]
+    narrow = gap(rows, "s2-anchor-stripe", "s2-anchor-nm")
+    first_narrow = sensitivity["nm"]["checks"][-1]["gap"]
+    width_refinement = differences(first_narrow, {"smearing_0.006_vs_0.012_ry":narrow})[0]
+    dense_mesh = gap(rows, "k2-anchor-stripe", "k2-anchor-checker")
+    first_mesh = sensitivity["checker"]["checks"][1]["gap"]
+    mesh_refinement = differences(first_mesh, {"k2_8x8x5_vs_6x6x5":dense_mesh})[0]
     replay = gap(rows, "replay-anchor-stripe", "p1-anchor-stripe")
     replay["meets_tolerance"] = (abs(replay["mev_fe"]) <= 0.2
                                  and replay["final_states"] == ["stripe","stripe"]
                                  if replay["mev_fe"] is not None else None)
     return {"schema":1, "energy_unit":"meV/Fe", "sign":"first minus second",
             "primary_scan":scan, "anchor_numerical_sensitivity":sensitivity,
-            "adaptive_basis_refinement":refinement, "replay":replay}
+            "adaptive_basis_refinement":refinement, "adaptive_smearing_refinement":width_refinement,
+            "adaptive_mesh_refinement":mesh_refinement, "replay":replay}
 
 
 def main():

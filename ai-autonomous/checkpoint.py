@@ -16,7 +16,7 @@ from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile
 
 
-RUN_FILES = ("attempt.json", "pw.in", "pw.stdout", "pw.stderr", "CRASH")
+RUN_FILES = ("attempt.json", "pw.in", "pw.stdout", "pw.stderr", "CRASH", "work-stop.json")
 
 
 def pack(work, jobs, name, prefix):
@@ -24,7 +24,8 @@ def pack(work, jobs, name, prefix):
     paths = []
     for attempt in sorted(jobs.glob(f"{prefix}*/attempt.json")):
         record = json.loads(attempt.read_text())
-        if record["state"] not in {"PROCESS_EXITED", "LAUNCH_FAILED"}:
+        if (record["state"] not in {"PROCESS_EXITED", "LAUNCH_FAILED"} and
+                not (attempt.parent/"work-stop.json").is_file()):
             continue
         paths.extend(p for filename in RUN_FILES if (p := attempt.parent / filename).is_file())
     for pattern in ("apt-update.*", "blas-install.*", "qe-install.*", "qe-openblas.ldd",

@@ -27,9 +27,14 @@ python fese.py primary_R01.json jobs --pseudo-dir common --pw pw.x --ranks 2 --p
 python fese.py B1_R01.json jobs --pseudo-dir common --pw pw.x --ranks 2 --parallel 1
 python fese.py B2_R01.json jobs --pseudo-dir common --pw pw.x --ranks 2 --parallel 1
 python fese.py K1_R01.json jobs --pseudo-dir common --pw pw.x --ranks 2 --parallel 2
+python fese.py K2_R01.json jobs --pseudo-dir common --pw pw.x --ranks 2 --parallel 2
 python fese.py S1_R01.json jobs --pseudo-dir common --pw pw.x --ranks 2 --parallel 2
+python fese.py S2_R01.json jobs --pseudo-dir common --pw pw.x --ranks 2 --parallel 2
+python fese.py FM_RECOVERY_R01.json jobs --pseudo-dir common --pw pw.x --ranks 2
 python fese.py REPLAY_R01.json jobs --pseudo-dir common --pw pw.x --ranks 1
 ```
+
+The historical S2 stripe encountered multiple MPI runtime failures. The two-rank and single-rank recovery inputs are indexed by S2_RECOVERY_R01.json; the actual MPI-rank count and transport are in each attempt.json. Reproduce an eligible recovery using the exact row and rank count recorded by the assessment, while retaining the failed records in the historical analysis. The later K2 recovery retains the same physics and isolates the MPI backing directory.
 
 The sensitivity matrix can run with spare capacity during the main scan. For multiple groups running concurrently, the sum of simultaneous MPI ranks should fit the machine. The executable path, commands, input digest, attempt timestamps, stdout/stderr and terminal status are recorded per case. Reference-BLAS pilots and the repeat under serial OpenBLAS use their separate matrices and distinct IDs. Read ENVIRONMENT.md before trying to time-match the cloud run.
 
@@ -37,7 +42,8 @@ Make an analysis directory from all records, including failures and missing asse
 
 ```bash
 python analysis.py jobs derived pilots.json pilots_openblas.json primary_R01.json \
-  B1_R01.json B2_R01.json K1_R01.json S1_R01.json REPLAY_R01.json
+  B1_R01.json B2_R01.json K1_R01.json K2_R01.json S1_R01.json S2_R01.json \
+  S2_RECOVERY_R01.json K2_RECOVERY_R01.json REPLAY_R01.json FM_RECOVERY_R01.json
 python compare.py derived/results.json derived/comparisons.json
 python plot.py derived/results.json derived/figures
 python validate.py jobs

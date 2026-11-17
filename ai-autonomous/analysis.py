@@ -72,6 +72,7 @@ def analyze_run(root, case):
         "mixing_beta": settings.get("mixing", 0.32), "mixing_mode": "local-TF",
         "conv_thr_ry_cell": settings.get("tol", 1e-8), "scf_accuracy_bound_ry_cell": None,
         "iteration_count": None, "state": "NOT_RUN", "exit_code": record.get("returncode"),
+        "work_session_stop": None,
         "started_utc": record.get("started_utc"), "ended_utc": record.get("ended_utc"),
         "wall_seconds": record.get("wall_seconds"), "mpi_ranks": record.get("mpi_ranks"),
         "process_wall_seconds": record.get("process_wall_seconds", record.get("wall_seconds")),
@@ -94,7 +95,12 @@ def analyze_run(root, case):
     point_count = last_number(text, r"number of k points\s*=\s*(\d+)")
     row["n_k_output"] = int(point_count) if point_count is not None else None
     if record.get("state") in {"STARTING", "RUNNING"}:
-        row["state"] = "IN_PROGRESS_OR_INTERRUPTED"
+        stop = folder / "work-stop.json"
+        if stop.is_file():
+            observed = json.loads(stop.read_text())
+            row.update(state="INTERRUPTED", work_session_stop=observed)
+        else:
+            row["state"] = "IN_PROGRESS_OR_INTERRUPTED"
         return row
     if re.search(r"Calculation stopped in scf loop", text, re.IGNORECASE):
         row["state"] = "INTERRUPTED"
@@ -146,15 +152,14 @@ def analyze_run(root, case):
     return row
 
 
-def primary_matrix_outcomes(rows):
-    """Resolve each planned P1 member to an eligible, compatible recovery if needed.
+def measured_outcomes(rows):
+    """Resolve a planned member to an eligible, compatible recovery if needed.
 
     Original attempts remain in the full evidence table. Recovery may change
     spin-seed amplitude or mixing while preserving the seed pattern and all
     physical and quadrature settings. A successful original remains primary.
     """
-    original = {r["run_id"]:r for r in rows
-                if r["run_id"].startswith("p1-") and not r["settings"].get("repairs")}
+    original = {r["run_id"]:r for r in rows if not r["settings"].get("repairs")}
     compatible = ("initial_state", "path", "a_angstrom", "c_angstrom", "z_se_fraction",
                   "n_fe", "ecutwfc_ry", "ecutrho_ry", "k_mesh", "k_shift",
                   "smearing", "degauss_ry", "conv_thr_ry_cell", "functional", "pseudo_sha256")
@@ -167,6 +172,11 @@ def primary_matrix_outcomes(rows):
                 all(predecessor[k] == repair[k] for k in compatible)):
             original[parent]=repair
     return original
+
+
+def primary_matrix_outcomes(rows):
+    """Return one eligible observation or an explicit missing row per P1 member."""
+    return {k:v for k,v in measured_outcomes(rows).items() if k.startswith("p1-")}
 
 
 def energy_reference(rows):
