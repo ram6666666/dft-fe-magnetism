@@ -1,0 +1,50 @@
+[
+  {
+    "id": "pilot-stripe",
+    "pattern": "stripe",
+    "k": [
+      4,
+      4,
+      3
+    ],
+    "ecut": 45,
+    "sigma": 0.021,
+    "tol": 3e-08
+  },
+  {
+    "id": "pilot-checker",
+    "pattern": "checker",
+    "k": [
+      4,
+      4,
+      3
+    ],
+    "ecut": 45,
+    "sigma": 0.021,
+    "tol": 3e-08
+  },
+  {
+    "id": "pilot-fm",
+    "pattern": "fm",
+    "k": [
+      4,
+      4,
+      3
+    ],
+    "ecut": 45,
+    "sigma": 0.021,
+    "tol": 3e-08
+  },
+  {
+    "id": "pilot-nm",
+    "pattern": "nm",
+    "k": [
+      4,
+      4,
+      3
+    ],
+    "ecut": 45,
+    "sigma": 0.021,
+    "tol": 3e-08
+  }
+]

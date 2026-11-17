@@ -1,0 +1,50 @@
+[
+  {
+    "id": "pilot-stripe-openblas",
+    "pattern": "stripe",
+    "k": [
+      4,
+      4,
+      3
+    ],
+    "ecut": 45,
+    "sigma": 0.021,
+    "tol": 3e-08
+  },
+  {
+    "id": "pilot-checker-openblas",
+    "pattern": "checker",
+    "k": [
+      4,
+      4,
+      3
+    ],
+    "ecut": 45,
+    "sigma": 0.021,
+    "tol": 3e-08
+  },
+  {
+    "id": "pilot-fm-openblas",
+    "pattern": "fm",
+    "k": [
+      4,
+      4,
+      3
+    ],
+    "ecut": 45,
+    "sigma": 0.021,
+    "tol": 3e-08
+  },
+  {
+    "id": "pilot-nm-openblas",
+    "pattern": "nm",
+    "k": [
+      4,
+      4,
+      3
+    ],
+    "ecut": 45,
+    "sigma": 0.021,
+    "tol": 3e-08
+  }
+]
