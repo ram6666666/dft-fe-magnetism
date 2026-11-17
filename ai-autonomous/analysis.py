@@ -74,6 +74,8 @@ def analyze_run(root, case):
         "iteration_count": None, "state": "NOT_RUN", "exit_code": record.get("returncode"),
         "started_utc": record.get("started_utc"), "ended_utc": record.get("ended_utc"),
         "wall_seconds": record.get("wall_seconds"), "mpi_ranks": record.get("mpi_ranks"),
+        "process_wall_seconds": record.get("process_wall_seconds", record.get("wall_seconds")),
+        "starting_checkpoint": record.get("starting_checkpoint"),
         "input_sha256": record.get("input_sha256"), "total_energy_ry_cell": None,
         "smearing_term_ry_cell": None, "total_moment_muB_cell": None,
         "absolute_spin_muB_cell": None, "fe_weighted_moments_muB": None,
@@ -142,6 +144,29 @@ def analyze_run(root, case):
                weighted_radii_bohr_by_species={int(i): float(value) for value, i in radii} or None,
                magnetic_diagnostic="QE 6.7 report_mag weighted real-space site integration at last SCF iterate.")
     return row
+
+
+def primary_matrix_outcomes(rows):
+    """Resolve each planned P1 member to an eligible, compatible recovery if needed.
+
+    Original attempts remain in the full evidence table. Recovery may change
+    spin-seed amplitude or mixing while preserving the seed pattern and all
+    physical and quadrature settings. A successful original remains primary.
+    """
+    original = {r["run_id"]:r for r in rows
+                if r["run_id"].startswith("p1-") and not r["settings"].get("repairs")}
+    compatible = ("initial_state", "path", "a_angstrom", "c_angstrom", "z_se_fraction",
+                  "n_fe", "ecutwfc_ry", "ecutrho_ry", "k_mesh", "k_shift",
+                  "smearing", "degauss_ry", "conv_thr_ry_cell", "functional", "pseudo_sha256")
+    for repair in rows:
+        parent=repair["settings"].get("repairs")
+        if parent not in original or repair["state"] not in SCIENCE_STATUS:
+            continue
+        predecessor=original[parent]
+        if (predecessor["state"] not in SCIENCE_STATUS and
+                all(predecessor[k] == repair[k] for k in compatible)):
+            original[parent]=repair
+    return original
 
 
 def energy_reference(rows):

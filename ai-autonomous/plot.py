@@ -15,7 +15,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-from analysis import SCIENCE_STATUS
+from analysis import SCIENCE_STATUS, primary_matrix_outcomes
 from fese import RY_TO_MEV
 
 STYLES = {"fm": ("#b44c30","s"), "checker": ("#28778f","^"), "stripe": ("#173854","o")}
@@ -24,7 +24,7 @@ LABELS = {"fm":"FM", "checker":"Checkerboard", "stripe":"Stripe"}
 
 def plot(rows, output):
     output.mkdir(parents=True, exist_ok=True)
-    primary = [r for r in rows if r["run_id"].startswith("p1-")]
+    primary = list(primary_matrix_outcomes(rows).values())
     accepted = [r for r in primary if r["state"] in SCIENCE_STATUS
                 and r["final_state"] != "missing_final_magnetic_evidence"]
     anchor = [r for r in accepted if r["run_id"].startswith("p1-anchor-")]

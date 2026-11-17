@@ -25,6 +25,7 @@ Run from this directory, using fresh distinct output directories for any indepen
 ```bash
 python fese.py primary_R01.json jobs --pseudo-dir common --pw pw.x --ranks 2 --parallel 3
 python fese.py B1_R01.json jobs --pseudo-dir common --pw pw.x --ranks 2 --parallel 1
+python fese.py B2_R01.json jobs --pseudo-dir common --pw pw.x --ranks 2 --parallel 1
 python fese.py K1_R01.json jobs --pseudo-dir common --pw pw.x --ranks 2 --parallel 2
 python fese.py S1_R01.json jobs --pseudo-dir common --pw pw.x --ranks 2 --parallel 2
 python fese.py REPLAY_R01.json jobs --pseudo-dir common --pw pw.x --ranks 1
@@ -36,7 +37,7 @@ Make an analysis directory from all records, including failures and missing asse
 
 ```bash
 python analysis.py jobs derived pilots.json pilots_openblas.json primary_R01.json \
-  B1_R01.json K1_R01.json S1_R01.json REPLAY_R01.json
+  B1_R01.json B2_R01.json K1_R01.json S1_R01.json REPLAY_R01.json
 python compare.py derived/results.json derived/comparisons.json
 python plot.py derived/results.json derived/figures
 python validate.py jobs

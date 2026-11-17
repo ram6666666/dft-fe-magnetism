@@ -1,0 +1,18 @@
+[
+  {
+    "id": "p1-expansion-fm-retry01",
+    "pattern": "fm",
+    "a": 3.83,
+    "k": [
+      4,
+      4,
+      3
+    ],
+    "ecut": 60,
+    "sigma": 0.021,
+    "tol": 1e-07,
+    "mixing": 0.2,
+    "repairs": "p1-expansion-fm",
+    "seed": 0.1
+  }
+]

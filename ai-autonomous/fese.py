@@ -144,7 +144,13 @@ def seed_from_saved_state(case, base, target):
     if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", parent_id):
         raise ValueError("Invalid parent attempt ID")
     parent = base / parent_id
-    meta = json.loads((parent / "attempt.json").read_text())
+    parent_record = parent / "attempt.json"
+    meta = json.loads(parent_record.read_text())
+    while meta["state"] in {"STARTING", "RUNNING"}:
+        # Only a known explicitly named parent can hold a queued child.
+        # The Work supervisor must reconcile interrupted sessions on recovery.
+        time.sleep(10)
+        meta = json.loads(parent_record.read_text())
     stdout = (parent / "pw.stdout").read_text()
     parent_case = meta["case"]
     comparables = ("a", "c", "z", "pattern", "k", "ecut", "rho", "seed")
@@ -196,9 +202,12 @@ def execute(case, base, pseudo_dir, pw, ranks, launcher):
                   "HWLOC_COMPONENTS", "LD_LIBRARY_PATH")}}
     write_json(folder / "attempt.json", record)
     started = time.monotonic()
+    launched = None
     try:
         record["starting_checkpoint"] = seed_from_saved_state(case, base, folder / "scratch" / "fese.save")
         with (folder / "pw.stdout").open("wb") as stdout, (folder / "pw.stderr").open("wb") as stderr:
+            launched = time.monotonic()
+            record["launched_utc"] = timestamp()
             with subprocess.Popen(command, cwd=folder, env=run_env, stdin=subprocess.DEVNULL,
                                   stdout=stdout, stderr=stderr) as proc:
                 record.update(state="RUNNING", process_pid=proc.pid)
@@ -208,7 +217,9 @@ def execute(case, base, pseudo_dir, pw, ranks, launcher):
     except (OSError, ValueError) as exc:
         record.update(state="LAUNCH_FAILED", launch_error=str(exc), returncode=None)
     finally:
-        record.update(ended_utc=timestamp(), wall_seconds=round(time.monotonic() - started, 3))
+        ended = time.monotonic()
+        record.update(ended_utc=timestamp(), wall_seconds=round(ended - started, 3),
+                      process_wall_seconds=round(ended - launched, 3) if launched is not None else None)
         write_json(folder / "attempt.json", record)
     print(f"{run_id}: {record.get('returncode')} ({record['wall_seconds']} s)", flush=True)
 

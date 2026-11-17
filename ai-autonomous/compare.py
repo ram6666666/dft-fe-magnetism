@@ -10,7 +10,7 @@ import argparse
 import json
 from pathlib import Path
 
-from analysis import SCIENCE_STATUS
+from analysis import SCIENCE_STATUS, primary_matrix_outcomes
 from fese import RY_TO_MEV, write_json
 
 
@@ -21,7 +21,8 @@ def gap(rows, first, second):
     if first not in rows or second not in rows:
         return entry
     a, b = rows[first], rows[second]
-    entry.update(initial_states=[a["initial_state"], b["initial_state"]],
+    entry.update(first=a["run_id"], second=b["run_id"],
+                 initial_states=[a["initial_state"], b["initial_state"]],
                  final_states=[a["final_state"], b["final_state"]])
     if any(r["state"] not in SCIENCE_STATUS or r["final_state"] in (
             None, "missing_final_magnetic_evidence") for r in (a, b)):
@@ -51,11 +52,12 @@ def differences(current, variants):
 
 def run(rows):
     """Create the complete pair ledger for all explicitly planned route checks."""
+    primary = primary_matrix_outcomes(list(rows.values()))
     scan = {}
     for lattice_point in ("compression", "anchor", "expansion"):
         left = f"p1-{lattice_point}-"
         comparisons = ("checker", "fm", "nm") if lattice_point == "anchor" else ("checker", "fm")
-        scan[lattice_point] = {p: gap(rows, left+"stripe", left+p) for p in comparisons}
+        scan[lattice_point] = {p: gap(primary, left+"stripe", left+p) for p in comparisons}
     sensitivity = {}
     for competitor in ("checker", "nm"):
         cur = scan["anchor"][competitor]
@@ -74,12 +76,16 @@ def run(rows):
             "within_2_mev_fe_goal":envelope <= 2. if envelope is not None else None,
             "sign_stable_beyond_envelope":abs(cur["mev_fe"]) > envelope if envelope is not None else None,
         }
+    high_basis = gap(rows, "b2-anchor-stripe", "b2-anchor-nm")
+    first_basis = sensitivity["nm"]["checks"][0]["gap"]
+    refinement = differences(first_basis, {"basis_106_vs_90_ry":high_basis})[0]
     replay = gap(rows, "replay-anchor-stripe", "p1-anchor-stripe")
     replay["meets_tolerance"] = (abs(replay["mev_fe"]) <= 0.2
                                  and replay["final_states"] == ["stripe","stripe"]
                                  if replay["mev_fe"] is not None else None)
     return {"schema":1, "energy_unit":"meV/Fe", "sign":"first minus second",
-            "primary_scan":scan, "anchor_numerical_sensitivity":sensitivity, "replay":replay}
+            "primary_scan":scan, "anchor_numerical_sensitivity":sensitivity,
+            "adaptive_basis_refinement":refinement, "replay":replay}
 
 
 def main():

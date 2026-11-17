@@ -1,0 +1,3 @@
+# Adaptive numerical check
+
+The complete primary anchor and B1 comparison selected the same stripe and checkerboard final patterns. The observed change in the stripe versus explicit NM gap on increasing the basis crossed the prespecified 2 meV/Fe target, even though its sign remained unchanged. This triggered B2, a matched stripe and NM pair at 106 Ry and four times this density cutoff, with the primary mesh, width, structural coordinates and tolerance. This cutoff corresponds to the high Fe library guideline. Its purpose is to assess the change from the 90 Ry pair. It is a separate post-observation check and does not overwrite the predeclared primary scan.
